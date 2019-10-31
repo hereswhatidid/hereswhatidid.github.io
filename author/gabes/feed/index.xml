@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Gabe &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/author/gabes/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Tue, 18 Sep 2018 16:54:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
+		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
+				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[GravityForms]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=703</guid>
+				<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
+								<content:encoded><![CDATA[<p>Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:</p>
+<p><script src="https://gist.github.com/hereswhatidid/eaee026f172e53b8d79c20d6c1666be6.js"></script></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Using MySQL to conditionally update WordPress post meta data</title>
+		<link>/2018/04/using-mysql-to-conditionally-update-wordpress-post-meta-data/</link>
+				<pubDate>Sat, 21 Apr 2018 15:14:29 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=691</guid>
+				<description><![CDATA[After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first image twice. The suggestion from the plugin&#8217;s documentation was to rerun the import specifically targeting those fields to fix the issue. This was less than ideal as we were dealing with a product list that was nearly 3,000 items long and took 20-25 minutes to fully import.</p>
+<p>Because I knew the underlying data was fine, it was just being duplicated, I decided to use a MySQL query to update the database directly rather than running another import. Here is the query I ended up with:</p>
+<blockquote><p><code>UPDATE wp_postmeta a<br />
+JOIN wp_postmeta b<br />
+ON a.post_id = b.post_id<br />
+SET b.meta_value = REPLACE(b.meta_value, CONCAT(a.meta_value, ','), '')<br />
+WHERE a.meta_key = '_thumbnail_id' AND b.meta_key = '_product_image_gallery';<br />
+</code></p></blockquote>
+<p>Because of the way that WordPress stores post meta I had to run a join on the wp_postmeta table against itself. Here is a break down of each line of the query:</p>
+<blockquote><p><code>UPDATE wp_postmeta a<br />
+JOIN wp_postmeta b</code></p></blockquote>
+<p>Here I am selecting the wp_postmeta table and joining it to itself in order to grab the two separate meta data values. The <code>a</code> table is for the <code>_thumbnail_id</code> field and the <code>b</code> table is for the <code>_product_image_gallery</code> field.</p>
+<blockquote><p><code>ON a.post_id = b.post_id</code></p></blockquote>
+<p>Now we use the <code>post_id</code> column to join together the rows by the post that they are associated with.</p>
+<blockquote><p><code>SET b.meta_value = REPLACE(b.meta_value, CONCAT(a.meta_value, ','), '')</code></p></blockquote>
+<p>After selecting and joining the tables I am setting the <code>meta_value</code> of the <code>b</code> table to be the value of the <code>meta_value</code> column with the duplicate image ID removed. It was made simpler because of the fact that I knew that the first value in that <code>_product_image_gallery</code> meta value was the duplicate. This meant I only had to search at the beginning and not worry about whether or not it was followed by a comma.</p>
+<p>One important note: the reason I&#8217;m specifically targeting the <code>b.meta_value</code> column is because the <code>b</code> table is the table within the join that is targeting the <code>_product_image_gallery</code> meta field. If I were to use the <code>a</code> table it would assign the updated value to the <code>_image_id</code> meta field.</p>
+<blockquote><p><code>WHERE a.meta_key = '_thumbnail_id' AND b.meta_key = '_product_image_gallery';</code></p></blockquote>
+<p>Finally I am establishing which meta fields that I&#8217;m looking to target with the query.</p>
+<p>By using this MySQL approach to fixing the meta data I was able to fix the meta fields with a single command that took roughly 3 seconds to process rather than running another full product import.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Add ACF fields to product attributes in WooCommerce</title>
+		<link>/2016/08/add-acf-fields-product-attributes-woocommerce/</link>
+				<pubDate>Sat, 20 Aug 2016 13:24:35 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=658</guid>
+				<description><![CDATA[For a client&#8217;s site we wanted to add some ACF fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>For a client&#8217;s site we wanted to add some <a href="https://www.advancedcustomfields.com/">ACF</a> fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have these custom fields and the client had the ability to add or remove attribute via the admin. This meant that we had to be able to gather all the attribute types and target them for our field group.</p>
+<p>This turned out to be a fairly straight-forward task. By using the WooCommerce function <a href="https://docs.woocommerce.com/wc-apidocs/function-wc_get_attribute_taxonomy_names.html">wc_get_attribute_taxonomy_names()</a> we can create a set of location rules that are dynamically created which will target all existing global attribute types.</p>
+<p>Here is the complete code which will add a tab and sample image field to all global attribute Term Edit pages:</p>
+<script src="https://gist.github.com/hereswhatidid/9ba2bfe386a4eafb0bc82a11a748416b.js"></script>
+<p>&nbsp;</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>List variation SKUs within the WooCommerce product edit screen</title>
+		<link>/2016/05/list-variation-skus-within-woocommerce-product-edit-screen/</link>
+				<pubDate>Wed, 04 May 2016 16:03:21 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=655</guid>
+				<description><![CDATA[This snippet will replace the existing post ID displayed in the WooCommerce product edit screen with the variation&#8217;s SKU if one exists. Often times the variation SKU is far more useful to an admin than the internal WordPress post ID so having it displayed on the edit screen makes the administration process much easier.]]></description>
+								<content:encoded><![CDATA[<p>This snippet will replace the existing post ID displayed in the WooCommerce product edit screen with the variation&#8217;s SKU if one exists. Often times the variation SKU is far more useful to an admin than the internal WordPress post ID so having it displayed on the edit screen makes the administration process much easier.</p>
+<p><a href="/media/woocommerce-sku-snippet.png"><img class="alignnone size-full wp-image-656" src="/media/woocommerce-sku-snippet.png" alt="woocommerce-sku-snippet" width="650" height="272" srcset="/media/woocommerce-sku-snippet.png 650w, /media/woocommerce-sku-snippet-580x243.png 580w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<script src="https://gist.github.com/hereswhatidid/88ffd83eb2e2840c43e589f30f335b4f.js"></script>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Customize ACF WYSIWYG Input Styles</title>
+		<link>/2015/08/customize-acf-wysiwyg-input-styles/</link>
+				<pubDate>Thu, 13 Aug 2015 03:29:27 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=614</guid>
+				<description><![CDATA[Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the ability to specify a body class for the WYSIWYG editor&#8217;s iframed body tag. (a prototype solution has been developed) Thankfully, ACF does have a JavaScript filter available that allows us to directly modify those classes, and with a little trickery, we can use the field options to give our WYSIWYG fields unique classes and thus styles.</p>
+<p>The filter that is used for this example is &#8216;<a href="http://www.advancedcustomfields.com/resources/adding-custom-javascript-fields/" target="_blank">wysiwyg_tinymce_settings</a>&#8216;. This filter makes it possible to edit the TinyMCE  settings immediately before the field is initialized. What I decided to do was to make use of the existing CSS wrapper field in the ACF admin:</p>
+<p><a href="/media/hwid-acf-wysiwyg-body-class.png"><img class="alignnone wp-image-616 size-medium" src="/media/hwid-acf-wysiwyg-body-class-580x195.png" alt="ACF WYSIWYG Class Input" width="580" height="195" srcset="/media/hwid-acf-wysiwyg-body-class-580x195.png 580w, /media/hwid-acf-wysiwyg-body-class.png 812w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
+<p>Then, using the previously mentioned filter, I grab those values and apply them to the WYSIWYG editor&#8217;s iframe body tag:</p>
+<p><script src="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d.js?file=custom-acf-wysiwyg-css.php"></script></p>
+<p>Now, if I specify the correct class names within my &#8216;editor-styles.css&#8217; file, the editor will get the custom styling I&#8217;ve set.</p>
+<p><img class="alignnone wp-image-617 size-full" src="/media/hwid-acf-wysiwyg-example.png" alt="ACF Custom WYSIWYG CSS Example" width="691" height="503" srcset="/media/hwid-acf-wysiwyg-example.png 691w, /media/hwid-acf-wysiwyg-example-580x422.png 580w" sizes="(max-width: 691px) 100vw, 691px" /></p>
+<p>Now I can easily style all the ACF WYSIWYG fields in my admin so that they exactly reflect how the content will look on the front end.</p>
+<p>The full code is <a href="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d" target="_blank">available on Github</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Creating custom product tabs in WooCommerce Storefront with ACF</title>
+		<link>/2015/08/creating-custom-product-tabs-in-woocommerce-storefront-with-acf/</link>
+				<pubDate>Wed, 05 Aug 2015 21:33:12 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=604</guid>
+				<description><![CDATA[Recently I was tasked with adding some custom tabs to a WooCommerce store using the Storefront theme. There was a commercial solution available but I felt this was something that could fairly easily be done via Advanced Custom Fields and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Recently I was tasked with adding some custom tabs to a WooCommerce store using the <a href="http://www.woothemes.com/storefront/" target="_blank" rel="noopener">Storefront theme</a>. There was a commercial solution available but I felt this was something that could fairly easily be done via <a href="http://www.advancedcustomfields.com/" target="_blank" rel="noopener">Advanced Custom Fields</a> and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a basic run down of how I was able to pull in the content of a <a href="http://www.advancedcustomfields.com/resources/repeater/" target="_blank" rel="noopener">Repeater</a> field:</p>
+<p>First, create the content fields within ACF. I used just a basic repeater that contains a text field for the tab title and a WYSIWYG field for the tab content. For the example code, the repeater was named &#8220;tabs&#8221; and it&#8217;s sub fields are named &#8220;tab_title&#8221; and &#8220;tab_content&#8221;.</p>
+<p>Next, I just had to tie these tabs in to the existing WooCommerce filter &#8220;<a href="https://github.com/woothemes/woocommerce/blob/master/templates/single-product/tabs/tabs.php" target="_blank" rel="noopener">woocommerce_product_tabs</a>&#8221; (<a href="http://docs.woothemes.com/document/editing-product-data-tabs/">more details</a>) which allows you to modify the existing tabs for each product on it&#8217;s detail page. I grabbed the assigned tabs from the &#8216;tabs&#8217; ACF field. Stepping through these tabs I added them to the incoming &#8216;$tabs&#8217; variable within the filter.  The required properties for each tab are:</p>
+<ul>
+<li>title &#8211; The title of the tab</li>
+<li>priority &#8211; The order in which the tab should appear among the other tabs</li>
+<li>callback &#8211; The name of the function to call to get the content of the tab</li>
+</ul>
+<p>You&#8217;ll notice in my code I&#8217;m adding a fourth property &#8220;tabContent&#8221;. This is a custom property used by my content generating function to get the WYSIWYG content to display within the tab.<script src="https://gist.github.com/hereswhatidid/3654843605397fe0e484.js?file=custom-woo-acf-tabs.php"></script><br />
+And that&#8217;s all there is to it. Of course there are plenty of areas to improve this small bit of code. For example, I plan on adding in a &#8220;Global Tabs&#8221; area that would let the client specify global tabs that should appear under all products or even products just within specific Categories. Additionally, I also will be adding a field to control the value of the &#8216;priority&#8217; property rather than auto-generating.</p>
+<p>The full code including the ACF Repeater declaration can be <a href="https://gist.github.com/hereswhatidid/3654843605397fe0e484" target="_blank" rel="noopener">viewed on GitHub</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error</title>
+		<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
+				<comments>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
+				<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[BackupBuddy]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[GoDaddy]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[ImportBuddy]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=586</guid>
+				<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
+<pre>ERROR #83893a: unable to decode JSON restore data ``. Restore halted.</pre>
+<p>Here are a couple steps you can follow to diagnose the issue:</p>
+<ol>
+<li><strong>Verify the source of the issue &#8211; </strong>Look in your browser&#8217;s debug console and check for something like &#8220;Uncaught TypeError: undefined is not a function&#8221;. Jump to the source of the error.  In my case it was the &#8220;.on()&#8221; function not being declared.  This is a dead giveaway that something wonky is going on with the loaded version of jQuery.</li>
+<li><strong>Check the loaded version of jQuery &#8211;</strong> Run this code in your debug console to verify the current version:
+<pre>jQuery.fn.jquery</pre>
+<p>If that returns anything below 1.11.x you are viewing an old version of the jQuery library.  You can double check this by browsing directly to the included jquery.js file.  The URL should be something like: http://YOURSITEURL/importbuddy/js/jquery.js</li>
+<li><strong>Check the loaded version of jQueryUI Tooltip &#8211;</strong> This was another script that was loading improperly for me as well.  Browse directly to the tooltip.js file by using a URL like: http://YOURSITEURL/importbuddy/js/tooltip.js</li>
+</ol>
+<p>What appears to be causing these issues is the hosting provider has a cached version of those specific files and is serving that rather than the actual files on your server.</p>
+<p>One possible workaround is to start the ImportBuddy process and clear the site&#8217;s cache after the /importbuddy/ directory has been created during the first step of the import process but before it has restored any files.  This can be tricky since ImportBuddy will put your site in to maintenance mode once it starts so you&#8217;ll have to delete the &#8220;.maintenance&#8221; file if your hosting provider requires you to be logged in to WordPress in order to clear the cache (this is the case with GoDaddy Managed WordPress hosting).  After you&#8217;ve cleared the cache, restart the import process and verify that the correct files are now showing up.</p>
+<p>If clearing the cache does not fix it there&#8217;s a more heavy-handed fix that will work but requires editing the ImportBuddy code:</p>
+<ol>
+<li><strong>Change the plugin version &#8211;</strong> Changing the plugin version to a much higher number will also cause the server to not use the cached version.  You can do this by opening the &#8216;/importbuddy/init.php&#8217; file on your destination server and set the version declaration to something like 55555.  Once you&#8217;ve done this, restart the ImportBuddy process and verify that the scripts are loading correctly.</li>
+</ol>
+]]></content:encoded>
+							<wfw:commentRss>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>Be careful with your CSS identifiers (AdBlock is watching!)</title>
+		<link>/2014/05/careful-css-identifiers-adblock-watching/</link>
+				<pubDate>Fri, 02 May 2014 15:52:08 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[SEO]]></category>
+
+		<guid isPermaLink="false">/?p=557</guid>
+				<description><![CDATA[If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for: #advert1, #advert2, [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for:</p>
+<pre>#advert1,
+#advert2,
+#advertise,
+#advertisement1,
+#advertisetop,
+#advertising_wrapper,
+#advtop,
+#adwrapper,
+#banner-ad,
+#bannerAd,
+#bannerAdWrapper,
+#banner_topad,
+#bannerad,
+#bigAd,
+#bigad,
+#body_ad,
+#bottom_ad,
+#centerads,
+#cmn_ad_tag_head,
+#companionAd,
+#content-header-ad,
+#contentAd,
+#content_ads,
+#content_adv,
+#contentad,
+#dart-container-728x90,
+#dfp_ad_Entry_728x90,
+#dfp_ad_Home_728x90,
+#divAd,
+#div_prerollAd_1,
+#download_ad,
+#featuread,
+#featured-ads,
+#featuredAds,
+#footer_ad,
+#footer_ads,
+#game-ad,
+#google_ads_frame,
+#google_ads_frame1_anchor,
+#google_ads_frame2,
+#googlead,
+#head-ad,
+#header-ads,
+#headerAd,
+#headerAdContainer,
+#header_ad,
+#homead,
+#ka_adRightSkyscraperWide,
+#leaderAd,
+#leaderBoardAd,
+#leaderboard-ad,
+#left_ads,
+#leftad,
+#leftads,
+#logoAd,
+#logo_ad,
+#mainAd,
+#main_ad,
+#mpu2,
+#mpu2_container,
+#mpu_container,
+#msad,
+#myAd,
+#player_ads,
+#pre_advertising_wrapper,
+#prerollAd,
+#promo-ad,
+#publicidad,
+#reklama,
+#rh-ad,
+#right_ads,
+#right_adsense,
+#searchAd,
+#search_ads,
+#sideAd,
+#side_ads,
+#sidebar-ads,
+#sidebar_ads,
+#skybox-ad,
+#sponsorAdDiv,
+#sponsoredlinks,
+#sponsors-home,
+#takeover_ad,
+#top-ad,
+#topAd,
+#topAdSpace,
+#topAdSpace_div,
+#topAdvert,
+#topBannerAd,
+#top_ad,
+#top_ads,
+#topad,
+#topbannerad,
+#videoAd,
+.ADBAR,
+.AdBody:not(body),
+.AdBox,
+.AdInfo,
+.AdTitle,
+.AdvertContainer,
+.HomeAds,
+.RelatedAds,
+.SponsoredContent,
+.ad-300x250,
+.ad-banner,
+.ad-block,
+.ad-border,
+.ad-btn,
+.ad-button,
+.ad-cell,
+.ad-display,
+.ad-enabled,
+.ad-holder,
+.ad-img,
+.ad-inner,
+.ad-item,
+.ad-leader,
+.ad-leaderboard,
+.ad-left,
+.ad-links,
+.ad-right,
+.ad-section,
+.ad-served,
+.ad-sidebar,
+.ad-square,
+.ad-stack,
+.ad-text,
+.ad-top,
+.ad-unit,
+.ad-unit-300-wrapper,
+.ad-vertical-container,
+.ad-wide,
+.ad-wrap,
+.ad-wrapper,
+.ad160,
+.ad300,
+.ad728,
+.ad90,
+.adBlock,
+.adBottomBoard,
+.adBox,
+.adContent,
+.adDiv,
+.adElement,
+.adFrame,
+.adFrameCnt,
+.adHead,
+.adHeader,
+.adHeaderblack,
+.adHeadline,
+.adHolder,
+.adHoldert,
+.adImg,
+.adItem,
+.adLink,
+.adMiddle,
+.adMod,
+.adModule,
+.adOverlay,
+.adPanel,
+.adResult,
+.adRight,
+.adRotator,
+.adSpace,
+.adSpot,
+.adText,
+.adTitle,
+.adTopHome,
+.adWidget,
+.adWrap,
+.ad_1,
+.ad_160,
+.ad_160x600,
+.ad_2,
+.ad_3,
+.ad_728x90,
+.ad_Right,
+.ad_body,
+.ad_container,
+.ad_description,
+.ad_global_header,
+.ad_head_rectangle,
+.ad_header,
+.ad_item,
+.ad_leaderboard,
+.ad_line,
+.ad_middle,
+.ad_outer,
+.ad_promo,
+.ad_slug_table,
+.ad_space,
+.ad_text,
+.ad_title,
+.ad_trick_header,
+.ad_wrap,
+.ad_wrapper,
+.ad_zone,
+.adarea,
+.adbanner,
+.adbar,
+.adbottom,
+.adbutton,
+.adcolumn,
+.adcont,
+.addiv,
+.adframe,
+.adheader,
+.adholder,
+.adinfo,
+.adlink,
+.adlist,
+.admain,
+.admiddle,
+.adright,
+.adrow1,
+.adrow2,
+.ads-area,
+.ads-col,
+.ads-header,
+.ads-holder,
+.ads-inline,
+.ads-item,
+.ads-section,
+.ads-title,
+.ads-top,
+.ads1,
+.adsBlock,
+.ads_catDiv,
+.ads_div,
+.ads_top,
+.ads_wrapper,
+.adsbottombox,
+.adsbox,
+.adsbygoogle,
+.adscontainer,
+.adshome,
+.adside,
+.adslot_blurred,
+.adspace,
+.adtile,
+.adtop,
+.adv_300,
+.advert-block,
+.advert-box,
+.advert-container,
+.advert-content,
+.advert-horizontal,
+.advert2,
+.advertColumn,
+.advertContainer,
+.advertLink,
+.advertText,
+.advert_container,
+.advert_list,
+.advertbox,
+.advertisement-1,
+.advertisement-swimlane,
+.advertiser,
+.advertising_block,
+.advertisment,
+.advertorial,
+.adverts,
+.adverttext,
+.adwords,
+.afs_ads,
+.after-post-ad,
+.article_ad,
+.banner-ads,
+.banner300,
+.bannerAd,
+.banner_728x90,
+.banner_ad,
+.bannerad,
+.block-ad,
+.blog-ads,
+.bottom-ad,
+.bottom-ads,
+.bottom-left-ad,
+.bottomAds,
+.bottom_ad_block,
+.box-ads,
+.boxad,
+.can_ad_slug,
+.category-ad,
+.change_AdContainer,
+.container_ad,
+.container_row_ad,
+.contentAd,
+.content_ads,
+.cp-adsInited,
+.displayAd,
+.featuredAdBox,
+.flash-advertisement,
+.footer-ad,
+.footer-ads,
+.footerad,
+.forumAd,
+.gallery-ad,
+.google-sponsored,
+.googleAdSense,
+.googleAds,
+.header-ad,
+.headerAd,
+.header_ad,
+.header_ad_center,
+.header_advert,
+.headerad,
+.headerads,
+.home-ad,
+.homeAd,
+.homead,
+.homepage-ad,
+.homepage_ads,
+.horizontal_ad,
+.image-advertisement,
+.imgad,
+.inner_ad,
+.innerad,
+.interstitial_ad_wrapper,
+.ipsAd,
+.item-container-ad,
+.leaderboard-ad,
+.leaderboard-ads,
+.leftAd,
+.leftad,
+.list-ad,
+.logo-ad,
+.marketing-ad,
+.mid_ad,
+.middle_AD,
+.module-ad,
+.newsAd,
+.oasad,
+.openx,
+.page_ad,
+.pfAd,
+.player_ad,
+.player_hover_ad,
+.pm-ad,
+.post-ad,
+.post_ad,
+.post_ads,
+.postad,
+.premiumAdOverlay,
+.premiumAdOverlayClose,
+.promoAd,
+.publicidad,
+.rbRectAd,
+.rectangle_ad,
+.refreshAds,
+.region-top-ad-position,
+.reklam,
+.reklama,
+.reportAdLink,
+.right-ad,
+.rightAd,
+.right_ad,
+.right_ads_column,
+.rightad,
+.rightadv,
+.sb_adsNv2,
+.searchAds,
+.searchad,
+.searchads,
+.showAd,
+.side-ad,
+.side-bar-ad-position1,
+.single-ad,
+.singleAd,
+.sky_ad,
+.skyscraperAd,
+.smallAd,
+.small_ad,
+.smallads,
+.sponsor-box,
+.sponsoredLinks,
+.sponsorlink,
+.text-ad,
+.textad,
+.textads,
+.top-ad,
+.topAds,
+.top_ad,
+.top_ad_div,
+.top_ad_wrap,
+.top_ads,
+.topads,
+.tower-ad,
+.type_ads_default,
+.wideAd,
+.withAds,
+.wp_bannerize,
+.yom-ad,
+a[href^="http://ad-emea.doubleclick.net/"],
+a[href^="http://ad.doubleclick.net/"],
+a[href^="http://adultfriendfinder.com/p/register.cgi?pid="],
+a[href^="http://marketgid.com/"],
+a[href^="http://mgid.com/"],
+a[href^="http://pubads.g.doubleclick.net/"],
+a[href^="http://us.marketgid.com/"],
+a[href^="http://www.fbooksluts.com/"],
+a[href^="http://www.fleshlight.com/"],
+a[href^="http://www.google.com/aclk?"],
+a[href^="http://www.liutilities.com/"],
+a[href^="http://www.socialsex.com/"],
+a[href^="http://www.yourfuckbook.com/?"],
+a[id^="mg_add"],
+div[id^="MarketGid"],
+div[id^="div-gpt-ad-"],
+iframe[src^="http://ad.yieldmanager.com/"]</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Knockout.js Extenders: Grouped</title>
+		<link>/2014/02/knockout-js-extenders-grouped/</link>
+				<pubDate>Thu, 27 Feb 2014 03:31:24 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Knockout.js]]></category>
+
+		<guid isPermaLink="false">/?p=522</guid>
+				<description><![CDATA[I wrote this extender to more easily handle outputting observable arrays in row+column layout.  Typically, when running a simple foreach loop to display the content of an observable array you&#8217;re forced to include the row+column logic within the view itself or you have to write additional helper functions in the view model.  I ran in [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>I wrote this extender to more easily handle outputting observable arrays in row+column layout.  Typically, when running a simple foreach loop to display the content of an observable array you&#8217;re forced to include the row+column logic within the view itself or you have to write additional helper functions in the view model.  I ran in to a situation where several different observable arrays needed to be displayed in row+column grids and rather than handling that functionality in the view or view model, I created this extension to generate a property of the observable array that is simply an additional observable array of the parent that has all the elements arranged in groups of whatever quantity that is specified.</p>
+<script src="https://gist.github.com/hereswhatidid/8553151.js"></script>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Use Bootstrap 3+ styles within the WordPress admin</title>
+		<link>/2014/02/use-bootstrap-3-styles-within-the-wordpress-admin/</link>
+				<pubDate>Sun, 16 Feb 2014 16:29:32 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=525</guid>
+				<description><![CDATA[In previous versions of Bootstrap it was a one-step process to localize it to a container element. This would allow you to use Bootstrap within the WordPress admin and not affect the rest of the built-in WordPress styles. After version 3 of Bootstrap this method no longer works as Bootstrap started using more descendant selectors [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>In previous versions of Bootstrap it was a one-step process to localize it to a container element. This would allow you to use Bootstrap within the WordPress admin and not affect the rest of the built-in WordPress styles.</p>
+<script src="https://gist.github.com/hereswhatidid/9036684.js"></script>
+<p>After version 3 of Bootstrap this method no longer works as Bootstrap started using more descendant selectors that do not translate properly when just wrapped in a container.  Fortunately, the workaround is fairly simple.  First, with this method we need to use the output CSS from Bootstrap rather than the LESS files.  Then, when importing it we pass the <a href="http://lesscss.org/features/#import-options-less" target="_blank">(less) option</a> to force our LESS file to process the imported CSS as though it were also LESS.  This generates the correct class names to constrain your Bootstrap styles to a designated element without affecting the rest of the page.</p>
+<script src="https://gist.github.com/hereswhatidid/9029915.js"></script>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WooCommerce &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/development/wordpress/woocommerce/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Sat, 21 Apr 2018 23:38:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Using MySQL to conditionally update WordPress post meta data</title>
+		<link>/2018/04/using-mysql-to-conditionally-update-wordpress-post-meta-data/</link>
+				<pubDate>Sat, 21 Apr 2018 15:14:29 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=691</guid>
+				<description><![CDATA[After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first image twice. The suggestion from the plugin&#8217;s documentation was to rerun the import specifically targeting those fields to fix the issue. This was less than ideal as we were dealing with a product list that was nearly 3,000 items long and took 20-25 minutes to fully import.</p>
+<p>Because I knew the underlying data was fine, it was just being duplicated, I decided to use a MySQL query to update the database directly rather than running another import. Here is the query I ended up with:</p>
+<blockquote><p><code>UPDATE wp_postmeta a<br />
+JOIN wp_postmeta b<br />
+ON a.post_id = b.post_id<br />
+SET b.meta_value = REPLACE(b.meta_value, CONCAT(a.meta_value, ','), '')<br />
+WHERE a.meta_key = '_thumbnail_id' AND b.meta_key = '_product_image_gallery';<br />
+</code></p></blockquote>
+<p>Because of the way that WordPress stores post meta I had to run a join on the wp_postmeta table against itself. Here is a break down of each line of the query:</p>
+<blockquote><p><code>UPDATE wp_postmeta a<br />
+JOIN wp_postmeta b</code></p></blockquote>
+<p>Here I am selecting the wp_postmeta table and joining it to itself in order to grab the two separate meta data values. The <code>a</code> table is for the <code>_thumbnail_id</code> field and the <code>b</code> table is for the <code>_product_image_gallery</code> field.</p>
+<blockquote><p><code>ON a.post_id = b.post_id</code></p></blockquote>
+<p>Now we use the <code>post_id</code> column to join together the rows by the post that they are associated with.</p>
+<blockquote><p><code>SET b.meta_value = REPLACE(b.meta_value, CONCAT(a.meta_value, ','), '')</code></p></blockquote>
+<p>After selecting and joining the tables I am setting the <code>meta_value</code> of the <code>b</code> table to be the value of the <code>meta_value</code> column with the duplicate image ID removed. It was made simpler because of the fact that I knew that the first value in that <code>_product_image_gallery</code> meta value was the duplicate. This meant I only had to search at the beginning and not worry about whether or not it was followed by a comma.</p>
+<p>One important note: the reason I&#8217;m specifically targeting the <code>b.meta_value</code> column is because the <code>b</code> table is the table within the join that is targeting the <code>_product_image_gallery</code> meta field. If I were to use the <code>a</code> table it would assign the updated value to the <code>_image_id</code> meta field.</p>
+<blockquote><p><code>WHERE a.meta_key = '_thumbnail_id' AND b.meta_key = '_product_image_gallery';</code></p></blockquote>
+<p>Finally I am establishing which meta fields that I&#8217;m looking to target with the query.</p>
+<p>By using this MySQL approach to fixing the meta data I was able to fix the meta fields with a single command that took roughly 3 seconds to process rather than running another full product import.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Add ACF fields to product attributes in WooCommerce</title>
+		<link>/2016/08/add-acf-fields-product-attributes-woocommerce/</link>
+				<pubDate>Sat, 20 Aug 2016 13:24:35 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=658</guid>
+				<description><![CDATA[For a client&#8217;s site we wanted to add some ACF fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>For a client&#8217;s site we wanted to add some <a href="https://www.advancedcustomfields.com/">ACF</a> fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have these custom fields and the client had the ability to add or remove attribute via the admin. This meant that we had to be able to gather all the attribute types and target them for our field group.</p>
+<p>This turned out to be a fairly straight-forward task. By using the WooCommerce function <a href="https://docs.woocommerce.com/wc-apidocs/function-wc_get_attribute_taxonomy_names.html">wc_get_attribute_taxonomy_names()</a> we can create a set of location rules that are dynamically created which will target all existing global attribute types.</p>
+<p>Here is the complete code which will add a tab and sample image field to all global attribute Term Edit pages:</p>
+<script src="https://gist.github.com/hereswhatidid/9ba2bfe386a4eafb0bc82a11a748416b.js"></script>
+<p>&nbsp;</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>List variation SKUs within the WooCommerce product edit screen</title>
+		<link>/2016/05/list-variation-skus-within-woocommerce-product-edit-screen/</link>
+				<pubDate>Wed, 04 May 2016 16:03:21 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=655</guid>
+				<description><![CDATA[This snippet will replace the existing post ID displayed in the WooCommerce product edit screen with the variation&#8217;s SKU if one exists. Often times the variation SKU is far more useful to an admin than the internal WordPress post ID so having it displayed on the edit screen makes the administration process much easier.]]></description>
+								<content:encoded><![CDATA[<p>This snippet will replace the existing post ID displayed in the WooCommerce product edit screen with the variation&#8217;s SKU if one exists. Often times the variation SKU is far more useful to an admin than the internal WordPress post ID so having it displayed on the edit screen makes the administration process much easier.</p>
+<p><a href="/media/woocommerce-sku-snippet.png"><img class="alignnone size-full wp-image-656" src="/media/woocommerce-sku-snippet.png" alt="woocommerce-sku-snippet" width="650" height="272" srcset="/media/woocommerce-sku-snippet.png 650w, /media/woocommerce-sku-snippet-580x243.png 580w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<script src="https://gist.github.com/hereswhatidid/88ffd83eb2e2840c43e589f30f335b4f.js"></script>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Creating custom product tabs in WooCommerce Storefront with ACF</title>
+		<link>/2015/08/creating-custom-product-tabs-in-woocommerce-storefront-with-acf/</link>
+				<pubDate>Wed, 05 Aug 2015 21:33:12 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=604</guid>
+				<description><![CDATA[Recently I was tasked with adding some custom tabs to a WooCommerce store using the Storefront theme. There was a commercial solution available but I felt this was something that could fairly easily be done via Advanced Custom Fields and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Recently I was tasked with adding some custom tabs to a WooCommerce store using the <a href="http://www.woothemes.com/storefront/" target="_blank" rel="noopener">Storefront theme</a>. There was a commercial solution available but I felt this was something that could fairly easily be done via <a href="http://www.advancedcustomfields.com/" target="_blank" rel="noopener">Advanced Custom Fields</a> and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a basic run down of how I was able to pull in the content of a <a href="http://www.advancedcustomfields.com/resources/repeater/" target="_blank" rel="noopener">Repeater</a> field:</p>
+<p>First, create the content fields within ACF. I used just a basic repeater that contains a text field for the tab title and a WYSIWYG field for the tab content. For the example code, the repeater was named &#8220;tabs&#8221; and it&#8217;s sub fields are named &#8220;tab_title&#8221; and &#8220;tab_content&#8221;.</p>
+<p>Next, I just had to tie these tabs in to the existing WooCommerce filter &#8220;<a href="https://github.com/woothemes/woocommerce/blob/master/templates/single-product/tabs/tabs.php" target="_blank" rel="noopener">woocommerce_product_tabs</a>&#8221; (<a href="http://docs.woothemes.com/document/editing-product-data-tabs/">more details</a>) which allows you to modify the existing tabs for each product on it&#8217;s detail page. I grabbed the assigned tabs from the &#8216;tabs&#8217; ACF field. Stepping through these tabs I added them to the incoming &#8216;$tabs&#8217; variable within the filter.  The required properties for each tab are:</p>
+<ul>
+<li>title &#8211; The title of the tab</li>
+<li>priority &#8211; The order in which the tab should appear among the other tabs</li>
+<li>callback &#8211; The name of the function to call to get the content of the tab</li>
+</ul>
+<p>You&#8217;ll notice in my code I&#8217;m adding a fourth property &#8220;tabContent&#8221;. This is a custom property used by my content generating function to get the WYSIWYG content to display within the tab.<script src="https://gist.github.com/hereswhatidid/3654843605397fe0e484.js?file=custom-woo-acf-tabs.php"></script><br />
+And that&#8217;s all there is to it. Of course there are plenty of areas to improve this small bit of code. For example, I plan on adding in a &#8220;Global Tabs&#8221; area that would let the client specify global tabs that should appear under all products or even products just within specific Categories. Additionally, I also will be adding a field to control the value of the &#8216;priority&#8217; property rather than auto-generating.</p>
+<p>The full code including the ACF Repeater declaration can be <a href="https://gist.github.com/hereswhatidid/3654843605397fe0e484" target="_blank" rel="noopener">viewed on GitHub</a>.</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

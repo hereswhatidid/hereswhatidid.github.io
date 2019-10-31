@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GravityForms &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/development/wordpress/gravityforms/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Tue, 18 Sep 2018 16:54:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
+		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
+				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[GravityForms]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=703</guid>
+				<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
+								<content:encoded><![CDATA[<p>Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:</p>
+<p><script src="https://gist.github.com/hereswhatidid/eaee026f172e53b8d79c20d6c1666be6.js"></script></p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

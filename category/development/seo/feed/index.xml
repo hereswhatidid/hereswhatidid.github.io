@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SEO &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/development/seo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Mon, 05 May 2014 12:51:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Be careful with your CSS identifiers (AdBlock is watching!)</title>
+		<link>/2014/05/careful-css-identifiers-adblock-watching/</link>
+				<pubDate>Fri, 02 May 2014 15:52:08 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[SEO]]></category>
+
+		<guid isPermaLink="false">/?p=557</guid>
+				<description><![CDATA[If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for: #advert1, #advert2, [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for:</p>
+<pre>#advert1,
+#advert2,
+#advertise,
+#advertisement1,
+#advertisetop,
+#advertising_wrapper,
+#advtop,
+#adwrapper,
+#banner-ad,
+#bannerAd,
+#bannerAdWrapper,
+#banner_topad,
+#bannerad,
+#bigAd,
+#bigad,
+#body_ad,
+#bottom_ad,
+#centerads,
+#cmn_ad_tag_head,
+#companionAd,
+#content-header-ad,
+#contentAd,
+#content_ads,
+#content_adv,
+#contentad,
+#dart-container-728x90,
+#dfp_ad_Entry_728x90,
+#dfp_ad_Home_728x90,
+#divAd,
+#div_prerollAd_1,
+#download_ad,
+#featuread,
+#featured-ads,
+#featuredAds,
+#footer_ad,
+#footer_ads,
+#game-ad,
+#google_ads_frame,
+#google_ads_frame1_anchor,
+#google_ads_frame2,
+#googlead,
+#head-ad,
+#header-ads,
+#headerAd,
+#headerAdContainer,
+#header_ad,
+#homead,
+#ka_adRightSkyscraperWide,
+#leaderAd,
+#leaderBoardAd,
+#leaderboard-ad,
+#left_ads,
+#leftad,
+#leftads,
+#logoAd,
+#logo_ad,
+#mainAd,
+#main_ad,
+#mpu2,
+#mpu2_container,
+#mpu_container,
+#msad,
+#myAd,
+#player_ads,
+#pre_advertising_wrapper,
+#prerollAd,
+#promo-ad,
+#publicidad,
+#reklama,
+#rh-ad,
+#right_ads,
+#right_adsense,
+#searchAd,
+#search_ads,
+#sideAd,
+#side_ads,
+#sidebar-ads,
+#sidebar_ads,
+#skybox-ad,
+#sponsorAdDiv,
+#sponsoredlinks,
+#sponsors-home,
+#takeover_ad,
+#top-ad,
+#topAd,
+#topAdSpace,
+#topAdSpace_div,
+#topAdvert,
+#topBannerAd,
+#top_ad,
+#top_ads,
+#topad,
+#topbannerad,
+#videoAd,
+.ADBAR,
+.AdBody:not(body),
+.AdBox,
+.AdInfo,
+.AdTitle,
+.AdvertContainer,
+.HomeAds,
+.RelatedAds,
+.SponsoredContent,
+.ad-300x250,
+.ad-banner,
+.ad-block,
+.ad-border,
+.ad-btn,
+.ad-button,
+.ad-cell,
+.ad-display,
+.ad-enabled,
+.ad-holder,
+.ad-img,
+.ad-inner,
+.ad-item,
+.ad-leader,
+.ad-leaderboard,
+.ad-left,
+.ad-links,
+.ad-right,
+.ad-section,
+.ad-served,
+.ad-sidebar,
+.ad-square,
+.ad-stack,
+.ad-text,
+.ad-top,
+.ad-unit,
+.ad-unit-300-wrapper,
+.ad-vertical-container,
+.ad-wide,
+.ad-wrap,
+.ad-wrapper,
+.ad160,
+.ad300,
+.ad728,
+.ad90,
+.adBlock,
+.adBottomBoard,
+.adBox,
+.adContent,
+.adDiv,
+.adElement,
+.adFrame,
+.adFrameCnt,
+.adHead,
+.adHeader,
+.adHeaderblack,
+.adHeadline,
+.adHolder,
+.adHoldert,
+.adImg,
+.adItem,
+.adLink,
+.adMiddle,
+.adMod,
+.adModule,
+.adOverlay,
+.adPanel,
+.adResult,
+.adRight,
+.adRotator,
+.adSpace,
+.adSpot,
+.adText,
+.adTitle,
+.adTopHome,
+.adWidget,
+.adWrap,
+.ad_1,
+.ad_160,
+.ad_160x600,
+.ad_2,
+.ad_3,
+.ad_728x90,
+.ad_Right,
+.ad_body,
+.ad_container,
+.ad_description,
+.ad_global_header,
+.ad_head_rectangle,
+.ad_header,
+.ad_item,
+.ad_leaderboard,
+.ad_line,
+.ad_middle,
+.ad_outer,
+.ad_promo,
+.ad_slug_table,
+.ad_space,
+.ad_text,
+.ad_title,
+.ad_trick_header,
+.ad_wrap,
+.ad_wrapper,
+.ad_zone,
+.adarea,
+.adbanner,
+.adbar,
+.adbottom,
+.adbutton,
+.adcolumn,
+.adcont,
+.addiv,
+.adframe,
+.adheader,
+.adholder,
+.adinfo,
+.adlink,
+.adlist,
+.admain,
+.admiddle,
+.adright,
+.adrow1,
+.adrow2,
+.ads-area,
+.ads-col,
+.ads-header,
+.ads-holder,
+.ads-inline,
+.ads-item,
+.ads-section,
+.ads-title,
+.ads-top,
+.ads1,
+.adsBlock,
+.ads_catDiv,
+.ads_div,
+.ads_top,
+.ads_wrapper,
+.adsbottombox,
+.adsbox,
+.adsbygoogle,
+.adscontainer,
+.adshome,
+.adside,
+.adslot_blurred,
+.adspace,
+.adtile,
+.adtop,
+.adv_300,
+.advert-block,
+.advert-box,
+.advert-container,
+.advert-content,
+.advert-horizontal,
+.advert2,
+.advertColumn,
+.advertContainer,
+.advertLink,
+.advertText,
+.advert_container,
+.advert_list,
+.advertbox,
+.advertisement-1,
+.advertisement-swimlane,
+.advertiser,
+.advertising_block,
+.advertisment,
+.advertorial,
+.adverts,
+.adverttext,
+.adwords,
+.afs_ads,
+.after-post-ad,
+.article_ad,
+.banner-ads,
+.banner300,
+.bannerAd,
+.banner_728x90,
+.banner_ad,
+.bannerad,
+.block-ad,
+.blog-ads,
+.bottom-ad,
+.bottom-ads,
+.bottom-left-ad,
+.bottomAds,
+.bottom_ad_block,
+.box-ads,
+.boxad,
+.can_ad_slug,
+.category-ad,
+.change_AdContainer,
+.container_ad,
+.container_row_ad,
+.contentAd,
+.content_ads,
+.cp-adsInited,
+.displayAd,
+.featuredAdBox,
+.flash-advertisement,
+.footer-ad,
+.footer-ads,
+.footerad,
+.forumAd,
+.gallery-ad,
+.google-sponsored,
+.googleAdSense,
+.googleAds,
+.header-ad,
+.headerAd,
+.header_ad,
+.header_ad_center,
+.header_advert,
+.headerad,
+.headerads,
+.home-ad,
+.homeAd,
+.homead,
+.homepage-ad,
+.homepage_ads,
+.horizontal_ad,
+.image-advertisement,
+.imgad,
+.inner_ad,
+.innerad,
+.interstitial_ad_wrapper,
+.ipsAd,
+.item-container-ad,
+.leaderboard-ad,
+.leaderboard-ads,
+.leftAd,
+.leftad,
+.list-ad,
+.logo-ad,
+.marketing-ad,
+.mid_ad,
+.middle_AD,
+.module-ad,
+.newsAd,
+.oasad,
+.openx,
+.page_ad,
+.pfAd,
+.player_ad,
+.player_hover_ad,
+.pm-ad,
+.post-ad,
+.post_ad,
+.post_ads,
+.postad,
+.premiumAdOverlay,
+.premiumAdOverlayClose,
+.promoAd,
+.publicidad,
+.rbRectAd,
+.rectangle_ad,
+.refreshAds,
+.region-top-ad-position,
+.reklam,
+.reklama,
+.reportAdLink,
+.right-ad,
+.rightAd,
+.right_ad,
+.right_ads_column,
+.rightad,
+.rightadv,
+.sb_adsNv2,
+.searchAds,
+.searchad,
+.searchads,
+.showAd,
+.side-ad,
+.side-bar-ad-position1,
+.single-ad,
+.singleAd,
+.sky_ad,
+.skyscraperAd,
+.smallAd,
+.small_ad,
+.smallads,
+.sponsor-box,
+.sponsoredLinks,
+.sponsorlink,
+.text-ad,
+.textad,
+.textads,
+.top-ad,
+.topAds,
+.top_ad,
+.top_ad_div,
+.top_ad_wrap,
+.top_ads,
+.topads,
+.tower-ad,
+.type_ads_default,
+.wideAd,
+.withAds,
+.wp_bannerize,
+.yom-ad,
+a[href^="http://ad-emea.doubleclick.net/"],
+a[href^="http://ad.doubleclick.net/"],
+a[href^="http://adultfriendfinder.com/p/register.cgi?pid="],
+a[href^="http://marketgid.com/"],
+a[href^="http://mgid.com/"],
+a[href^="http://pubads.g.doubleclick.net/"],
+a[href^="http://us.marketgid.com/"],
+a[href^="http://www.fbooksluts.com/"],
+a[href^="http://www.fleshlight.com/"],
+a[href^="http://www.google.com/aclk?"],
+a[href^="http://www.liutilities.com/"],
+a[href^="http://www.socialsex.com/"],
+a[href^="http://www.yourfuckbook.com/?"],
+a[id^="mg_add"],
+div[id^="MarketGid"],
+div[id^="div-gpt-ad-"],
+iframe[src^="http://ad.yieldmanager.com/"]</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Read the Agreement Validator</title>
+		<link>/2011/02/read-the-agreement-validator/</link>
+				<pubDate>Fri, 04 Feb 2011 20:51:06 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[SEO]]></category>
+
+		<guid isPermaLink="false">/?p=175</guid>
+				<description><![CDATA[Recently a client wanted to have a user agreement added to an enrollment form. The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission. Once again, jQuery to the rescue! HTML jQuery JavaScript: I&#8217;m currently working on [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Recently a client wanted to have a user agreement added to an enrollment form.  The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission.  Once again, jQuery to the rescue!<span id="more-175"></span></p>
+<p>HTML</p>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;agreement&quot;&gt;
+  &lt;div class=&quot;agreement-inner&quot;&gt;
+    Content for agreement goes here...
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;agreement-agree&quot;&gt;
+  This is the stuff I want activated when the agreement has been read.
+&lt;/div&gt;
+</pre>
+<p>jQuery JavaScript:</p>
+<pre class="prettyprint linenums">
+$(&quot;.agreement&quot;).scroll(function() {
+  if ($(this).scrollTop() &gt;= ($('.agreement-inner',this).height() - $(this).height())) {
+    $('.agreement-agree').removeClass('disabled');
+    $('.agreement').unbind('scroll');
+    $('.agreement-agree').fadeTo(0,1);
+  }
+});
+</pre>
+<p>I&#8217;m currently working on deploying this to a generic jQuery plugin that will let you specify the content that needs to be scrolled through as well as the content should become enabled once that criteria is met.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>301 Redirection Codes</title>
+		<link>/2010/11/301-redirection-codes/</link>
+				<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[Classic ASP]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[301]]></category>
+		<category><![CDATA[asp]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[seo]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=52</guid>
+				<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
+<div>
+<h3>Redirect with .htaccess and Mod_Rewrite</h3>
+<p><span style="color: #000000; line-height: 23px;">301 Redirect: xyz-site.com to www.xyz-site.com</span></p>
+<p><code> RewriteEngine On<br />
+RewriteBase /<br />
+RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC]<br />
+RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] </code></p>
+<h4>301 Redirect: www.xyz-site.com to xyz-site.com</h4>
+<p><code> RewriteEngine On<br />
+RewriteBase /<br />
+RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC]<br />
+RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] </code></p>
+<h4>301 Redirect: Redirecting Individual pages</h4>
+<p><code> Redirect 301 /previous-page.html http://www.xyz-site.com/new-page.html </code></p>
+<p>* These scripts should be placed in the .htaccess file.</p>
+</div>
+<div>
+<h3>Redirect with PHP</h3>
+<p><code> &lt;?php<br />
+Header( "HTTP/1.1 301 Moved Permanently" );<br />
+Header( "Location: http://www.xyz-site.com/" );<br />
+exit(0);<br />
+?&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with classic ASP</h3>
+<p><code> &lt;@ Language=VBScript %&gt;<br />
+&lt;%<br />
+Response.Status="301 Moved Permanently" Response.AddHeader "Location",<br />
+" http://www.xyz-site.com/"<br />
+%&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with ASP.NET</h3>
+<p><code> &lt;script&gt;<br />
+private void Page_Load(object sender, System.EventArgs e)<br />
+{<br />
+Response.Status = "301 Moved Permanently";<br />
+Response.AddHeader("Location","http://www.xyz-site.com/");<br />
+}<br />
+&lt;/script&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with ColdFusion</h3>
+<p><code> &lt;cfheader statuscode="301" statustext="Moved permanently"&gt;<br />
+&lt;cfheader name="Location" value="http://www.new-xyz-site.com/"&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with Perl</h3>
+<p>[perl]<br />
+$q = new CGI;<br />
+print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
+[/perl]</p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>CSS Reset Techniques</title>
+		<link>/2010/10/css-reset-techniques/</link>
+				<pubDate>Sat, 30 Oct 2010 04:25:34 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[SEO]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=42</guid>
+				<description><![CDATA[Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences). The Ins and Outs of CSS Resets Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script. The [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences).</p>
+<p><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg257960.aspx" target="_blank">The Ins and Outs of CSS Resets</a></p>
+<p>Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script.  The project is here:</p>
+<p><a href="http://code.google.com/p/reset5/" target="_blank">http://code.google.com/p/reset5/</a><span id="more-42"></span></p>
+<p>And the hosted code includes this:</p>
+<p>[sourcecode lang=&#8221;css&#8221;]/*</p>
+<p>HTML5 CSS Reset<br />
+Based on Eric Meyer&#8217;s CSS Reset<br />
+and html5doctor.com HTML5 Reset</p>
+<p>Copyright (c) 2010 736 Computing Services Limited<br />
+Released under the MIT license. http://736cs.com/mit-license.php?2010</p>
+<p>*/</p>
+<p>html, body, div, span, applet, object, iframe,<br />
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,<br />
+a, abbr, acronym, address, big, cite, code,<br />
+del, dfn, em, font, img, ins, kbd, q, s, samp,<br />
+small, strike, strong, sub, sup, tt, var,<br />
+b, i, center, dl, dt, dd, ol, ul, li,<br />
+fieldset, form, label, legend,<br />
+table, caption, tbody, tfoot, thead, tr, th, td,<br />
+article, aside, audio, canvas, details, figcaption,<br />
+figure, footer, header, hgroup, mark, menu, meter, nav,<br />
+output, progress, section, summary, time, video {<br />
+	margin: 0;<br />
+	padding: 0;<br />
+	border: 0;<br />
+	outline: 0;<br />
+	font-size: 100%;<br />
+	vertical-align: baseline;<br />
+	background: transparent;<br />
+}</p>
+<p>body {<br />
+	line-height: 1;<br />
+}</p>
+<p>article, aside, dialog, figure, footer, header,<br />
+hgroup, nav, section, blockquote {<br />
+	display: block;<br />
+}</p>
+<p>nav ul {<br />
+	list-style: none;<br />
+}</p>
+<p>ol {<br />
+	list-style: decimal;<br />
+}</p>
+<p>ul {<br />
+	list-style: disc;<br />
+}</p>
+<p>ul ul {<br />
+	list-style: circle;<br />
+}</p>
+<p>blockquote, q {<br />
+	quotes: none;<br />
+}</p>
+<p>blockquote:before, blockquote:after,<br />
+q:before, q:after {<br />
+	content: &#8221;;<br />
+	content: none;<br />
+}</p>
+<p>ins {<br />
+	text-decoration: underline;<br />
+}</p>
+<p>del {<br />
+	text-decoration: line-through;<br />
+}</p>
+<p>mark {<br />
+	background: none;<br />
+}</p>
+<p>abbr[title], dfn[title] {<br />
+	border-bottom:1px dotted #000;<br />
+	cursor:help;<br />
+}</p>
+<p>/* tables still need &#8216;cellspacing=&quot;0&quot;&#8217; in the markup */<br />
+table {<br />
+	border-collapse: collapse;<br />
+	border-spacing: 0;<br />
+}</p>
+<p>hr {<br />
+	display: block;<br />
+	height: 1px;<br />
+	border: 0;<br />
+	border-top: 1px solid #ccc;<br />
+	margin: 1em 0;<br />
+	padding: 0;<br />
+}</p>
+<p>input[type=&quot;submit&quot;], input[type=&quot;button&quot;], button {<br />
+    padding: 0 !important;<br />
+    margin: 0 !important;<br />
+}</p>
+<p>input, select, a img {<br />
+	vertical-align: middle;<br />
+}[/sourcecode]</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>jQuery &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/development/jquery/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Fri, 20 Apr 2018 13:08:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>List variation SKUs within the WooCommerce product edit screen</title>
+		<link>/2016/05/list-variation-skus-within-woocommerce-product-edit-screen/</link>
+				<pubDate>Wed, 04 May 2016 16:03:21 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=655</guid>
+				<description><![CDATA[This snippet will replace the existing post ID displayed in the WooCommerce product edit screen with the variation&#8217;s SKU if one exists. Often times the variation SKU is far more useful to an admin than the internal WordPress post ID so having it displayed on the edit screen makes the administration process much easier.]]></description>
+								<content:encoded><![CDATA[<p>This snippet will replace the existing post ID displayed in the WooCommerce product edit screen with the variation&#8217;s SKU if one exists. Often times the variation SKU is far more useful to an admin than the internal WordPress post ID so having it displayed on the edit screen makes the administration process much easier.</p>
+<p><a href="/media/woocommerce-sku-snippet.png"><img class="alignnone size-full wp-image-656" src="/media/woocommerce-sku-snippet.png" alt="woocommerce-sku-snippet" width="650" height="272" srcset="/media/woocommerce-sku-snippet.png 650w, /media/woocommerce-sku-snippet-580x243.png 580w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<script src="https://gist.github.com/hereswhatidid/88ffd83eb2e2840c43e589f30f335b4f.js"></script>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Customize ACF WYSIWYG Input Styles</title>
+		<link>/2015/08/customize-acf-wysiwyg-input-styles/</link>
+				<pubDate>Thu, 13 Aug 2015 03:29:27 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=614</guid>
+				<description><![CDATA[Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the ability to specify a body class for the WYSIWYG editor&#8217;s iframed body tag. (a prototype solution has been developed) Thankfully, ACF does have a JavaScript filter available that allows us to directly modify those classes, and with a little trickery, we can use the field options to give our WYSIWYG fields unique classes and thus styles.</p>
+<p>The filter that is used for this example is &#8216;<a href="http://www.advancedcustomfields.com/resources/adding-custom-javascript-fields/" target="_blank">wysiwyg_tinymce_settings</a>&#8216;. This filter makes it possible to edit the TinyMCE  settings immediately before the field is initialized. What I decided to do was to make use of the existing CSS wrapper field in the ACF admin:</p>
+<p><a href="/media/hwid-acf-wysiwyg-body-class.png"><img class="alignnone wp-image-616 size-medium" src="/media/hwid-acf-wysiwyg-body-class-580x195.png" alt="ACF WYSIWYG Class Input" width="580" height="195" srcset="/media/hwid-acf-wysiwyg-body-class-580x195.png 580w, /media/hwid-acf-wysiwyg-body-class.png 812w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
+<p>Then, using the previously mentioned filter, I grab those values and apply them to the WYSIWYG editor&#8217;s iframe body tag:</p>
+<p><script src="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d.js?file=custom-acf-wysiwyg-css.php"></script></p>
+<p>Now, if I specify the correct class names within my &#8216;editor-styles.css&#8217; file, the editor will get the custom styling I&#8217;ve set.</p>
+<p><img class="alignnone wp-image-617 size-full" src="/media/hwid-acf-wysiwyg-example.png" alt="ACF Custom WYSIWYG CSS Example" width="691" height="503" srcset="/media/hwid-acf-wysiwyg-example.png 691w, /media/hwid-acf-wysiwyg-example-580x422.png 580w" sizes="(max-width: 691px) 100vw, 691px" /></p>
+<p>Now I can easily style all the ACF WYSIWYG fields in my admin so that they exactly reflect how the content will look on the front end.</p>
+<p>The full code is <a href="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d" target="_blank">available on Github</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Move Gravity Forms jQuery calls to footer</title>
+		<link>/2013/01/move-gravity-forms-jquery-calls-to-footer/</link>
+				<pubDate>Thu, 10 Jan 2013 22:31:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=365</guid>
+				<description><![CDATA[Gravity Forms by default will write an inline JavaScript call to jQuery on every form you add to a page.  This will throw an error if you&#8217;re loading jQuery in the footer of your site (which you should be doing).  This is the error: Uncaught ReferenceError: jQuery is not defined There&#8217;s an extremely hidden bit [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Gravity Forms by default will write an inline JavaScript call to jQuery on every form you add to a page.  This will throw an error if you&#8217;re loading jQuery in the footer of your site (which you should be doing).  This is the error:</p>
+<p>Uncaught ReferenceError: jQuery is not defined</p>
+<p>There&#8217;s an extremely hidden bit of documentation on how to override this behavior here:</p>
+<pre class="prettyprint linenums">
+&lt;?php
+add_filter("gform_init_scripts_footer", "init_scripts");
+function init_scripts() {
+return true;
+}
+?&gt;
+</pre>
+<p>This code should be placed within your theme&#8217;s functions.php file.</p>
+<p><a href="http://www.gravityhelp.com/documentation/page/Gform_init_scripts_footer" target="_blank">http://www.gravityhelp.com/documentation/page/Gform_init_scripts_footer</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Google News style floating sidebar</title>
+		<link>/2011/02/google-news-style-floating-sidebar/</link>
+				<comments>/2011/02/google-news-style-floating-sidebar/#comments</comments>
+				<pubDate>Mon, 28 Feb 2011 03:34:09 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">/?p=244</guid>
+				<description><![CDATA[I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire navigation vertically, when you mouseover the navigation area a set of vertical scroll bars appears.  After a little digging it turns out they did this with a combination of CSS and JavaScript.  Here&#8217;s a simple demo I&#8217;ve set up that illustrates how I believe they achieved the effect.</p>
+<p><span id="more-244"></span><br />
+Initially, the sidebar area is set to a non-fixed position.  In my example I&#8217;m just floating it to the left of the main content area.  It also has overflow set to hidden.  Here is the CSS for the sidebar:</p>
+<pre class="prettyprint linenums">
+&lt;style type="text/css"&gt;
+#sidebar { float: left; width: 180px; margin: 10px 0 0 0; font-size: 11px; line-height: 15px; }
+#sidebar #pinned { width: 180px; height: 100%; overflow-y: hidden; }
+#sidebar #pinned.pin-set { position: fixed; height: 100%; top: 0px; z-index: 99; }
+#sidebar:hover #pinned { overflow-y: auto !important; }
+&lt;/style&gt;
+</pre>
+<p>The pin-set class is what I&#8217;ll apply to the sidebar content area (#pinned) when the user scrolls far enough down that the header is covered.  Here is the JavaScript required for that effect.  I&#8217;m using jQuery for simplicity of selectors and events:</p>
+<pre class="prettyprint linenums">
+&lt;script type="text/javascript"&gt;
+(function($) {
+$(function() {
+var int_sideheight = $(window).height() - $('#header').height() - 10;
+$('#pinned').css('height',int_sideheight+'px');
+$(window).scroll(function() {
+if ($(this).scrollTop() &gt; $('#header').height()) {
+$('#pinned').addClass('pin-set').css('height','100%');
+} else {
+var int_sideheight = $(window).height() - $('#header').height() - 10;
+$('#pinned').removeClass('pin-set').css('height',int_sideheight+'px');
+}
+});
+});
+})(jQuery);
+&lt;/script&gt;
+</pre>
+<p>What I&#8217;m doing is checking to seel when the scrollTop() is greater than the height of the header area. If it is, then apply that pin-set class to the sidebar navigation area.  If it isn&#8217;t, I&#8217;m clearing the class so that the sidebar area will always remain below the header area.  The mouseover scroll bar effect is purely CSS-driven.</p>
+<p><a href="/coding/fixedsidebar/sidebar.php" target="_blank">View a working demo of this code here.</a></p>
+]]></content:encoded>
+							<wfw:commentRss>/2011/02/google-news-style-floating-sidebar/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Using jQuery to find elements that contain a specific text string</title>
+		<link>/2011/02/using-jquery-to-find-elements-that-contain-a-specific-text-string/</link>
+				<pubDate>Wed, 23 Feb 2011 22:31:31 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">/?p=241</guid>
+				<description><![CDATA[This snippet of code uses the .filter() function within jQuery to find all &#8220;li&#8221; elements that contain just the text &#8220;findthis&#8221;.]]></description>
+								<content:encoded><![CDATA[<p>This snippet of code uses the .filter() function within jQuery to find all &#8220;li&#8221; elements that contain just the text &#8220;findthis&#8221;.</p>
+<pre class="prettyprint linenums">
+$('li:contains(&quot;findthis&quot;)').filter(function() {
+  return $(this).text() == &quot;findthis&quot;;
+}).addClass('active');
+</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Read the Agreement Validator</title>
+		<link>/2011/02/read-the-agreement-validator/</link>
+				<pubDate>Fri, 04 Feb 2011 20:51:06 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[SEO]]></category>
+
+		<guid isPermaLink="false">/?p=175</guid>
+				<description><![CDATA[Recently a client wanted to have a user agreement added to an enrollment form. The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission. Once again, jQuery to the rescue! HTML jQuery JavaScript: I&#8217;m currently working on [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Recently a client wanted to have a user agreement added to an enrollment form.  The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission.  Once again, jQuery to the rescue!<span id="more-175"></span></p>
+<p>HTML</p>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;agreement&quot;&gt;
+  &lt;div class=&quot;agreement-inner&quot;&gt;
+    Content for agreement goes here...
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;agreement-agree&quot;&gt;
+  This is the stuff I want activated when the agreement has been read.
+&lt;/div&gt;
+</pre>
+<p>jQuery JavaScript:</p>
+<pre class="prettyprint linenums">
+$(&quot;.agreement&quot;).scroll(function() {
+  if ($(this).scrollTop() &gt;= ($('.agreement-inner',this).height() - $(this).height())) {
+    $('.agreement-agree').removeClass('disabled');
+    $('.agreement').unbind('scroll');
+    $('.agreement-agree').fadeTo(0,1);
+  }
+});
+</pre>
+<p>I&#8217;m currently working on deploying this to a generic jQuery plugin that will let you specify the content that needs to be scrolled through as well as the content should become enabled once that criteria is met.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Ajax Autocomplete jQuery Plugin</title>
+		<link>/2010/10/ajax-autocomplete-jquery-plugin/</link>
+				<pubDate>Fri, 29 Oct 2010 02:01:44 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=40</guid>
+				<description><![CDATA[This is a nice little plugin for easily adding auto-complete functionality to form fields. All it looks for is a datasource formatted as JSON. I&#8217;ve put an example here using PHP to access a dinosaur name database returning the previously stored values. /coding/autocomplete/ The project site is here: http://jqueryui.com/demos/autocomplete/ jQuery Code: [sourcecode lang=&#8221;javascript&#8221;](function($) { $(function() [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>This is a nice little plugin for easily adding auto-complete functionality to form fields.  All it looks for is a datasource formatted as JSON.  I&#8217;ve put an example here using PHP to access a dinosaur name database returning the previously stored values.</p>
+<p><a href="/coding/autocomplete/" target="_blank">/coding/autocomplete/</a></p>
+<p>The project site is here: <a href="http://jqueryui.com/demos/autocomplete/">http://jqueryui.com/demos/autocomplete/</a></p>
+<p>jQuery Code:</p>
+<p>[sourcecode lang=&#8221;javascript&#8221;](function($) {<br />
+	$(function() {<br />
+		$( &#8216;#s&#8217; ).autocomplete({<br />
+			source: &#8216;tags.php&#8217;,<br />
+			minLength: 2<br />
+		});<br />
+	});<br />
+})(jQuery);[/sourcecode]</p>
+<p>PHP for JSON Remote Data:</p>
+<p>[sourcecode lang=&#8221;php&#8221;]$return_arr = array();</p>
+<p>$dbhost = &#8216;hostname&#8217;;<br />
+$dbuser = &#8216;username&#8217;;<br />
+$dbpass = &#8216;password&#8217;;<br />
+$dbname = &#8216;databasename&#8217;;</p>
+<p>$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die (&#8216;Error connecting to database&#8217;);<br />
+mysql_select_db($dbname);<br />
+if ($conn) {<br />
+	$fetch = mysql_query(&quot;SELECT * FROM `sample-dinosaurs` WHERE DinoName LIKE &#8216;%&quot;.$_GET[&#8216;term&#8217;].&quot;%&#8217;&quot;);<br />
+	while ($row = mysql_fetch_array($fetch, MYSQL_ASSOC)) {<br />
+		$row_array[&#8216;label&#8217;] = $row[&#8216;DinoName&#8217;];<br />
+    array_push($return_arr,$row_array);<br />
+  }<br />
+}<br />
+mysql_close($conn);<br />
+echo json_encode($return_arr);[/sourcecode]</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>jQuery data function speed variations</title>
+		<link>/2010/10/jquery-data-function-speed-variations/</link>
+				<pubDate>Tue, 12 Oct 2010 02:01:19 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=38</guid>
+				<description><![CDATA[It&#8217;s always worth looking up a function that you may be using heavily to see if there&#8217;s a faster way to call it. For example, getting and setting variables using the data() function within jQuery can vary greatly depending on how you call it. Here&#8217;s a site that compares the speed differences in various browsers: [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>It&#8217;s always worth looking up a function that you may be using heavily to see if there&#8217;s a faster way to call it. For example, getting and setting variables using the data() function within jQuery can vary greatly depending on how you call it. Here&#8217;s a site that compares the speed differences in various browsers:</p>
+<p><a href="http://jsperf.com/jquery-data-vs-jqueryselection-data">http://jsperf.com/jquery-data-vs-jqueryselection-data</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Use Google Closure to minify your .js</title>
+		<link>/2010/10/use-google-closure-to-minify-your-js/</link>
+				<pubDate>Thu, 07 Oct 2010 01:59:04 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=35</guid>
+				<description><![CDATA[Have a large .js file that you&#8217;d like to bring down to size? Check out the Google-hosted Closure compiler: http://closure-compiler.appspot.com/home It let&#8217;s you specify some basic rules for the compression as well as creates the actual resulting .js file if you don&#8217;t want to bother with copy/paste for the results.]]></description>
+								<content:encoded><![CDATA[<p>Have a large .js file that you&#8217;d like to bring down to size?  Check out the Google-hosted Closure compiler:</p>
+<p><a href="http://closure-compiler.appspot.com/home">http://closure-compiler.appspot.com/home</a></p>
+<p>It let&#8217;s you specify some basic rules for the compression as well as creates the actual resulting .js file if you don&#8217;t want to bother with copy/paste for the results.</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

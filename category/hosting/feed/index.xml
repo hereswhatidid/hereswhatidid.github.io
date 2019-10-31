@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Hosting &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/hosting/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Mon, 16 Mar 2015 18:46:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error</title>
+		<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
+				<comments>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
+				<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[BackupBuddy]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[GoDaddy]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[ImportBuddy]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=586</guid>
+				<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
+<pre>ERROR #83893a: unable to decode JSON restore data ``. Restore halted.</pre>
+<p>Here are a couple steps you can follow to diagnose the issue:</p>
+<ol>
+<li><strong>Verify the source of the issue &#8211; </strong>Look in your browser&#8217;s debug console and check for something like &#8220;Uncaught TypeError: undefined is not a function&#8221;. Jump to the source of the error.  In my case it was the &#8220;.on()&#8221; function not being declared.  This is a dead giveaway that something wonky is going on with the loaded version of jQuery.</li>
+<li><strong>Check the loaded version of jQuery &#8211;</strong> Run this code in your debug console to verify the current version:
+<pre>jQuery.fn.jquery</pre>
+<p>If that returns anything below 1.11.x you are viewing an old version of the jQuery library.  You can double check this by browsing directly to the included jquery.js file.  The URL should be something like: http://YOURSITEURL/importbuddy/js/jquery.js</li>
+<li><strong>Check the loaded version of jQueryUI Tooltip &#8211;</strong> This was another script that was loading improperly for me as well.  Browse directly to the tooltip.js file by using a URL like: http://YOURSITEURL/importbuddy/js/tooltip.js</li>
+</ol>
+<p>What appears to be causing these issues is the hosting provider has a cached version of those specific files and is serving that rather than the actual files on your server.</p>
+<p>One possible workaround is to start the ImportBuddy process and clear the site&#8217;s cache after the /importbuddy/ directory has been created during the first step of the import process but before it has restored any files.  This can be tricky since ImportBuddy will put your site in to maintenance mode once it starts so you&#8217;ll have to delete the &#8220;.maintenance&#8221; file if your hosting provider requires you to be logged in to WordPress in order to clear the cache (this is the case with GoDaddy Managed WordPress hosting).  After you&#8217;ve cleared the cache, restart the import process and verify that the correct files are now showing up.</p>
+<p>If clearing the cache does not fix it there&#8217;s a more heavy-handed fix that will work but requires editing the ImportBuddy code:</p>
+<ol>
+<li><strong>Change the plugin version &#8211;</strong> Changing the plugin version to a much higher number will also cause the server to not use the cached version.  You can do this by opening the &#8216;/importbuddy/init.php&#8217; file on your destination server and set the version declaration to something like 55555.  Once you&#8217;ve done this, restart the ImportBuddy process and verify that the scripts are loading correctly.</li>
+</ol>
+]]></content:encoded>
+							<wfw:commentRss>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>Windows batch file for getting the latest WordPress core files</title>
+		<link>/2013/09/windows-batch-file-for-getting-the-latest-wordpress-core-files/</link>
+				<pubDate>Tue, 03 Sep 2013 02:51:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=479</guid>
+				<description><![CDATA[I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following: Uses wget to download the latest version of WordPress. (http://wordpress.org/latest.tar.gz) Unzips the .tar.gz and .tar to a /wordpress subdirectory using 7zip Uses ROBOCOPY to move those resulting files up to the current directory and [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following:</p>
+<ol>
+<li>Uses <a href="http://www.alexlomas.com/blog/2005/08/64_bit_wget_for_windows/" target="_blank">wget </a>to download the latest version of WordPress. (<a href="http://wordpress.org/latest.tar.gz" target="_blank">http://wordpress.org/latest.tar.gz</a>)</li>
+<li>Unzips the .tar.gz and .tar to a /wordpress subdirectory using <a href="http://www.7-zip.org/" target="_blank">7zip</a></li>
+<li>Uses ROBOCOPY to move those resulting files up to the current directory and delete the unneeded /wordpress directory.</li>
+<li>Deletes the .tar.gz and .tar core files.</li>
+<li>Renames wp-config-sample.php to wp-config.php.</li>
+</ol>
+<p>Save these commands in a .bat file or just run them directly in the command window from the directory you&#8217;d like to download the WordPress core files to:</p>
+<pre>wget64 http://wordpress.org/latest.tar.gz
+7z e latest.tar.gz &amp; 7z x latest.tar
+robocopy wordpress ./ /MOVE /E
+del latest.tar
+del latest.tar.gz
+ren wp-config-sample.php wp-config.php</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>301 Redirection Codes</title>
+		<link>/2010/11/301-redirection-codes/</link>
+				<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[Classic ASP]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[301]]></category>
+		<category><![CDATA[asp]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[seo]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=52</guid>
+				<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
+<div>
+<h3>Redirect with .htaccess and Mod_Rewrite</h3>
+<p><span style="color: #000000; line-height: 23px;">301 Redirect: xyz-site.com to www.xyz-site.com</span></p>
+<p><code> RewriteEngine On<br />
+RewriteBase /<br />
+RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC]<br />
+RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] </code></p>
+<h4>301 Redirect: www.xyz-site.com to xyz-site.com</h4>
+<p><code> RewriteEngine On<br />
+RewriteBase /<br />
+RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC]<br />
+RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] </code></p>
+<h4>301 Redirect: Redirecting Individual pages</h4>
+<p><code> Redirect 301 /previous-page.html http://www.xyz-site.com/new-page.html </code></p>
+<p>* These scripts should be placed in the .htaccess file.</p>
+</div>
+<div>
+<h3>Redirect with PHP</h3>
+<p><code> &lt;?php<br />
+Header( "HTTP/1.1 301 Moved Permanently" );<br />
+Header( "Location: http://www.xyz-site.com/" );<br />
+exit(0);<br />
+?&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with classic ASP</h3>
+<p><code> &lt;@ Language=VBScript %&gt;<br />
+&lt;%<br />
+Response.Status="301 Moved Permanently" Response.AddHeader "Location",<br />
+" http://www.xyz-site.com/"<br />
+%&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with ASP.NET</h3>
+<p><code> &lt;script&gt;<br />
+private void Page_Load(object sender, System.EventArgs e)<br />
+{<br />
+Response.Status = "301 Moved Permanently";<br />
+Response.AddHeader("Location","http://www.xyz-site.com/");<br />
+}<br />
+&lt;/script&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with ColdFusion</h3>
+<p><code> &lt;cfheader statuscode="301" statustext="Moved permanently"&gt;<br />
+&lt;cfheader name="Location" value="http://www.new-xyz-site.com/"&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with Perl</h3>
+<p>[perl]<br />
+$q = new CGI;<br />
+print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
+[/perl]</p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>CSS Reset Techniques</title>
+		<link>/2010/10/css-reset-techniques/</link>
+				<pubDate>Sat, 30 Oct 2010 04:25:34 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[SEO]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=42</guid>
+				<description><![CDATA[Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences). The Ins and Outs of CSS Resets Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script. The [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences).</p>
+<p><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg257960.aspx" target="_blank">The Ins and Outs of CSS Resets</a></p>
+<p>Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script.  The project is here:</p>
+<p><a href="http://code.google.com/p/reset5/" target="_blank">http://code.google.com/p/reset5/</a><span id="more-42"></span></p>
+<p>And the hosted code includes this:</p>
+<p>[sourcecode lang=&#8221;css&#8221;]/*</p>
+<p>HTML5 CSS Reset<br />
+Based on Eric Meyer&#8217;s CSS Reset<br />
+and html5doctor.com HTML5 Reset</p>
+<p>Copyright (c) 2010 736 Computing Services Limited<br />
+Released under the MIT license. http://736cs.com/mit-license.php?2010</p>
+<p>*/</p>
+<p>html, body, div, span, applet, object, iframe,<br />
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,<br />
+a, abbr, acronym, address, big, cite, code,<br />
+del, dfn, em, font, img, ins, kbd, q, s, samp,<br />
+small, strike, strong, sub, sup, tt, var,<br />
+b, i, center, dl, dt, dd, ol, ul, li,<br />
+fieldset, form, label, legend,<br />
+table, caption, tbody, tfoot, thead, tr, th, td,<br />
+article, aside, audio, canvas, details, figcaption,<br />
+figure, footer, header, hgroup, mark, menu, meter, nav,<br />
+output, progress, section, summary, time, video {<br />
+	margin: 0;<br />
+	padding: 0;<br />
+	border: 0;<br />
+	outline: 0;<br />
+	font-size: 100%;<br />
+	vertical-align: baseline;<br />
+	background: transparent;<br />
+}</p>
+<p>body {<br />
+	line-height: 1;<br />
+}</p>
+<p>article, aside, dialog, figure, footer, header,<br />
+hgroup, nav, section, blockquote {<br />
+	display: block;<br />
+}</p>
+<p>nav ul {<br />
+	list-style: none;<br />
+}</p>
+<p>ol {<br />
+	list-style: decimal;<br />
+}</p>
+<p>ul {<br />
+	list-style: disc;<br />
+}</p>
+<p>ul ul {<br />
+	list-style: circle;<br />
+}</p>
+<p>blockquote, q {<br />
+	quotes: none;<br />
+}</p>
+<p>blockquote:before, blockquote:after,<br />
+q:before, q:after {<br />
+	content: &#8221;;<br />
+	content: none;<br />
+}</p>
+<p>ins {<br />
+	text-decoration: underline;<br />
+}</p>
+<p>del {<br />
+	text-decoration: line-through;<br />
+}</p>
+<p>mark {<br />
+	background: none;<br />
+}</p>
+<p>abbr[title], dfn[title] {<br />
+	border-bottom:1px dotted #000;<br />
+	cursor:help;<br />
+}</p>
+<p>/* tables still need &#8216;cellspacing=&quot;0&quot;&#8217; in the markup */<br />
+table {<br />
+	border-collapse: collapse;<br />
+	border-spacing: 0;<br />
+}</p>
+<p>hr {<br />
+	display: block;<br />
+	height: 1px;<br />
+	border: 0;<br />
+	border-top: 1px solid #ccc;<br />
+	margin: 1em 0;<br />
+	padding: 0;<br />
+}</p>
+<p>input[type=&quot;submit&quot;], input[type=&quot;button&quot;], button {<br />
+    padding: 0 !important;<br />
+    margin: 0 !important;<br />
+}</p>
+<p>input, select, a img {<br />
+	vertical-align: middle;<br />
+}[/sourcecode]</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

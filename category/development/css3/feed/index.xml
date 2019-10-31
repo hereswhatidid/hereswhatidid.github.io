@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CSS3 &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/development/css3/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Tue, 18 Mar 2014 17:27:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Use Bootstrap 3+ styles within the WordPress admin</title>
+		<link>/2014/02/use-bootstrap-3-styles-within-the-wordpress-admin/</link>
+				<pubDate>Sun, 16 Feb 2014 16:29:32 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=525</guid>
+				<description><![CDATA[In previous versions of Bootstrap it was a one-step process to localize it to a container element. This would allow you to use Bootstrap within the WordPress admin and not affect the rest of the built-in WordPress styles. After version 3 of Bootstrap this method no longer works as Bootstrap started using more descendant selectors [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>In previous versions of Bootstrap it was a one-step process to localize it to a container element. This would allow you to use Bootstrap within the WordPress admin and not affect the rest of the built-in WordPress styles.</p>
+<script src="https://gist.github.com/hereswhatidid/9036684.js"></script>
+<p>After version 3 of Bootstrap this method no longer works as Bootstrap started using more descendant selectors that do not translate properly when just wrapped in a container.  Fortunately, the workaround is fairly simple.  First, with this method we need to use the output CSS from Bootstrap rather than the LESS files.  Then, when importing it we pass the <a href="http://lesscss.org/features/#import-options-less" target="_blank">(less) option</a> to force our LESS file to process the imported CSS as though it were also LESS.  This generates the correct class names to constrain your Bootstrap styles to a designated element without affecting the rest of the page.</p>
+<script src="https://gist.github.com/hereswhatidid/9029915.js"></script>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Update: CSS3 Pie still pretty rough</title>
+		<link>/2011/06/update-css3-pie-still-pretty-rough/</link>
+				<pubDate>Fri, 24 Jun 2011 19:19:22 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[IE]]></category>
+
+		<guid isPermaLink="false">/?p=259</guid>
+				<description><![CDATA[After attempting to use the CSS3 Pie method for achieving some CSS3 support in IE browsers I&#8217;ve unfortunately come to the conclusion that it is still far too buggy for any kind of use other than for testing or demonstrations.  It has a pretty significant issue with the way that IE8 and lower hand page [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>After attempting to use the CSS3 Pie method for achieving some CSS3 support in IE browsers I&#8217;ve unfortunately come to the conclusion that it is still far too buggy for any kind of use other than for testing or demonstrations.  It has a pretty significant issue with the way that IE8 and lower hand page zooming in that any background image that you have will remain at it&#8217;s fixed size and simply tile.  <span id="more-259"></span>Here&#8217;s a screenshot showing what my tabbed quotes example looks like after zooming:</p>
+<p><img class="alignnone size-full wp-image-260" title="IE Tiling Background Zoom Bug" src="/wp-content/uploads/2011/06/css3-pie-tile-bug.png" alt="" width="590" height="343" srcset="/media/2011/06/css3-pie-tile-bug.png 590w, /media/2011/06/css3-pie-tile-bug-580x337.png 580w" sizes="(max-width: 590px) 100vw, 590px" /></p>
+<p>Here are a few other issues that I&#8217;ve run into as well:</p>
+<ol>
+<li><strong>Noticeable delay on style rendering when page first loads.</strong> When you first load a page using the CSS3 Pie fix there is a small delay before those CSS3 properties are put in place.  This delay increases with every element that has some type of CSS3 style applied to it.  So if you wanted to round the corners on 100 divs on a single page you could be seeing nearly a full half-second delay before those are rendered on the screen.  It appears to be affected purely by machine speed so even people with a very fast internet connection will experience a delay unless they&#8217;re on a powerful machine.</li>
+<li><strong>Many &#8220;position: relative&#8221; hacks required on more complex layouts.</strong> The more complex your styling gets the more you have to utilize the &#8220;position: relative&#8221; fix that is recommended on their site to trigger the proper layout method in IE.  This becomes extremely cumbersome as you go on with a layout as it isn&#8217;t necessarily used in the same elements every time, which leads to a lot of wasted time hunting down the particular element which needs the style applied to it.</li>
+<li><strong>Sometimes it just doesn&#8217;t work.</strong> Occasionally a page will load and the CSS3 Pie will not load at all this leaving it in the default styles.  This happens infrequently but the fact that it happens at all seals the deal on whether or not I would feel safe using this method for anything other than a proof of concept or demonstration site.</li>
+</ol>
+<p>I&#8217;m sure the problems with CSS3 Pie are purely related to having to work around the huge amount of shortcomings within the IE browser and I applaud the author for getting it this far.  For now, though, I would still recommend against using this for any type of production work.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Google News style floating sidebar</title>
+		<link>/2011/02/google-news-style-floating-sidebar/</link>
+				<comments>/2011/02/google-news-style-floating-sidebar/#comments</comments>
+				<pubDate>Mon, 28 Feb 2011 03:34:09 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">/?p=244</guid>
+				<description><![CDATA[I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire navigation vertically, when you mouseover the navigation area a set of vertical scroll bars appears.  After a little digging it turns out they did this with a combination of CSS and JavaScript.  Here&#8217;s a simple demo I&#8217;ve set up that illustrates how I believe they achieved the effect.</p>
+<p><span id="more-244"></span><br />
+Initially, the sidebar area is set to a non-fixed position.  In my example I&#8217;m just floating it to the left of the main content area.  It also has overflow set to hidden.  Here is the CSS for the sidebar:</p>
+<pre class="prettyprint linenums">
+&lt;style type="text/css"&gt;
+#sidebar { float: left; width: 180px; margin: 10px 0 0 0; font-size: 11px; line-height: 15px; }
+#sidebar #pinned { width: 180px; height: 100%; overflow-y: hidden; }
+#sidebar #pinned.pin-set { position: fixed; height: 100%; top: 0px; z-index: 99; }
+#sidebar:hover #pinned { overflow-y: auto !important; }
+&lt;/style&gt;
+</pre>
+<p>The pin-set class is what I&#8217;ll apply to the sidebar content area (#pinned) when the user scrolls far enough down that the header is covered.  Here is the JavaScript required for that effect.  I&#8217;m using jQuery for simplicity of selectors and events:</p>
+<pre class="prettyprint linenums">
+&lt;script type="text/javascript"&gt;
+(function($) {
+$(function() {
+var int_sideheight = $(window).height() - $('#header').height() - 10;
+$('#pinned').css('height',int_sideheight+'px');
+$(window).scroll(function() {
+if ($(this).scrollTop() &gt; $('#header').height()) {
+$('#pinned').addClass('pin-set').css('height','100%');
+} else {
+var int_sideheight = $(window).height() - $('#header').height() - 10;
+$('#pinned').removeClass('pin-set').css('height',int_sideheight+'px');
+}
+});
+});
+})(jQuery);
+&lt;/script&gt;
+</pre>
+<p>What I&#8217;m doing is checking to seel when the scrollTop() is greater than the height of the header area. If it is, then apply that pin-set class to the sidebar navigation area.  If it isn&#8217;t, I&#8217;m clearing the class so that the sidebar area will always remain below the header area.  The mouseover scroll bar effect is purely CSS-driven.</p>
+<p><a href="/coding/fixedsidebar/sidebar.php" target="_blank">View a working demo of this code here.</a></p>
+]]></content:encoded>
+							<wfw:commentRss>/2011/02/google-news-style-floating-sidebar/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Use CSS3 PIE for enabling CSS3 in IE</title>
+		<link>/2011/02/use-css3-pie-for-enabling-css3-in-ie/</link>
+				<comments>/2011/02/use-css3-pie-for-enabling-css3-in-ie/#comments</comments>
+				<pubDate>Sat, 12 Feb 2011 14:44:45 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[IE]]></category>
+
+		<guid isPermaLink="false">/?p=191</guid>
+				<description><![CDATA[I recently ran across this Internet Explorer CSS3 workaround that uses a HTC file to solve the majority of my CSS3 woes when it comes to developing cross-browser layouts.  Rounded corners, drop shadows, gradients, rgba, multiple backgrounds and even PNG transparency support are all solved with a simple (mostly simple) bit of CSS and the [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>I recently ran across this Internet Explorer CSS3 workaround that uses a HTC file to solve the majority of my CSS3 woes when it comes to developing cross-browser layouts.  Rounded corners, drop shadows, gradients, rgba, multiple backgrounds and even PNG transparency support are all solved with a simple (mostly simple) bit of CSS and the HTC file they&#8217;ve developed.<span id="more-191"></span>The official site for this fix is here:</p>
+<p><a href="http://css3pie.com/" target="_blank">http://css3pie.com/</a>/</p>
+<p>I&#8217;ve set up a working demo of the code described below here:</p>
+<p><a href="/coding/csspie/csspie.html" target="_blank">View Demo</a></p>
+<p><a href="/codind/csspie/csspie-tabs.zip">Download Source Files</a></p>
+<p>I tried this out on a new project that involved creating a tab-style content box with rounded corners.  Normally this would involve either using image sprites or living with the fact that IE-based browsers will not be able to render the corners as the designer wanted them.</p>
+<p>Here&#8217;s a screenshot of the basic tabbed content boxes as they are rendered in Internet Explorer 6 and Internet Explorer 7/8.  I lumped 7 and 8 together since they were nearly identical except for some very minor font anti-aliasing differences.</p>
+<h3>Before CSS3 PIE</h3>
+<h3>Internet Explorer 6</h3>
+<p><img class="alignnone size-full wp-image-198" title="IE 6 Before CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie6-before.png" alt="IE 6 Before CSS3 PIE" width="520" height="389" /></p>
+<h3>Internet Explorer 7 &amp; 8</h3>
+<p><img class="alignnone size-full wp-image-200" title="IE 7 &amp; 8 Before CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie78-before.png" alt="IE 7 &amp; 8 Before CSS3 PIE" width="520" height="389" /></p>
+<h3>After CSS3 PIE</h3>
+<h3>Internet Explorer 6</h3>
+<p><img class="alignnone size-full wp-image-197" title="IE 6 After CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie6-after.png" alt="IE 6 After CSS3 PIE" width="580" height="430" /></p>
+<h3>Internet Explorer 7 &amp; 8</h3>
+<p><img class="alignnone size-full wp-image-199" title="IE 7 &amp; 8 After CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie78-after.png" alt="IE 7 &amp; 8 After CSS3 PIE" width="580" height="430" /></p>
+<h3>Implementation</h3>
+<p>There are a few things to watch out for when using CSS3 PIE.  A few of the CSS3 properties have to be done using the &#8220;-pie&#8221; prefix in order to trigger the proper rendering in Internet Explorer.  For example, to achieve this same multiple background declaration in CSS3 PIE:</p>
+<pre class="prettyprint linenums">
+background-color: #ccc;
+background-image: url(quote-open.png), url(quote-close.png);
+background-position: left top, right bottom;
+background-repeat: no-repeat, no-repeat;
+background-color: #ccc;	background-image: url(quote-open.png), url(quote-close.png);  background-position: left top, right bottom;  background-repeat: no-repeat, no-repeat;
+</pre>
+<p>You will need to add the CSS3 PIE specific declaration for backgrounds:</p>
+<pre class="prettyprint linenums">
+-pie-background: #ccc url(quote-open.png) no-repeat left top, url(quote-close.png) no-repeat right bottom;
+</pre>
+<p>Also, when you&#8217;re using JavaScript to manipulate styles on your page you need to add the following bit to your CSS to tell CSS3 PIE to &#8220;listen&#8221; to that element and watch for updates to it&#8217;s ancestors.</p>
+<pre class="prettyprint linenums">
+-pie-watch-ancestors: 1;
+</pre>
+<p>Finally, the last semi-tricky thing with CSS3 PIE is that for some elements you will have to apply the following CSS to their ancestor to get the CSS3 PIE to take effect.  The symptom of needing to apply this fix is if the element you&#8217;re expecting to be styled disappears from the screen upon rendering:</p>
+<pre class="prettyprint linenums">
+position: relative;
+z-index: 1;
+</pre>
+<p>All in all, I&#8217;ve found this system well worth the 2-3 minor tricky parts.  In my opinion it&#8217;s a much better solution than letting the unsupported CSS3 elements degrade for those that are still using Internet Explorer 6-8.</p>
+]]></content:encoded>
+							<wfw:commentRss>/2011/02/use-css3-pie-for-enabling-css3-in-ie/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+	</channel>
+</rss>

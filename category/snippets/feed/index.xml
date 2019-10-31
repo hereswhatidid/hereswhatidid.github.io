@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Snippets &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/snippets/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Sat, 15 Feb 2014 05:32:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Clean WordPress nav walker class</title>
+		<link>/2014/02/clean-wordpress-nav-walker-class/</link>
+				<pubDate>Sun, 09 Feb 2014 19:11:48 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=512</guid>
+				<description><![CDATA[This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.]]></description>
+								<content:encoded><![CDATA[<p>This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.<br />
+<script src="https://gist.github.com/hereswhatidid/8904445.js"></script></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Check for the existence of multiple shortcodes with one function</title>
+		<link>/2013/11/check-for-the-existence-of-multiple-shortcodes-with-one-function/</link>
+				<pubDate>Wed, 27 Nov 2013 15:59:14 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=493</guid>
+				<description><![CDATA[Recently, I needed to check for the existence of several related shortcodes within WordPress.  Rather than writing a large if-or statement I came up with this small function that takes in an array of strings and a boolean to determine whether I needed to check for the existence of all the supplied shortcodes or just [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Recently, I needed to check for the existence of several related shortcodes within WordPress.  Rather than writing a large if-or statement I came up with this small function that takes in an array of strings and a boolean to determine whether I needed to check for the existence of all the supplied shortcodes or just any of them.</p>
+<script src="https://gist.github.com/hereswhatidid/7677861.js"></script>
+<p>&nbsp;</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Windows batch file for getting the latest WordPress core files</title>
+		<link>/2013/09/windows-batch-file-for-getting-the-latest-wordpress-core-files/</link>
+				<pubDate>Tue, 03 Sep 2013 02:51:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=479</guid>
+				<description><![CDATA[I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following: Uses wget to download the latest version of WordPress. (http://wordpress.org/latest.tar.gz) Unzips the .tar.gz and .tar to a /wordpress subdirectory using 7zip Uses ROBOCOPY to move those resulting files up to the current directory and [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following:</p>
+<ol>
+<li>Uses <a href="http://www.alexlomas.com/blog/2005/08/64_bit_wget_for_windows/" target="_blank">wget </a>to download the latest version of WordPress. (<a href="http://wordpress.org/latest.tar.gz" target="_blank">http://wordpress.org/latest.tar.gz</a>)</li>
+<li>Unzips the .tar.gz and .tar to a /wordpress subdirectory using <a href="http://www.7-zip.org/" target="_blank">7zip</a></li>
+<li>Uses ROBOCOPY to move those resulting files up to the current directory and delete the unneeded /wordpress directory.</li>
+<li>Deletes the .tar.gz and .tar core files.</li>
+<li>Renames wp-config-sample.php to wp-config.php.</li>
+</ol>
+<p>Save these commands in a .bat file or just run them directly in the command window from the directory you&#8217;d like to download the WordPress core files to:</p>
+<pre>wget64 http://wordpress.org/latest.tar.gz
+7z e latest.tar.gz &amp; 7z x latest.tar
+robocopy wordpress ./ /MOVE /E
+del latest.tar
+del latest.tar.gz
+ren wp-config-sample.php wp-config.php</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Override video player dimensions using the WordPress 3.6 shortcode attributes filter</title>
+		<link>/2013/08/override-video-player-dimensions-using-the-wordpress-3-6-shortcode-attributes-filter/</link>
+				<pubDate>Thu, 08 Aug 2013 03:32:28 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=455</guid>
+				<description><![CDATA[As of WordPress 3.6 you may now modify the passed attributes for any shortcode (that supports it) via a filter.  Here is the filter: shortcode_atts_{$shortcode} where {$shortcode} is the id given to the particular shortcode you&#8217;d like to modify.  In this example I am overriding the embedded video width and height to force it to a [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>As of WordPress 3.6 you may now modify the passed attributes for any shortcode (that supports it) via a filter.  Here is the filter:</p>
+<p><strong>shortcode_atts_{$shortcode}</strong></p>
+<p>where <strong>{$shortcode}</strong> is the id given to the particular shortcode you&#8217;d like to modify.  In this example I am overriding the embedded video width and height to force it to a specific size:</p>
+<script src="https://gist.github.com/hereswhatidid/6181218.js"></script>
+<p>Any video embedded via the  shortcode will now have the dimensions of 768&#215;583.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Extending the get_field function in Advanced Custom Fields to have a default and fallback option</title>
+		<link>/2013/07/extended-get-field/</link>
+				<pubDate>Wed, 17 Jul 2013 19:23:09 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=441</guid>
+				<description><![CDATA[This function will extend the default get_field function within Advanced Custom Fields to also allow you to: pass in a default value in case none are found fall back to site options (if one exists) pass in the ID of the post to get the field from and then apply the previous actions &#160;]]></description>
+								<content:encoded><![CDATA[<p>This function will extend the default get_field function within Advanced Custom Fields to also allow you to:</p>
+<ul>
+<li><span style="line-height: 13px;">pass in a default value in case none are found</span></li>
+<li>fall back to site options (if one exists)</li>
+<li>pass in the ID of the post to get the field from and then apply the previous actions</li>
+</ul>
+<p>&nbsp;<br />
+<script src="https://gist.github.com/hereswhatidid/6023589.js"></script></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Display current template in WordPress ribbon bar</title>
+		<link>/2013/07/display-current-template-in-wordpress-ribbon-bar/</link>
+				<pubDate>Tue, 02 Jul 2013 19:01:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=427</guid>
+				<description><![CDATA[Place this snippet of code in your functions.php file or in a plugin and then your admin bar will display the path of the template being currently used: function display_admin_bar_template() { global $wp_admin_bar; $wp_admin_bar-&#62;add_node( array( 'id' =&#62; 'templateMethod', 'title' =&#62; __( 'Template: ', 'hwid' ) . str_replace( get_theme_root(), '', get_page_template() ) )); } add_action( 'wp_before_admin_bar_render', [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Place this snippet of code in your functions.php file or in a plugin and then your admin bar will display the path of the template being currently used:<span id="more-427"></span></p>
+<pre>function display_admin_bar_template() {
+   global $wp_admin_bar;
+   $wp_admin_bar-&gt;add_node( array(
+      'id' =&gt; 'templateMethod',
+      'title' =&gt; __( 'Template: ', 'hwid' ) . str_replace( get_theme_root(), '', get_page_template() )
+   ));
+}
+add_action( 'wp_before_admin_bar_render', 'display_admin_bar_template' );</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Move Gravity Forms jQuery calls to footer</title>
+		<link>/2013/01/move-gravity-forms-jquery-calls-to-footer/</link>
+				<pubDate>Thu, 10 Jan 2013 22:31:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=365</guid>
+				<description><![CDATA[Gravity Forms by default will write an inline JavaScript call to jQuery on every form you add to a page.  This will throw an error if you&#8217;re loading jQuery in the footer of your site (which you should be doing).  This is the error: Uncaught ReferenceError: jQuery is not defined There&#8217;s an extremely hidden bit [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Gravity Forms by default will write an inline JavaScript call to jQuery on every form you add to a page.  This will throw an error if you&#8217;re loading jQuery in the footer of your site (which you should be doing).  This is the error:</p>
+<p>Uncaught ReferenceError: jQuery is not defined</p>
+<p>There&#8217;s an extremely hidden bit of documentation on how to override this behavior here:</p>
+<pre class="prettyprint linenums">
+&lt;?php
+add_filter("gform_init_scripts_footer", "init_scripts");
+function init_scripts() {
+return true;
+}
+?&gt;
+</pre>
+<p>This code should be placed within your theme&#8217;s functions.php file.</p>
+<p><a href="http://www.gravityhelp.com/documentation/page/Gform_init_scripts_footer" target="_blank">http://www.gravityhelp.com/documentation/page/Gform_init_scripts_footer</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Retain custom fields when restoring a previous post version in WordPress</title>
+		<link>/2012/09/retain-custom-fields-when-restoring-a-previous-post-version/</link>
+				<pubDate>Thu, 13 Sep 2012 18:32:35 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=308</guid>
+				<description><![CDATA[This little script will keep whatever custom field values you have used when you restore a post to a previous version. Currently, WordPress by default will clear those custom fields whenever you try to restore a post to a previous version which can lead to some headaches.  Add this bit to your functions.php file to [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>This little script will keep whatever custom field values you have used when you restore a post to a previous version. Currently, WordPress by default will clear those custom fields whenever you try to restore a post to a previous version which can lead to some headaches.  Add this bit to your functions.php file to keep those fields when you restore:</p>
+<pre class="prettyprint linenums">
+global $tempholder;
+function customfields_save_post( $post_id ) {
+global $templholder;
+$parent_id = wp_is_post_revision( $post_id );
+if ( $parent_id ) {
+$parent = get_post( $parent_id );
+$templholder = get_post_custom($parent-&gt;ID);
+}
+}
+add_action( 'save_post', 'customfields_save_post' );
+function customfields_restore_revision( $post_id, $revision_id ) {
+global $templholder;
+foreach($templholder as $index =&gt; $item) {
+delete_post_meta($post_id, $index);
+if ($item[0] != '') {
+add_post_meta($post_id, $index, $item[0]);
+}
+}
+}
+add_action( 'wp_restore_post_revision', 'customfields_restore_revision', 10, 2 );
+</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>SQL to replace URLs in common WordPress tables</title>
+		<link>/2012/02/sql-to-replace-urls-in-common-wordpress-tables/</link>
+				<pubDate>Tue, 07 Feb 2012 16:19:17 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[SQL]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=303</guid>
+				<description><![CDATA[Use this script when moving from one URL to another to catch the most common places where a URL is embedded:]]></description>
+								<content:encoded><![CDATA[<p>Use this script when moving from one URL to another to catch the most common places where a URL is embedded:</p>
+<pre class="prettyprint linenums">
+SET @oldurl := "oldurl.com";
+SET @newurl := "newurl.com";
+UPDATE wp_posts
+SET post_content = REPLACE(post_content, @oldurl, @newurl)
+WHERE post_content LIKE CONCAT('%',@oldurl,'%');
+UPDATE wp_options
+SET option_value = REPLACE(option_value, @oldurl, @newurl)
+WHERE option_value LIKE CONCAT('%',@oldurl,'%');
+UPDATE wp_postmeta
+SET meta_value = REPLACE(meta_value, @oldurl, @newurl)
+WHERE meta_value LIKE CONCAT('%',@oldurl,'%');
+</pre>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Modify the default stylesheet path for WordPress blogs</title>
+		<link>/2012/02/modify-the-default-stylesheet-path-for-wordpress-blogs/</link>
+				<pubDate>Fri, 03 Feb 2012 16:36:50 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=287</guid>
+				<description><![CDATA[Recently I wanted to update a particular WordPress installation to use something other than the theme&#8217;s style.css file as it&#8217;s default CSS document.  Here is the code to enable that:]]></description>
+								<content:encoded><![CDATA[<p>Recently I wanted to update a particular WordPress installation to use something other than the theme&#8217;s style.css file as it&#8217;s default CSS document.  Here is the code to enable that:</p>
+<pre class="prettyprint linenums">
+&lt;?php
+function modify_stylesheet_uri(){
+$stylesheet_dir_uri = THEMEURI;
+$stylesheet_uri = THEMEURI.'/css/styles-screen.css';
+return $stylesheet_uri;
+}
+add_filter("stylesheet_uri", "modify_stylesheet_uri");
+?&gt;
+</pre>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

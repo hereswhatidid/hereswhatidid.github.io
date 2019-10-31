@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Portfolio &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/portfolio/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Thu, 15 Nov 2012 15:49:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>Gareth Stevens</title>
+		<link>/2010/11/gareth-stevens/</link>
+				<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Classic ASP]]></category>
+		<category><![CDATA[ECommerce]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[asp]]></category>
+		<category><![CDATA[e-commerce]]></category>
+		<category><![CDATA[portfolio]]></category>
+		<category><![CDATA[sql]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=4</guid>
+				<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
+								<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="/media/2011/01/gareth-stevens-01.jpg 598w, /media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
+<p><strong>&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers.</strong> Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

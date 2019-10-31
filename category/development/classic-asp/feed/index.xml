@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Classic ASP &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/development/classic-asp/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Thu, 15 Nov 2012 15:49:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>301 Redirection Codes</title>
+		<link>/2010/11/301-redirection-codes/</link>
+				<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[Classic ASP]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[301]]></category>
+		<category><![CDATA[asp]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[seo]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=52</guid>
+				<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
+<div>
+<h3>Redirect with .htaccess and Mod_Rewrite</h3>
+<p><span style="color: #000000; line-height: 23px;">301 Redirect: xyz-site.com to www.xyz-site.com</span></p>
+<p><code> RewriteEngine On<br />
+RewriteBase /<br />
+RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC]<br />
+RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] </code></p>
+<h4>301 Redirect: www.xyz-site.com to xyz-site.com</h4>
+<p><code> RewriteEngine On<br />
+RewriteBase /<br />
+RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC]<br />
+RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] </code></p>
+<h4>301 Redirect: Redirecting Individual pages</h4>
+<p><code> Redirect 301 /previous-page.html http://www.xyz-site.com/new-page.html </code></p>
+<p>* These scripts should be placed in the .htaccess file.</p>
+</div>
+<div>
+<h3>Redirect with PHP</h3>
+<p><code> &lt;?php<br />
+Header( "HTTP/1.1 301 Moved Permanently" );<br />
+Header( "Location: http://www.xyz-site.com/" );<br />
+exit(0);<br />
+?&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with classic ASP</h3>
+<p><code> &lt;@ Language=VBScript %&gt;<br />
+&lt;%<br />
+Response.Status="301 Moved Permanently" Response.AddHeader "Location",<br />
+" http://www.xyz-site.com/"<br />
+%&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with ASP.NET</h3>
+<p><code> &lt;script&gt;<br />
+private void Page_Load(object sender, System.EventArgs e)<br />
+{<br />
+Response.Status = "301 Moved Permanently";<br />
+Response.AddHeader("Location","http://www.xyz-site.com/");<br />
+}<br />
+&lt;/script&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with ColdFusion</h3>
+<p><code> &lt;cfheader statuscode="301" statustext="Moved permanently"&gt;<br />
+&lt;cfheader name="Location" value="http://www.new-xyz-site.com/"&gt;<br />
+</code></p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+<div>
+<h3>Redirect with Perl</h3>
+<p>[perl]<br />
+$q = new CGI;<br />
+print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
+[/perl]</p>
+<p>* This script should be the first piece of code on the page to function correctly.</p>
+</div>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Classic ASP Recordset values disappearing…</title>
+		<link>/2010/11/classic-asp-recordset-values-disappearing/</link>
+				<pubDate>Tue, 09 Nov 2010 04:27:37 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Browser Quirks]]></category>
+		<category><![CDATA[Classic ASP]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[asp]]></category>
+		<category><![CDATA[classic asp]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[sql]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=48</guid>
+				<description><![CDATA[Or just plain acting strange? Check your connection string. Recently had a Classic ASP site that I was converting from running off of Access to using a SQL2005 database and the values in recordsets were behaving very oddly. Anytime a row column was accessed it would clear the rest of the values. For example, if I [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Or just plain acting strange?  Check your connection string. Recently had a Classic ASP site that I was converting from running off of Access to using a SQL2005 database and the values in recordsets were behaving very oddly.  Anytime a row column was accessed it would clear the rest of the values.  For example, if I called up the value of</p>
+<p>[vb]rsTemp.Fields(&quot;FieldOne&quot;)[/vb]</p>
+<p>Any other fields in that particular row would come up blank.  After quite a bit of searching the solution came down to the fact I was using this as my connection string:<span id="more-48"></span></p>
+<p>Driver={SQL Server}; Server=DBServer; Database=DBName; Uid=DBUserName; Pwd=DBPassword;</p>
+<p>Changing the driver portion of the connection string immediately fixed all the strange behaviors I was getting:</p>
+<p>Provider=SQLNCLI; Server=DBServer; Database=DBName; Uid=DBUserName; Pwd=DBPassword;</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Gareth Stevens</title>
+		<link>/2010/11/gareth-stevens/</link>
+				<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Classic ASP]]></category>
+		<category><![CDATA[ECommerce]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[asp]]></category>
+		<category><![CDATA[e-commerce]]></category>
+		<category><![CDATA[portfolio]]></category>
+		<category><![CDATA[sql]]></category>
+
+		<guid isPermaLink="false">http://hereswhatidid/?p=4</guid>
+				<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
+								<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="/media/2011/01/gareth-stevens-01.jpg 598w, /media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
+<p><strong>&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers.</strong> Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

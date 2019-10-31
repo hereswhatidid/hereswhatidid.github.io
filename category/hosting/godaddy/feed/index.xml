@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GoDaddy &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="/category/hosting/godaddy/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Mon, 16 Mar 2015 18:46:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<item>
+		<title>ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error</title>
+		<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
+				<comments>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
+				<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[BackupBuddy]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[GoDaddy]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[ImportBuddy]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=586</guid>
+				<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
+<pre>ERROR #83893a: unable to decode JSON restore data ``. Restore halted.</pre>
+<p>Here are a couple steps you can follow to diagnose the issue:</p>
+<ol>
+<li><strong>Verify the source of the issue &#8211; </strong>Look in your browser&#8217;s debug console and check for something like &#8220;Uncaught TypeError: undefined is not a function&#8221;. Jump to the source of the error.  In my case it was the &#8220;.on()&#8221; function not being declared.  This is a dead giveaway that something wonky is going on with the loaded version of jQuery.</li>
+<li><strong>Check the loaded version of jQuery &#8211;</strong> Run this code in your debug console to verify the current version:
+<pre>jQuery.fn.jquery</pre>
+<p>If that returns anything below 1.11.x you are viewing an old version of the jQuery library.  You can double check this by browsing directly to the included jquery.js file.  The URL should be something like: http://YOURSITEURL/importbuddy/js/jquery.js</li>
+<li><strong>Check the loaded version of jQueryUI Tooltip &#8211;</strong> This was another script that was loading improperly for me as well.  Browse directly to the tooltip.js file by using a URL like: http://YOURSITEURL/importbuddy/js/tooltip.js</li>
+</ol>
+<p>What appears to be causing these issues is the hosting provider has a cached version of those specific files and is serving that rather than the actual files on your server.</p>
+<p>One possible workaround is to start the ImportBuddy process and clear the site&#8217;s cache after the /importbuddy/ directory has been created during the first step of the import process but before it has restored any files.  This can be tricky since ImportBuddy will put your site in to maintenance mode once it starts so you&#8217;ll have to delete the &#8220;.maintenance&#8221; file if your hosting provider requires you to be logged in to WordPress in order to clear the cache (this is the case with GoDaddy Managed WordPress hosting).  After you&#8217;ve cleared the cache, restart the import process and verify that the correct files are now showing up.</p>
+<p>If clearing the cache does not fix it there&#8217;s a more heavy-handed fix that will work but requires editing the ImportBuddy code:</p>
+<ol>
+<li><strong>Change the plugin version &#8211;</strong> Changing the plugin version to a much higher number will also cause the server to not use the cached version.  You can do this by opening the &#8216;/importbuddy/init.php&#8217; file on your destination server and set the version declaration to something like 55555.  Once you&#8217;ve done this, restart the ImportBuddy process and verify that the scripts are loading correctly.</li>
+</ol>
+]]></content:encoded>
+							<wfw:commentRss>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

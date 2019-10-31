@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Use CSS3 PIE for enabling CSS3 in IE	</title>
+	<atom:link href="/2011/02/use-css3-pie-for-enabling-css3-in-ie/feed/" rel="self" type="application/rss+xml" />
+	<link>/2011/02/use-css3-pie-for-enabling-css3-in-ie/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Thu, 15 Nov 2012 15:48:26 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+			<item>
+				<title>
+				By: Jason				</title>
+				<link>/2011/02/use-css3-pie-for-enabling-css3-in-ie/#comment-29</link>
+		<dc:creator><![CDATA[Jason]]></dc:creator>
+		<pubDate>Fri, 06 May 2011 16:44:53 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-29</guid>
+					<description><![CDATA[ditto on Stephen&#039;s IE Zoom background-repeat issue.]]></description>
+		<content:encoded><![CDATA[<p>ditto on Stephen&#8217;s IE Zoom background-repeat issue.</p>
+]]></content:encoded>
+						</item>
+						<item>
+				<title>
+				By: Gabe				</title>
+				<link>/2011/02/use-css3-pie-for-enabling-css3-in-ie/#comment-9</link>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Mon, 14 Feb 2011 16:42:15 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-9</guid>
+					<description><![CDATA[Good catch on that, Stephen.  I haven&#039;t found anything yet to fix this but there was a note on the CSS3PIE forums stating that this is a known bug that&#039;s been submitted to the author.  Hopefully a future update will resolve this!]]></description>
+		<content:encoded><![CDATA[<p>Good catch on that, Stephen.  I haven&#8217;t found anything yet to fix this but there was a note on the CSS3PIE forums stating that this is a known bug that&#8217;s been submitted to the author.  Hopefully a future update will resolve this!</p>
+]]></content:encoded>
+						</item>
+						<item>
+				<title>
+				By: Stephen				</title>
+				<link>/2011/02/use-css3-pie-for-enabling-css3-in-ie/#comment-7</link>
+		<dc:creator><![CDATA[Stephen]]></dc:creator>
+		<pubDate>Mon, 14 Feb 2011 05:28:36 +0000</pubDate>
+		<guid isPermaLink="false">/?p=191#comment-7</guid>
+					<description><![CDATA[When you zoom in IE, the background-image starts to repeat. It&#039;s a common error I&#039;ve been trying to find a solution to for a while. If anyone has any ideas, please post them.]]></description>
+		<content:encoded><![CDATA[<p>When you zoom in IE, the background-image starts to repeat. It&#8217;s a common error I&#8217;ve been trying to find a solution to for a while. If anyone has any ideas, please post them.</p>
+]]></content:encoded>
+						</item>
+			</channel>
+</rss>
