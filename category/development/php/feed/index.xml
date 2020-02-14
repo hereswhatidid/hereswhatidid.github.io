@@ -12,14 +12,35 @@
 	<atom:link href="/category/development/php/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Tue, 18 Sep 2018 16:54:31 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Feb 2020 14:40:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<generator>https://wordpress.org/?v=5.2.5</generator>
 	<item>
+		<title>Override WooCommerce breadcrumbs with Yoast Primary Categories</title>
+		<link>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/</link>
+				<comments>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/#respond</comments>
+				<pubDate>Fri, 14 Feb 2020 14:40:49 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[Yoast]]></category>
+
+		<guid isPermaLink="false">/?p=738</guid>
+				<description><![CDATA[The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce breadcrumbs with the ones provided by Yoast. If you&#8217;ve done any customization or styling based on the WooCommerce breadcrumbs, the YoastSEO version is less than ideal. The HTML structure of the Yoast breadcrumbs is a series of nested &lt;span&gt; tags and the divider is manually set through the plugin settings. Not only is this not great from a CSS styling perspective, it&#8217;s completely differnent from the breadcrumb structure provided by WooCommerce and other breadcrumbs plugins.</p>
+<p>Another option exists for integrating the Primary Category in to the WooCommerce breadcrumbs is to simply override the main term that WooCommerce uses to generate the crumbs. The code below demonstrates how to do this using the `woocommerce_breadcrumb_main_term` filter:</p>
+<p><script src="https://gist.github.com/hereswhatidid/fb9152a11bc359fa32772e4d18f01c9a.js"></script></p>
+]]></content:encoded>
+							<wfw:commentRss>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
 		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
 		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
 				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
@@ -198,43 +219,6 @@ add_action( 'wp_before_admin_bar_render', 'display_admin_bar_template' );</pre>
 		<guid isPermaLink="false">/?p=315</guid>
 				<description><![CDATA[If you&#8217;ve found that particular transients simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the get_site_transient() function to silently fail.  Simply go [&#8230;]]]></description>
 								<content:encoded><![CDATA[<p>If you&#8217;ve found that particular <a href="http://codex.wordpress.org/Transients_API" target="_blank">transients</a> simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the <a href="http://codex.wordpress.org/Function_Reference/get_site_transient" target="_blank">get_site_transient()</a> function to silently fail.  Simply go in and remove the duplicate transient &#8216;meta_key&#8217;s that are LOWER than the highest duplicate.  After doing this you should now see your transients correctly.</p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Retain custom fields when restoring a previous post version in WordPress</title>
-		<link>/2012/09/retain-custom-fields-when-restoring-a-previous-post-version/</link>
-				<pubDate>Thu, 13 Sep 2012 18:32:35 +0000</pubDate>
-		<dc:creator><![CDATA[Gabe]]></dc:creator>
-				<category><![CDATA[Development]]></category>
-		<category><![CDATA[PHP]]></category>
-		<category><![CDATA[Snippets]]></category>
-		<category><![CDATA[WordPress]]></category>
-
-		<guid isPermaLink="false">/?p=308</guid>
-				<description><![CDATA[This little script will keep whatever custom field values you have used when you restore a post to a previous version. Currently, WordPress by default will clear those custom fields whenever you try to restore a post to a previous version which can lead to some headaches.  Add this bit to your functions.php file to [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>This little script will keep whatever custom field values you have used when you restore a post to a previous version. Currently, WordPress by default will clear those custom fields whenever you try to restore a post to a previous version which can lead to some headaches.  Add this bit to your functions.php file to keep those fields when you restore:</p>
-<pre class="prettyprint linenums">
-global $tempholder;
-function customfields_save_post( $post_id ) {
-global $templholder;
-$parent_id = wp_is_post_revision( $post_id );
-if ( $parent_id ) {
-$parent = get_post( $parent_id );
-$templholder = get_post_custom($parent-&gt;ID);
-}
-}
-add_action( 'save_post', 'customfields_save_post' );
-function customfields_restore_revision( $post_id, $revision_id ) {
-global $templholder;
-foreach($templholder as $index =&gt; $item) {
-delete_post_meta($post_id, $index);
-if ($item[0] != '') {
-add_post_meta($post_id, $index, $item[0]);
-}
-}
-}
-add_action( 'wp_restore_post_revision', 'customfields_restore_revision', 10, 2 );
-</pre>
 ]]></content:encoded>
 										</item>
 	</channel>

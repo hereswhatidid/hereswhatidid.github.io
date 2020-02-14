@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<generator>https://wordpress.org/?v=5.2.5</generator>
 	<item>
 		<title>Using MySQL to conditionally update WordPress post meta data</title>
 		<link>/2018/04/using-mysql-to-conditionally-update-wordpress-post-meta-data/</link>

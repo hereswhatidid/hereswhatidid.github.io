@@ -12,14 +12,35 @@
 	<atom:link href="/category/development/wordpress/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Tue, 18 Sep 2018 16:54:31 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Feb 2020 14:40:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.4</generator>
+	<generator>https://wordpress.org/?v=5.2.5</generator>
 	<item>
+		<title>Override WooCommerce breadcrumbs with Yoast Primary Categories</title>
+		<link>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/</link>
+				<comments>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/#respond</comments>
+				<pubDate>Fri, 14 Feb 2020 14:40:49 +0000</pubDate>
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[Yoast]]></category>
+
+		<guid isPermaLink="false">/?p=738</guid>
+				<description><![CDATA[The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce breadcrumbs with the ones provided by Yoast. If you&#8217;ve done any customization or styling based on the WooCommerce breadcrumbs, the YoastSEO version is less than ideal. The HTML structure of the Yoast breadcrumbs is a series of nested &lt;span&gt; tags and the divider is manually set through the plugin settings. Not only is this not great from a CSS styling perspective, it&#8217;s completely differnent from the breadcrumb structure provided by WooCommerce and other breadcrumbs plugins.</p>
+<p>Another option exists for integrating the Primary Category in to the WooCommerce breadcrumbs is to simply override the main term that WooCommerce uses to generate the crumbs. The code below demonstrates how to do this using the `woocommerce_breadcrumb_main_term` filter:</p>
+<p><script src="https://gist.github.com/hereswhatidid/fb9152a11bc359fa32772e4d18f01c9a.js"></script></p>
+]]></content:encoded>
+							<wfw:commentRss>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
 		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
 		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
 				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
@@ -224,36 +245,6 @@ And that&#8217;s all there is to it. Of course there are plenty of areas to impr
 				<description><![CDATA[This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.]]></description>
 								<content:encoded><![CDATA[<p>This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.<br />
 <script src="https://gist.github.com/hereswhatidid/8904445.js"></script></p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Beginner&#8217;s Guide: Installing WP-CLI with AMPPS</title>
-		<link>/2014/01/installing-wp-cli-with-ampps/</link>
-				<pubDate>Tue, 21 Jan 2014 04:52:46 +0000</pubDate>
-		<dc:creator><![CDATA[Gabe]]></dc:creator>
-				<category><![CDATA[AMPPS]]></category>
-		<category><![CDATA[Development]]></category>
-		<category><![CDATA[MySQL]]></category>
-		<category><![CDATA[PHP]]></category>
-		<category><![CDATA[WordPress]]></category>
-		<category><![CDATA[WP-CLI]]></category>
-
-		<guid isPermaLink="false">/?p=502</guid>
-				<description><![CDATA[This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP binary that is bundled with the OS.  When this happens, WP-CLI cannot communicate with the local MySQL instance and will usually return a bit of HTML in the terminal that says something along the lines of &#8220;Error Establishing A Database Connection&#8221; and/or &#8220;Can’t connect to local MySQL.&#8221;</p>
-<h3>Step 1 &#8211; Install WP-CLI</h3>
-<pre><code>curl -L https://github.com/wp-cli/wp-cli/releases/download/v0.13.0/wp-cli.phar &gt; wp-cli.phar</code></pre>
-<p>And then running these commands in order to be able to call WP-CLI by just using &#8216;wp&#8217;:</p>
-<pre><code>chmod +x wp-cli.phar
-sudo mv wp-cli.phar /usr/bin/wp</code></pre>
-<h3>Step 2 &#8211; Configure WP-CLI to use AMPPS binaries</h3>
-<p>At this point, if you&#8217;re using AMPPS to serve web sites locally, you&#8217;ll notice that any call to &#8216;wp&#8217; within a site directory will return the &#8220;Error Establishing A Database Connection&#8221; message.  This is due to WP-CLI using the bundled PHP binary which is separate from the binary you are using for AMPPS.  The way to fix this is by adding some values to your bash_profile file.  To open the .bash_profile file, run this command:</p>
-<pre><code>open ~/.bash_profile</code></pre>
-<p>This should launch TextEdit window for editing your .bash_profile file. Add this line (modify the path to AMPPS to match your directory configuration) and save the file:</p>
-<pre><code>export PATH="/Applications/AMPPS/php/bin:/Applications/AMPPS/mysql/bin:$PATH"</code></pre>
-<p>Now you will need to restart Terminal in order for the updates to be applied. Verify the new path has been set by using this command:</p>
-<pre><code>wp --info</code></pre>
-<p>The PHP binary setting should now be pointing to the PHP binary within your AMPPS directory. If not, go back and verify that the paths you entered in the .bash_profile file are correct.</p>
 ]]></content:encoded>
 										</item>
 	</channel>
