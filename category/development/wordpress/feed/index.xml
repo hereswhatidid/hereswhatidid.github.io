@@ -12,7 +12,7 @@
 	<atom:link href="/category/development/wordpress/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Fri, 14 Feb 2020 14:40:49 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Feb 2020 14:52:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -34,7 +34,7 @@
 		<guid isPermaLink="false">/?p=738</guid>
 				<description><![CDATA[The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce [&#8230;]]]></description>
 								<content:encoded><![CDATA[<p>The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce breadcrumbs with the ones provided by Yoast. If you&#8217;ve done any customization or styling based on the WooCommerce breadcrumbs, the YoastSEO version is less than ideal. The HTML structure of the Yoast breadcrumbs is a series of nested &lt;span&gt; tags and the divider is manually set through the plugin settings. Not only is this not great from a CSS styling perspective, it&#8217;s completely differnent from the breadcrumb structure provided by WooCommerce and other breadcrumbs plugins.</p>
-<p>Another option exists for integrating the Primary Category in to the WooCommerce breadcrumbs is to simply override the main term that WooCommerce uses to generate the crumbs. The code below demonstrates how to do this using the `woocommerce_breadcrumb_main_term` filter:</p>
+<p>Another option that exists for integrating the Primary Category in to the WooCommerce breadcrumbs is to simply override the main term that WooCommerce uses to generate the crumbs. The code below demonstrates how to do this using the `woocommerce_breadcrumb_main_term` filter. This code can be added to your theme&#8217;s functions.php file or in a plugin file:</p>
 <p><script src="https://gist.github.com/hereswhatidid/fb9152a11bc359fa32772e4d18f01c9a.js"></script></p>
 ]]></content:encoded>
 							<wfw:commentRss>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/feed/</wfw:commentRss>
