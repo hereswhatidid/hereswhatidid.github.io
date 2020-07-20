@@ -9,8 +9,8 @@
 
 <channel>
 	<title>ImportBuddy &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/wordpress/backupbuddy/importbuddy/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/wordpress/backupbuddy/importbuddy/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Mon, 16 Mar 2015 18:46:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,23 +18,24 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error</title>
-		<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
-				<comments>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
-				<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
+					<comments>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
 				<category><![CDATA[BackupBuddy]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[GoDaddy]]></category>
 		<category><![CDATA[Hosting]]></category>
 		<category><![CDATA[ImportBuddy]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=586</guid>
 
-		<guid isPermaLink="false">/?p=586</guid>
-				<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
+					<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
 <pre>ERROR #83893a: unable to decode JSON restore data ``. Restore halted.</pre>
 <p>Here are a couple steps you can follow to diagnose the issue:</p>
 <ol>
@@ -51,8 +52,11 @@
 <li><strong>Change the plugin version &#8211;</strong> Changing the plugin version to a much higher number will also cause the server to not use the cached version.  You can do this by opening the &#8216;/importbuddy/init.php&#8217; file on your destination server and set the version declaration to something like 55555.  Once you&#8217;ve done this, restart the ImportBuddy process and verify that the scripts are loading correctly.</li>
 </ol>
 ]]></content:encoded>
-							<wfw:commentRss>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
-		<slash:comments>2</slash:comments>
-							</item>
+					
+					<wfw:commentRss>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
 	</channel>
 </rss>

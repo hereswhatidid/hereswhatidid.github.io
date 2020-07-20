@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Nexcess &#8211; here&#039;s what I did&#8230;</title>
+	<atom:link href="https://www.hereswhatidid.com/category/hosting/nexcess/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
+	<description>The Development Blog of Gabe Shackle</description>
+	<lastBuildDate>Mon, 20 Jul 2020 12:50:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
+	<item>
+		<title>Setting up GIT deployment on Nexcess hosting</title>
+		<link>https://www.hereswhatidid.com/2020/02/setting-up-git-deployment-on-nexcess-hosting/</link>
+		
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 11 Feb 2020 03:24:55 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[Nexcess]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=727</guid>
+
+					<description><![CDATA[Setting up GIT deployment for hosts that do not have it baked in to the control panel can be daunting if you&#8217;ve never done it before. After Googling around quite a bit I&#8217;ve put together a step-by-step process that makes it fairly straight forward. Step 1: Connect and gather directory information The first step is [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Setting up GIT deployment for hosts that do not have it baked in to the control panel can be daunting if you&#8217;ve never done it before. After Googling around quite a bit I&#8217;ve put together a step-by-step process that makes it fairly straight forward.</p>
+<h4>Step 1: Connect and gather directory information</h4>
+<p>The first step is to make sure you have SSH access to the host machine as well as confirming that GIT is installed and available. Once you have done this you can begin by connecting to the host via SSH:</p>
+<p><code>ssh SSHUSERNAME@SSHDOMAINorIP</code></p>
+<p>Once connected, run this command to get the directory information that will be used later on:</p>
+<p><code>pwd</code></p>
+<p>This command will list the path to the current directory should be something like /home/USERNAME/</p>
+<h4>Step 2: Create directories and initialize GIT</h4>
+<p>Create the directory for your new, empty GIT repository. Replace SITENAME with the domain name for the site or whatever you want it to be:</p>
+<p><code>mkdir repo/SITENAME.git</code></p>
+<p>Then switch to that newly created directory and initialize GIT:</p>
+<p><code>cd repo/SITENAME.git<br />
+git init --bare</code></p>
+<h4>Step 3: Create post-receive hook to deploy code changes</h4>
+<p>Hooks in GIT are a way to execute scripts after specific events occur. In this case we want to use the &#8216;post-receive&#8217; hook. This hook runs after everything else has occurred during a GIT push.</p>
+<p>Switch to the GIT directory’s `hooks` subdirectory</p>
+<p><code>cd hooks</code></p>
+<p>Create and open a file named `post-receive`</p>
+<p><code>nano post-receive</code></p>
+<p>This will open a nano editor within Terminal for editing the `post-receive` file.<br />
+Grab the contents of `post-receive` in this GIST and update them to match your data:</p>
+<p><script src="https://gist.github.com/hereswhatidid/ffe28538278e4a3566e7d2053e9c6456.js?file=post-receive"></script></p>
+<p>Paste the updated contents in to the nano document then save and close the document.</p>
+<p><code>ctrl+o</code></p>
+<p>Hit enter to confirm the file name which should be `post-receive`.</p>
+<p><code>ctrl+x</code></p>
+<p>Finally, set the correct permissions on the file so that it can process the requests.</p>
+<p><code>chmod +x post-receive</code></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

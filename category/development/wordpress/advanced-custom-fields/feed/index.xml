@@ -9,89 +9,123 @@
 
 <channel>
 	<title>Advanced Custom Fields &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/wordpress/advanced-custom-fields/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/wordpress/advanced-custom-fields/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Tue, 18 Sep 2018 16:54:31 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 21 Feb 2020 15:35:03 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
-		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
-		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
-				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
+		<title>ACF Gotchas: Hide on screen</title>
+		<link>https://www.hereswhatidid.com/2020/02/acf-gotchas-hide-on-screen/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 21 Feb 2020 15:33:56 +0000</pubDate>
+				<category><![CDATA[Advanced Custom Fields]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=749</guid>
+
+					<description><![CDATA[If you&#8217;ve ever run across issues with the &#8220;Hide on screen&#8221; options in your ACF groups not working or being ignored, be sure to make note of the &#8220;Order No.&#8221; value. Hide on screen options for field groups with a lower order number value will take precendance over higher numbered groups. For example, in the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you&#8217;ve ever run across issues with the &#8220;Hide on screen&#8221; options in your ACF groups not working or being ignored, be sure to make note of the &#8220;Order No.&#8221; value. Hide on screen options for field groups with a lower order number value will take precendance over higher numbered groups.</p>
+<p>For example, in the screenshot below you can see two separate custom fields groups that are applied to the same post object:</p>
+<p><a href="https://www.hereswhatidid.com/media/acf-gotcha-hideonscreen.png"><img class="alignnone size-full wp-image-750" src="https://www.hereswhatidid.com/media/acf-gotcha-hideonscreen.png" alt="ACF Gotcha: Hide on screen" width="1000" height="548" srcset="https://www.hereswhatidid.com/media/acf-gotcha-hideonscreen.png 1000w, https://www.hereswhatidid.com/media/acf-gotcha-hideonscreen-580x318.png 580w, https://www.hereswhatidid.com/media/acf-gotcha-hideonscreen-768x421.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+<p>When viewing the edit screen for this post, the main Content Editor would still appear even though you&#8217;ve marked it as hidden in the field group on the right. The reason for this is because the field group on the left has a lower Order No. and takes precedance over the group on the right.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
+		<link>https://www.hereswhatidid.com/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
+		
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[GravityForms]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=703</guid>
 
-		<guid isPermaLink="false">/?p=703</guid>
-				<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
-								<content:encoded><![CDATA[<p>Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:</p>
+					<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
+										<content:encoded><![CDATA[<p>Here is an example script showing how to populate an <a href="https://www.advancedcustomfields.com/" target="_blank" rel="noopener noreferrer">Advanced Custom Fields</a> drop down with any forms you have currently enabled that have been created by the <a href="https://www.gravityforms.com/" target="_blank" rel="noopener noreferrer">GravityForms</a> plugin:</p>
 <p><script src="https://gist.github.com/hereswhatidid/eaee026f172e53b8d79c20d6c1666be6.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Add ACF fields to product attributes in WooCommerce</title>
-		<link>/2016/08/add-acf-fields-product-attributes-woocommerce/</link>
-				<pubDate>Sat, 20 Aug 2016 13:24:35 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2016/08/add-acf-fields-product-attributes-woocommerce/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 20 Aug 2016 13:24:35 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[WooCommerce]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=658</guid>
 
-		<guid isPermaLink="false">/?p=658</guid>
-				<description><![CDATA[For a client&#8217;s site we wanted to add some ACF fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>For a client&#8217;s site we wanted to add some <a href="https://www.advancedcustomfields.com/">ACF</a> fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have these custom fields and the client had the ability to add or remove attribute via the admin. This meant that we had to be able to gather all the attribute types and target them for our field group.</p>
+					<description><![CDATA[For a client&#8217;s site we wanted to add some ACF fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>For a client&#8217;s site we wanted to add some <a href="https://www.advancedcustomfields.com/">ACF</a> fields to the Edit Term page for global attributes. If the attribute list were fixed, this would be a simple task of targeting the specific taxonomies in the field group&#8217;s location parameter. What complicated this particular instance is that we wanted ALL attribute edit pages to have these custom fields and the client had the ability to add or remove attribute via the admin. This meant that we had to be able to gather all the attribute types and target them for our field group.</p>
 <p>This turned out to be a fairly straight-forward task. By using the WooCommerce function <a href="https://docs.woocommerce.com/wc-apidocs/function-wc_get_attribute_taxonomy_names.html">wc_get_attribute_taxonomy_names()</a> we can create a set of location rules that are dynamically created which will target all existing global attribute types.</p>
 <p>Here is the complete code which will add a tab and sample image field to all global attribute Term Edit pages:</p>
 <script src="https://gist.github.com/hereswhatidid/9ba2bfe386a4eafb0bc82a11a748416b.js"></script>
 <p>&nbsp;</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Customize ACF WYSIWYG Input Styles</title>
-		<link>/2015/08/customize-acf-wysiwyg-input-styles/</link>
-				<pubDate>Thu, 13 Aug 2015 03:29:27 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2015/08/customize-acf-wysiwyg-input-styles/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 13 Aug 2015 03:29:27 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[jQuery]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=614</guid>
 
-		<guid isPermaLink="false">/?p=614</guid>
-				<description><![CDATA[Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the ability to specify a body class for the WYSIWYG editor&#8217;s iframed body tag. (a prototype solution has been developed) Thankfully, ACF does have a JavaScript filter available that allows us to directly modify those classes, and with a little trickery, we can use the field options to give our WYSIWYG fields unique classes and thus styles.</p>
+					<description><![CDATA[Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the ability to specify a body class for the WYSIWYG editor&#8217;s iframed body tag. (a prototype solution has been developed) Thankfully, ACF does have a JavaScript filter available that allows us to directly modify those classes, and with a little trickery, we can use the field options to give our WYSIWYG fields unique classes and thus styles.</p>
 <p>The filter that is used for this example is &#8216;<a href="http://www.advancedcustomfields.com/resources/adding-custom-javascript-fields/" target="_blank">wysiwyg_tinymce_settings</a>&#8216;. This filter makes it possible to edit the TinyMCE  settings immediately before the field is initialized. What I decided to do was to make use of the existing CSS wrapper field in the ACF admin:</p>
-<p><a href="/media/hwid-acf-wysiwyg-body-class.png"><img class="alignnone wp-image-616 size-medium" src="/media/hwid-acf-wysiwyg-body-class-580x195.png" alt="ACF WYSIWYG Class Input" width="580" height="195" srcset="/media/hwid-acf-wysiwyg-body-class-580x195.png 580w, /media/hwid-acf-wysiwyg-body-class.png 812w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
+<p><a href="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class.png"><img class="alignnone wp-image-616 size-medium" src="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class-580x195.png" alt="ACF WYSIWYG Class Input" width="580" height="195" srcset="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class-580x195.png 580w, https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class.png 812w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
 <p>Then, using the previously mentioned filter, I grab those values and apply them to the WYSIWYG editor&#8217;s iframe body tag:</p>
 <p><script src="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d.js?file=custom-acf-wysiwyg-css.php"></script></p>
 <p>Now, if I specify the correct class names within my &#8216;editor-styles.css&#8217; file, the editor will get the custom styling I&#8217;ve set.</p>
-<p><img class="alignnone wp-image-617 size-full" src="/media/hwid-acf-wysiwyg-example.png" alt="ACF Custom WYSIWYG CSS Example" width="691" height="503" srcset="/media/hwid-acf-wysiwyg-example.png 691w, /media/hwid-acf-wysiwyg-example-580x422.png 580w" sizes="(max-width: 691px) 100vw, 691px" /></p>
+<p><img class="alignnone wp-image-617 size-full" src="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-example.png" alt="ACF Custom WYSIWYG CSS Example" width="691" height="503" srcset="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-example.png 691w, https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-example-580x422.png 580w" sizes="(max-width: 691px) 100vw, 691px" /></p>
 <p>Now I can easily style all the ACF WYSIWYG fields in my admin so that they exactly reflect how the content will look on the front end.</p>
 <p>The full code is <a href="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d" target="_blank">available on Github</a>.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Creating custom product tabs in WooCommerce Storefront with ACF</title>
-		<link>/2015/08/creating-custom-product-tabs-in-woocommerce-storefront-with-acf/</link>
-				<pubDate>Wed, 05 Aug 2015 21:33:12 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2015/08/creating-custom-product-tabs-in-woocommerce-storefront-with-acf/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2015 21:33:12 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[WooCommerce]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=604</guid>
 
-		<guid isPermaLink="false">/?p=604</guid>
-				<description><![CDATA[Recently I was tasked with adding some custom tabs to a WooCommerce store using the Storefront theme. There was a commercial solution available but I felt this was something that could fairly easily be done via Advanced Custom Fields and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Recently I was tasked with adding some custom tabs to a WooCommerce store using the <a href="http://www.woothemes.com/storefront/" target="_blank" rel="noopener">Storefront theme</a>. There was a commercial solution available but I felt this was something that could fairly easily be done via <a href="http://www.advancedcustomfields.com/" target="_blank" rel="noopener">Advanced Custom Fields</a> and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a basic run down of how I was able to pull in the content of a <a href="http://www.advancedcustomfields.com/resources/repeater/" target="_blank" rel="noopener">Repeater</a> field:</p>
+					<description><![CDATA[Recently I was tasked with adding some custom tabs to a WooCommerce store using the Storefront theme. There was a commercial solution available but I felt this was something that could fairly easily be done via Advanced Custom Fields and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Recently I was tasked with adding some custom tabs to a WooCommerce store using the <a href="http://www.woothemes.com/storefront/" target="_blank" rel="noopener">Storefront theme</a>. There was a commercial solution available but I felt this was something that could fairly easily be done via <a href="http://www.advancedcustomfields.com/" target="_blank" rel="noopener">Advanced Custom Fields</a> and the built-in Storefront filters. 30 minutes later and a solution was in place.  Here&#8217;s a basic run down of how I was able to pull in the content of a <a href="http://www.advancedcustomfields.com/resources/repeater/" target="_blank" rel="noopener">Repeater</a> field:</p>
 <p>First, create the content fields within ACF. I used just a basic repeater that contains a text field for the tab title and a WYSIWYG field for the tab content. For the example code, the repeater was named &#8220;tabs&#8221; and it&#8217;s sub fields are named &#8220;tab_title&#8221; and &#8220;tab_content&#8221;.</p>
 <p>Next, I just had to tie these tabs in to the existing WooCommerce filter &#8220;<a href="https://github.com/woothemes/woocommerce/blob/master/templates/single-product/tabs/tabs.php" target="_blank" rel="noopener">woocommerce_product_tabs</a>&#8221; (<a href="http://docs.woothemes.com/document/editing-product-data-tabs/">more details</a>) which allows you to modify the existing tabs for each product on it&#8217;s detail page. I grabbed the assigned tabs from the &#8216;tabs&#8217; ACF field. Stepping through these tabs I added them to the incoming &#8216;$tabs&#8217; variable within the filter.  The required properties for each tab are:</p>
 <ul>
@@ -103,21 +137,25 @@
 And that&#8217;s all there is to it. Of course there are plenty of areas to improve this small bit of code. For example, I plan on adding in a &#8220;Global Tabs&#8221; area that would let the client specify global tabs that should appear under all products or even products just within specific Categories. Additionally, I also will be adding a field to control the value of the &#8216;priority&#8217; property rather than auto-generating.</p>
 <p>The full code including the ACF Repeater declaration can be <a href="https://gist.github.com/hereswhatidid/3654843605397fe0e484" target="_blank" rel="noopener">viewed on GitHub</a>.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Extending the get_field function in Advanced Custom Fields to have a default and fallback option</title>
-		<link>/2013/07/extended-get-field/</link>
-				<pubDate>Wed, 17 Jul 2013 19:23:09 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2013/07/extended-get-field/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 17 Jul 2013 19:23:09 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=441</guid>
 
-		<guid isPermaLink="false">/?p=441</guid>
-				<description><![CDATA[This function will extend the default get_field function within Advanced Custom Fields to also allow you to: pass in a default value in case none are found fall back to site options (if one exists) pass in the ID of the post to get the field from and then apply the previous actions &#160;]]></description>
-								<content:encoded><![CDATA[<p>This function will extend the default get_field function within Advanced Custom Fields to also allow you to:</p>
+					<description><![CDATA[This function will extend the default get_field function within Advanced Custom Fields to also allow you to: pass in a default value in case none are found fall back to site options (if one exists) pass in the ID of the post to get the field from and then apply the previous actions &#160;]]></description>
+										<content:encoded><![CDATA[<p>This function will extend the default get_field function within Advanced Custom Fields to also allow you to:</p>
 <ul>
 <li><span style="line-height: 13px;">pass in a default value in case none are found</span></li>
 <li>fall back to site options (if one exists)</li>
@@ -126,6 +164,9 @@ And that&#8217;s all there is to it. Of course there are plenty of areas to impr
 <p>&nbsp;<br />
 <script src="https://gist.github.com/hereswhatidid/6023589.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

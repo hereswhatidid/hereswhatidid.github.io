@@ -9,32 +9,78 @@
 
 <channel>
 	<title>Hosting &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/hosting/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/hosting/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Mon, 16 Mar 2015 18:46:55 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 20 Jul 2020 12:50:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
-		<title>ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error</title>
-		<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
-				<comments>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
-				<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
+		<title>Setting up GIT deployment on Nexcess hosting</title>
+		<link>https://www.hereswhatidid.com/2020/02/setting-up-git-deployment-on-nexcess-hosting/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 11 Feb 2020 03:24:55 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hosting]]></category>
+		<category><![CDATA[Nexcess]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=727</guid>
+
+					<description><![CDATA[Setting up GIT deployment for hosts that do not have it baked in to the control panel can be daunting if you&#8217;ve never done it before. After Googling around quite a bit I&#8217;ve put together a step-by-step process that makes it fairly straight forward. Step 1: Connect and gather directory information The first step is [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Setting up GIT deployment for hosts that do not have it baked in to the control panel can be daunting if you&#8217;ve never done it before. After Googling around quite a bit I&#8217;ve put together a step-by-step process that makes it fairly straight forward.</p>
+<h4>Step 1: Connect and gather directory information</h4>
+<p>The first step is to make sure you have SSH access to the host machine as well as confirming that GIT is installed and available. Once you have done this you can begin by connecting to the host via SSH:</p>
+<p><code>ssh SSHUSERNAME@SSHDOMAINorIP</code></p>
+<p>Once connected, run this command to get the directory information that will be used later on:</p>
+<p><code>pwd</code></p>
+<p>This command will list the path to the current directory should be something like /home/USERNAME/</p>
+<h4>Step 2: Create directories and initialize GIT</h4>
+<p>Create the directory for your new, empty GIT repository. Replace SITENAME with the domain name for the site or whatever you want it to be:</p>
+<p><code>mkdir repo/SITENAME.git</code></p>
+<p>Then switch to that newly created directory and initialize GIT:</p>
+<p><code>cd repo/SITENAME.git<br />
+git init --bare</code></p>
+<h4>Step 3: Create post-receive hook to deploy code changes</h4>
+<p>Hooks in GIT are a way to execute scripts after specific events occur. In this case we want to use the &#8216;post-receive&#8217; hook. This hook runs after everything else has occurred during a GIT push.</p>
+<p>Switch to the GIT directory’s `hooks` subdirectory</p>
+<p><code>cd hooks</code></p>
+<p>Create and open a file named `post-receive`</p>
+<p><code>nano post-receive</code></p>
+<p>This will open a nano editor within Terminal for editing the `post-receive` file.<br />
+Grab the contents of `post-receive` in this GIST and update them to match your data:</p>
+<p><script src="https://gist.github.com/hereswhatidid/ffe28538278e4a3566e7d2053e9c6456.js?file=post-receive"></script></p>
+<p>Paste the updated contents in to the nano document then save and close the document.</p>
+<p><code>ctrl+o</code></p>
+<p>Hit enter to confirm the file name which should be `post-receive`.</p>
+<p><code>ctrl+x</code></p>
+<p>Finally, set the correct permissions on the file so that it can process the requests.</p>
+<p><code>chmod +x post-receive</code></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error</title>
+		<link>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
+					<comments>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comments</comments>
+		
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Mon, 16 Mar 2015 18:45:25 +0000</pubDate>
 				<category><![CDATA[BackupBuddy]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[GoDaddy]]></category>
 		<category><![CDATA[Hosting]]></category>
 		<category><![CDATA[ImportBuddy]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=586</guid>
 
-		<guid isPermaLink="false">/?p=586</guid>
-				<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
+					<description><![CDATA[If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool: ERROR #83893a: unable to decode JSON restore data ``. Restore halted. Here are a couple steps you can follow to diagnose the issue: Verify the source of the issue &#8211; Look in your browser&#8217;s debug console and check [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you&#8217;ve run across this error when trying to restore a site via the iThemes ImportBuddy tool:</p>
 <pre>ERROR #83893a: unable to decode JSON restore data ``. Restore halted.</pre>
 <p>Here are a couple steps you can follow to diagnose the issue:</p>
 <ol>
@@ -51,22 +97,26 @@
 <li><strong>Change the plugin version &#8211;</strong> Changing the plugin version to a much higher number will also cause the server to not use the cached version.  You can do this by opening the &#8216;/importbuddy/init.php&#8217; file on your destination server and set the version declaration to something like 55555.  Once you&#8217;ve done this, restart the ImportBuddy process and verify that the scripts are loading correctly.</li>
 </ol>
 ]]></content:encoded>
-							<wfw:commentRss>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
-		<slash:comments>2</slash:comments>
-							</item>
+					
+					<wfw:commentRss>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
 		<item>
 		<title>Windows batch file for getting the latest WordPress core files</title>
-		<link>/2013/09/windows-batch-file-for-getting-the-latest-wordpress-core-files/</link>
-				<pubDate>Tue, 03 Sep 2013 02:51:56 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2013/09/windows-batch-file-for-getting-the-latest-wordpress-core-files/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 03 Sep 2013 02:51:56 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[Hosting]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=479</guid>
 
-		<guid isPermaLink="false">/?p=479</guid>
-				<description><![CDATA[I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following: Uses wget to download the latest version of WordPress. (http://wordpress.org/latest.tar.gz) Unzips the .tar.gz and .tar to a /wordpress subdirectory using 7zip Uses ROBOCOPY to move those resulting files up to the current directory and [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following:</p>
+					<description><![CDATA[I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following: Uses wget to download the latest version of WordPress. (http://wordpress.org/latest.tar.gz) Unzips the .tar.gz and .tar to a /wordpress subdirectory using 7zip Uses ROBOCOPY to move those resulting files up to the current directory and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I wrote this small batch file to simplify the initial WordPress core files download.  Basically this batch file does the following:</p>
 <ol>
 <li>Uses <a href="http://www.alexlomas.com/blog/2005/08/64_bit_wget_for_windows/" target="_blank">wget </a>to download the latest version of WordPress. (<a href="http://wordpress.org/latest.tar.gz" target="_blank">http://wordpress.org/latest.tar.gz</a>)</li>
 <li>Unzips the .tar.gz and .tar to a /wordpress subdirectory using <a href="http://www.7-zip.org/" target="_blank">7zip</a></li>
@@ -82,12 +132,16 @@ del latest.tar
 del latest.tar.gz
 ren wp-config-sample.php wp-config.php</pre>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>301 Redirection Codes</title>
-		<link>/2010/11/301-redirection-codes/</link>
-				<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/301-redirection-codes/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[Development]]></category>
@@ -98,10 +152,10 @@ ren wp-config-sample.php wp-config.php</pre>
 		<category><![CDATA[hosting]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[seo]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=52</guid>
-				<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
+
+					<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
 <div>
 <h3>Redirect with .htaccess and Mod_Rewrite</h3>
 <p><span style="color: #000000; line-height: 23px;">301 Redirect: xyz-site.com to www.xyz-site.com</span></p>
@@ -166,19 +220,23 @@ print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
 <p>* This script should be the first piece of code on the page to function correctly.</p>
 </div>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>CSS Reset Techniques</title>
-		<link>/2010/10/css-reset-techniques/</link>
-				<pubDate>Sat, 30 Oct 2010 04:25:34 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/10/css-reset-techniques/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 30 Oct 2010 04:25:34 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[Hosting]]></category>
 		<category><![CDATA[SEO]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=42</guid>
-				<description><![CDATA[Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences). The Ins and Outs of CSS Resets Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script. The [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences).</p>
+
+					<description><![CDATA[Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences). The Ins and Outs of CSS Resets Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script. The [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences).</p>
 <p><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg257960.aspx" target="_blank">The Ins and Outs of CSS Resets</a></p>
 <p>Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script.  The project is here:</p>
 <p><a href="http://code.google.com/p/reset5/" target="_blank">http://code.google.com/p/reset5/</a><span id="more-42"></span></p>
@@ -270,6 +328,9 @@ table {<br />
 	vertical-align: middle;<br />
 }[/sourcecode]</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

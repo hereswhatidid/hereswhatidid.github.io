@@ -9,110 +9,124 @@
 
 <channel>
 	<title>PHP &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/php/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/php/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Fri, 14 Feb 2020 14:52:32 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 21 Feb 2020 15:40:48 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Override WooCommerce breadcrumbs with Yoast Primary Categories</title>
-		<link>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/</link>
-				<comments>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/#respond</comments>
-				<pubDate>Fri, 14 Feb 2020 14:40:49 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 14 Feb 2020 14:40:49 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WooCommerce]]></category>
 		<category><![CDATA[WordPress]]></category>
 		<category><![CDATA[Yoast]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=738</guid>
 
-		<guid isPermaLink="false">/?p=738</guid>
-				<description><![CDATA[The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the YoastSEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce breadcrumbs with the ones provided by Yoast. If you&#8217;ve done any customization or styling based on the WooCommerce breadcrumbs, the YoastSEO version is less than ideal. The HTML structure of the Yoast breadcrumbs is a series of nested &lt;span&gt; tags and the divider is manually set through the plugin settings. Not only is this not great from a CSS styling perspective, it&#8217;s completely differnent from the breadcrumb structure provided by WooCommerce and other breadcrumbs plugins.</p>
+					<description><![CDATA[The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the Yoast SEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The default behavior for <a href="https://woocommerce.com/" target="_blank" rel="noopener noreferrer">WooCommerce</a> breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the <a href="https://yoast.com/wordpress/plugins/seo/" target="_blank" rel="noopener noreferrer">Yoast SEO</a> plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce breadcrumbs with the ones provided by Yoast. If you&#8217;ve done any customization or styling based on the WooCommerce breadcrumbs, the Yoast SEO version is less than ideal. The HTML structure of the Yoast breadcrumbs is a series of nested &lt;span&gt; tags and the divider is manually set through the plugin settings. Not only is this not great from a CSS styling perspective, it&#8217;s completely differnent from the breadcrumb structure provided by WooCommerce and other breadcrumbs plugins.</p>
 <p>Another option that exists for integrating the Primary Category in to the WooCommerce breadcrumbs is to simply override the main term that WooCommerce uses to generate the crumbs. The code below demonstrates how to do this using the `woocommerce_breadcrumb_main_term` filter. This code can be added to your theme&#8217;s functions.php file or in a plugin file:</p>
 <p><script src="https://gist.github.com/hereswhatidid/fb9152a11bc359fa32772e4d18f01c9a.js"></script></p>
 ]]></content:encoded>
-							<wfw:commentRss>/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-							</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
-		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
-				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[GravityForms]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=703</guid>
 
-		<guid isPermaLink="false">/?p=703</guid>
-				<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
-								<content:encoded><![CDATA[<p>Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:</p>
+					<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
+										<content:encoded><![CDATA[<p>Here is an example script showing how to populate an <a href="https://www.advancedcustomfields.com/" target="_blank" rel="noopener noreferrer">Advanced Custom Fields</a> drop down with any forms you have currently enabled that have been created by the <a href="https://www.gravityforms.com/" target="_blank" rel="noopener noreferrer">GravityForms</a> plugin:</p>
 <p><script src="https://gist.github.com/hereswhatidid/eaee026f172e53b8d79c20d6c1666be6.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Customize ACF WYSIWYG Input Styles</title>
-		<link>/2015/08/customize-acf-wysiwyg-input-styles/</link>
-				<pubDate>Thu, 13 Aug 2015 03:29:27 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2015/08/customize-acf-wysiwyg-input-styles/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 13 Aug 2015 03:29:27 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[jQuery]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=614</guid>
 
-		<guid isPermaLink="false">/?p=614</guid>
-				<description><![CDATA[Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the ability to specify a body class for the WYSIWYG editor&#8217;s iframed body tag. (a prototype solution has been developed) Thankfully, ACF does have a JavaScript filter available that allows us to directly modify those classes, and with a little trickery, we can use the field options to give our WYSIWYG fields unique classes and thus styles.</p>
+					<description><![CDATA[Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Often times, a design will call for separate areas within a page to have their own unique styles applied to them. Whether it&#8217;s a different background color, font size, or available space, editing those areas can be frustrating when the backend editor does not have those same styles. By default, ACF does not have the ability to specify a body class for the WYSIWYG editor&#8217;s iframed body tag. (a prototype solution has been developed) Thankfully, ACF does have a JavaScript filter available that allows us to directly modify those classes, and with a little trickery, we can use the field options to give our WYSIWYG fields unique classes and thus styles.</p>
 <p>The filter that is used for this example is &#8216;<a href="http://www.advancedcustomfields.com/resources/adding-custom-javascript-fields/" target="_blank">wysiwyg_tinymce_settings</a>&#8216;. This filter makes it possible to edit the TinyMCE  settings immediately before the field is initialized. What I decided to do was to make use of the existing CSS wrapper field in the ACF admin:</p>
-<p><a href="/media/hwid-acf-wysiwyg-body-class.png"><img class="alignnone wp-image-616 size-medium" src="/media/hwid-acf-wysiwyg-body-class-580x195.png" alt="ACF WYSIWYG Class Input" width="580" height="195" srcset="/media/hwid-acf-wysiwyg-body-class-580x195.png 580w, /media/hwid-acf-wysiwyg-body-class.png 812w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
+<p><a href="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class.png"><img class="alignnone wp-image-616 size-medium" src="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class-580x195.png" alt="ACF WYSIWYG Class Input" width="580" height="195" srcset="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class-580x195.png 580w, https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-body-class.png 812w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
 <p>Then, using the previously mentioned filter, I grab those values and apply them to the WYSIWYG editor&#8217;s iframe body tag:</p>
 <p><script src="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d.js?file=custom-acf-wysiwyg-css.php"></script></p>
 <p>Now, if I specify the correct class names within my &#8216;editor-styles.css&#8217; file, the editor will get the custom styling I&#8217;ve set.</p>
-<p><img class="alignnone wp-image-617 size-full" src="/media/hwid-acf-wysiwyg-example.png" alt="ACF Custom WYSIWYG CSS Example" width="691" height="503" srcset="/media/hwid-acf-wysiwyg-example.png 691w, /media/hwid-acf-wysiwyg-example-580x422.png 580w" sizes="(max-width: 691px) 100vw, 691px" /></p>
+<p><img class="alignnone wp-image-617 size-full" src="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-example.png" alt="ACF Custom WYSIWYG CSS Example" width="691" height="503" srcset="https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-example.png 691w, https://www.hereswhatidid.com/media/hwid-acf-wysiwyg-example-580x422.png 580w" sizes="(max-width: 691px) 100vw, 691px" /></p>
 <p>Now I can easily style all the ACF WYSIWYG fields in my admin so that they exactly reflect how the content will look on the front end.</p>
 <p>The full code is <a href="https://gist.github.com/hereswhatidid/f88390659cbf1fd6a03d" target="_blank">available on Github</a>.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Clean WordPress nav walker class</title>
-		<link>/2014/02/clean-wordpress-nav-walker-class/</link>
-				<pubDate>Sun, 09 Feb 2014 19:11:48 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2014/02/clean-wordpress-nav-walker-class/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sun, 09 Feb 2014 19:11:48 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=512</guid>
 
-		<guid isPermaLink="false">/?p=512</guid>
-				<description><![CDATA[This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.]]></description>
-								<content:encoded><![CDATA[<p>This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.<br />
+					<description><![CDATA[This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.]]></description>
+										<content:encoded><![CDATA[<p>This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.<br />
 <script src="https://gist.github.com/hereswhatidid/8904445.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Beginner&#8217;s Guide: Installing WP-CLI with AMPPS</title>
-		<link>/2014/01/installing-wp-cli-with-ampps/</link>
-				<pubDate>Tue, 21 Jan 2014 04:52:46 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2014/01/installing-wp-cli-with-ampps/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 21 Jan 2014 04:52:46 +0000</pubDate>
 				<category><![CDATA[AMPPS]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[MySQL]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
 		<category><![CDATA[WP-CLI]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=502</guid>
 
-		<guid isPermaLink="false">/?p=502</guid>
-				<description><![CDATA[This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP binary that is bundled with the OS.  When this happens, WP-CLI cannot communicate with the local MySQL instance and will usually return a bit of HTML in the terminal that says something along the lines of &#8220;Error Establishing A Database Connection&#8221; and/or &#8220;Can’t connect to local MySQL.&#8221;</p>
+					<description><![CDATA[This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP binary that is bundled with the OS.  When this happens, WP-CLI cannot communicate with the local MySQL instance and will usually return a bit of HTML in the terminal that says something along the lines of &#8220;Error Establishing A Database Connection&#8221; and/or &#8220;Can’t connect to local MySQL.&#8221;</p>
 <h3>Step 1 &#8211; Install WP-CLI</h3>
 <pre><code>curl -L https://github.com/wp-cli/wp-cli/releases/download/v0.13.0/wp-cli.phar &gt; wp-cli.phar</code></pre>
 <p>And then running these commands in order to be able to call WP-CLI by just using &#8216;wp&#8217;:</p>
@@ -127,38 +141,46 @@ sudo mv wp-cli.phar /usr/bin/wp</code></pre>
 <pre><code>wp --info</code></pre>
 <p>The PHP binary setting should now be pointing to the PHP binary within your AMPPS directory. If not, go back and verify that the paths you entered in the .bash_profile file are correct.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Check for the existence of multiple shortcodes with one function</title>
-		<link>/2013/11/check-for-the-existence-of-multiple-shortcodes-with-one-function/</link>
-				<pubDate>Wed, 27 Nov 2013 15:59:14 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2013/11/check-for-the-existence-of-multiple-shortcodes-with-one-function/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 27 Nov 2013 15:59:14 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=493</guid>
 
-		<guid isPermaLink="false">/?p=493</guid>
-				<description><![CDATA[Recently, I needed to check for the existence of several related shortcodes within WordPress.  Rather than writing a large if-or statement I came up with this small function that takes in an array of strings and a boolean to determine whether I needed to check for the existence of all the supplied shortcodes or just [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Recently, I needed to check for the existence of several related shortcodes within WordPress.  Rather than writing a large if-or statement I came up with this small function that takes in an array of strings and a boolean to determine whether I needed to check for the existence of all the supplied shortcodes or just any of them.</p>
+					<description><![CDATA[Recently, I needed to check for the existence of several related shortcodes within WordPress.  Rather than writing a large if-or statement I came up with this small function that takes in an array of strings and a boolean to determine whether I needed to check for the existence of all the supplied shortcodes or just [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Recently, I needed to check for the existence of several related shortcodes within WordPress.  Rather than writing a large if-or statement I came up with this small function that takes in an array of strings and a boolean to determine whether I needed to check for the existence of all the supplied shortcodes or just any of them.</p>
 <script src="https://gist.github.com/hereswhatidid/7677861.js"></script>
 <p>&nbsp;</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Extending the get_field function in Advanced Custom Fields to have a default and fallback option</title>
-		<link>/2013/07/extended-get-field/</link>
-				<pubDate>Wed, 17 Jul 2013 19:23:09 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2013/07/extended-get-field/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 17 Jul 2013 19:23:09 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=441</guid>
 
-		<guid isPermaLink="false">/?p=441</guid>
-				<description><![CDATA[This function will extend the default get_field function within Advanced Custom Fields to also allow you to: pass in a default value in case none are found fall back to site options (if one exists) pass in the ID of the post to get the field from and then apply the previous actions &#160;]]></description>
-								<content:encoded><![CDATA[<p>This function will extend the default get_field function within Advanced Custom Fields to also allow you to:</p>
+					<description><![CDATA[This function will extend the default get_field function within Advanced Custom Fields to also allow you to: pass in a default value in case none are found fall back to site options (if one exists) pass in the ID of the post to get the field from and then apply the previous actions &#160;]]></description>
+										<content:encoded><![CDATA[<p>This function will extend the default get_field function within Advanced Custom Fields to also allow you to:</p>
 <ul>
 <li><span style="line-height: 13px;">pass in a default value in case none are found</span></li>
 <li>fall back to site options (if one exists)</li>
@@ -167,35 +189,43 @@ sudo mv wp-cli.phar /usr/bin/wp</code></pre>
 <p>&nbsp;<br />
 <script src="https://gist.github.com/hereswhatidid/6023589.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Media Chooser Demo Plugin</title>
-		<link>/2013/07/media-chooser-demo-plugin/</link>
-				<pubDate>Wed, 10 Jul 2013 22:58:46 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2013/07/media-chooser-demo-plugin/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 10 Jul 2013 22:58:46 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[JavaScript]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=436</guid>
 
-		<guid isPermaLink="false">/?p=436</guid>
-				<description><![CDATA[The demo plugin can be downloaded here.]]></description>
-								<content:encoded><![CDATA[<p>The demo plugin can be <a href="/wp-content/uploads/2013/07/media-chooser-demo1.zip">downloaded here</a>.</p>
+					<description><![CDATA[The demo plugin can be downloaded here.]]></description>
+										<content:encoded><![CDATA[<p>The demo plugin can be <a href="https://www.hereswhatidid.com/wp-content/uploads/2013/07/media-chooser-demo1.zip">downloaded here</a>.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Display current template in WordPress ribbon bar</title>
-		<link>/2013/07/display-current-template-in-wordpress-ribbon-bar/</link>
-				<pubDate>Tue, 02 Jul 2013 19:01:56 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2013/07/display-current-template-in-wordpress-ribbon-bar/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 02 Jul 2013 19:01:56 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=427</guid>
 
-		<guid isPermaLink="false">/?p=427</guid>
-				<description><![CDATA[Place this snippet of code in your functions.php file or in a plugin and then your admin bar will display the path of the template being currently used: function display_admin_bar_template() { global $wp_admin_bar; $wp_admin_bar-&#62;add_node( array( 'id' =&#62; 'templateMethod', 'title' =&#62; __( 'Template: ', 'hwid' ) . str_replace( get_theme_root(), '', get_page_template() ) )); } add_action( 'wp_before_admin_bar_render', [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Place this snippet of code in your functions.php file or in a plugin and then your admin bar will display the path of the template being currently used:<span id="more-427"></span></p>
+					<description><![CDATA[Place this snippet of code in your functions.php file or in a plugin and then your admin bar will display the path of the template being currently used: function display_admin_bar_template() { global $wp_admin_bar; $wp_admin_bar-&#62;add_node( array( 'id' =&#62; 'templateMethod', 'title' =&#62; __( 'Template: ', 'hwid' ) . str_replace( get_theme_root(), '', get_page_template() ) )); } add_action( 'wp_before_admin_bar_render', [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Place this snippet of code in your functions.php file or in a plugin and then your admin bar will display the path of the template being currently used:<span id="more-427"></span></p>
 <pre>function display_admin_bar_template() {
    global $wp_admin_bar;
    $wp_admin_bar-&gt;add_node( array(
@@ -205,21 +235,28 @@ sudo mv wp-cli.phar /usr/bin/wp</code></pre>
 }
 add_action( 'wp_before_admin_bar_render', 'display_admin_bar_template' );</pre>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Transients won&#8217;t show up?  Check for duplicates!</title>
-		<link>/2012/09/transients-wont-show-up-check-for-duplicates/</link>
-				<pubDate>Wed, 26 Sep 2012 14:36:10 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2012/09/transients-wont-show-up-check-for-duplicates/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 26 Sep 2012 14:36:10 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[MySQL]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=315</guid>
 
-		<guid isPermaLink="false">/?p=315</guid>
-				<description><![CDATA[If you&#8217;ve found that particular transients simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the get_site_transient() function to silently fail.  Simply go [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>If you&#8217;ve found that particular <a href="http://codex.wordpress.org/Transients_API" target="_blank">transients</a> simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the <a href="http://codex.wordpress.org/Function_Reference/get_site_transient" target="_blank">get_site_transient()</a> function to silently fail.  Simply go in and remove the duplicate transient &#8216;meta_key&#8217;s that are LOWER than the highest duplicate.  After doing this you should now see your transients correctly.</p>
+					<description><![CDATA[If you&#8217;ve found that particular transients simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the get_site_transient() function to silently fail.  Simply go [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you&#8217;ve found that particular <a href="http://codex.wordpress.org/Transients_API" target="_blank">transients</a> simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the <a href="http://codex.wordpress.org/Function_Reference/get_site_transient" target="_blank">get_site_transient()</a> function to silently fail.  Simply go in and remove the duplicate transient &#8216;meta_key&#8217;s that are LOWER than the highest duplicate.  After doing this you should now see your transients correctly.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

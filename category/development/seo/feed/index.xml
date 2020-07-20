@@ -9,8 +9,8 @@
 
 <channel>
 	<title>SEO &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/seo/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/seo/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Mon, 05 May 2014 12:51:59 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,20 +18,21 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Be careful with your CSS identifiers (AdBlock is watching!)</title>
-		<link>/2014/05/careful-css-identifiers-adblock-watching/</link>
-				<pubDate>Fri, 02 May 2014 15:52:08 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2014/05/careful-css-identifiers-adblock-watching/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 02 May 2014 15:52:08 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[CSS]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=557</guid>
 
-		<guid isPermaLink="false">/?p=557</guid>
-				<description><![CDATA[If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for: #advert1, #advert2, [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for:</p>
+					<description><![CDATA[If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for: #advert1, #advert2, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you notice that page elements are missing from browser to browser with no obvious source, verify that AdBlock is installed and then check that the offending element does not meet the criteria of being an advertisement.  Here is a list of the classes, IDs, and various other selectors that AdBlock currently looks for:</p>
 <pre>#advert1,
 #advert2,
 #advertise,
@@ -443,22 +444,26 @@ div[id^="MarketGid"],
 div[id^="div-gpt-ad-"],
 iframe[src^="http://ad.yieldmanager.com/"]</pre>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Read the Agreement Validator</title>
-		<link>/2011/02/read-the-agreement-validator/</link>
-				<pubDate>Fri, 04 Feb 2011 20:51:06 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/02/read-the-agreement-validator/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 04 Feb 2011 20:51:06 +0000</pubDate>
 				<category><![CDATA[CSS]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[JavaScript]]></category>
 		<category><![CDATA[jQuery]]></category>
 		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=175</guid>
 
-		<guid isPermaLink="false">/?p=175</guid>
-				<description><![CDATA[Recently a client wanted to have a user agreement added to an enrollment form. The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission. Once again, jQuery to the rescue! HTML jQuery JavaScript: I&#8217;m currently working on [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Recently a client wanted to have a user agreement added to an enrollment form.  The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission.  Once again, jQuery to the rescue!<span id="more-175"></span></p>
+					<description><![CDATA[Recently a client wanted to have a user agreement added to an enrollment form. The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission. Once again, jQuery to the rescue! HTML jQuery JavaScript: I&#8217;m currently working on [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Recently a client wanted to have a user agreement added to an enrollment form.  The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission.  Once again, jQuery to the rescue!<span id="more-175"></span></p>
 <p>HTML</p>
 <pre class="prettyprint linenums">
 &lt;div class=&quot;agreement&quot;&gt;
@@ -482,12 +487,16 @@ $(&quot;.agreement&quot;).scroll(function() {
 </pre>
 <p>I&#8217;m currently working on deploying this to a generic jQuery plugin that will let you specify the content that needs to be scrolled through as well as the content should become enabled once that criteria is met.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>301 Redirection Codes</title>
-		<link>/2010/11/301-redirection-codes/</link>
-				<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/301-redirection-codes/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[Development]]></category>
@@ -498,10 +507,10 @@ $(&quot;.agreement&quot;).scroll(function() {
 		<category><![CDATA[hosting]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[seo]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=52</guid>
-				<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
+
+					<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
 <div>
 <h3>Redirect with .htaccess and Mod_Rewrite</h3>
 <p><span style="color: #000000; line-height: 23px;">301 Redirect: xyz-site.com to www.xyz-site.com</span></p>
@@ -566,19 +575,23 @@ print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
 <p>* This script should be the first piece of code on the page to function correctly.</p>
 </div>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>CSS Reset Techniques</title>
-		<link>/2010/10/css-reset-techniques/</link>
-				<pubDate>Sat, 30 Oct 2010 04:25:34 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/10/css-reset-techniques/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 30 Oct 2010 04:25:34 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[Hosting]]></category>
 		<category><![CDATA[SEO]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=42</guid>
-				<description><![CDATA[Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences). The Ins and Outs of CSS Resets Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script. The [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences).</p>
+
+					<description><![CDATA[Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences). The Ins and Outs of CSS Resets Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script. The [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Here&#8217;s a new article on MSDN that gives a brief history of various CSS Reset techniques (clearing base styles in order to avoid cross-browser differences).</p>
 <p><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg257960.aspx" target="_blank">The Ins and Outs of CSS Resets</a></p>
 <p>Also, as pointed out in that article there is a Google Code hosted version of the HTML5 compliant Meyer&#8217;s CSS Reset script.  The project is here:</p>
 <p><a href="http://code.google.com/p/reset5/" target="_blank">http://code.google.com/p/reset5/</a><span id="more-42"></span></p>
@@ -670,6 +683,9 @@ table {<br />
 	vertical-align: middle;<br />
 }[/sourcecode]</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

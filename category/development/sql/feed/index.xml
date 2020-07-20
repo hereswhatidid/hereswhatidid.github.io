@@ -9,8 +9,8 @@
 
 <channel>
 	<title>SQL &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/sql/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/sql/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Thu, 15 Nov 2012 15:48:40 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,20 +18,21 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>SQL to replace URLs in common WordPress tables</title>
-		<link>/2012/02/sql-to-replace-urls-in-common-wordpress-tables/</link>
-				<pubDate>Tue, 07 Feb 2012 16:19:17 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2012/02/sql-to-replace-urls-in-common-wordpress-tables/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 07 Feb 2012 16:19:17 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[SQL]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=303</guid>
 
-		<guid isPermaLink="false">/?p=303</guid>
-				<description><![CDATA[Use this script when moving from one URL to another to catch the most common places where a URL is embedded:]]></description>
-								<content:encoded><![CDATA[<p>Use this script when moving from one URL to another to catch the most common places where a URL is embedded:</p>
+					<description><![CDATA[Use this script when moving from one URL to another to catch the most common places where a URL is embedded:]]></description>
+										<content:encoded><![CDATA[<p>Use this script when moving from one URL to another to catch the most common places where a URL is embedded:</p>
 <pre class="prettyprint linenums">
 SET @oldurl := "oldurl.com";
 SET @newurl := "newurl.com";
@@ -46,19 +47,23 @@ SET meta_value = REPLACE(meta_value, @oldurl, @newurl)
 WHERE meta_value LIKE CONCAT('%',@oldurl,'%');
 </pre>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Sort Select Results by Arbitrary Values</title>
-		<link>/2012/01/sort-select-results-by-arbitrary-values/</link>
-				<pubDate>Thu, 26 Jan 2012 21:31:25 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2012/01/sort-select-results-by-arbitrary-values/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 26 Jan 2012 21:31:25 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[SQL]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=283</guid>
 
-		<guid isPermaLink="false">/?p=283</guid>
-				<description><![CDATA[SELECT ColumnOne, ColumnTwo, ColumnThree FROM Table ORDER BY CASE ColumnTwo WHEN &#8216;miny&#8217; 1 WHEN &#8216;meeny&#8217; 2 WHEN &#8216;eeny&#8217; 3 WHEN &#8216;moe&#8217; 4 END, ColumnThree]]></description>
-								<content:encoded><![CDATA[<p>SELECT ColumnOne, ColumnTwo, ColumnThree FROM Table<br />
+					<description><![CDATA[SELECT ColumnOne, ColumnTwo, ColumnThree FROM Table ORDER BY CASE ColumnTwo WHEN &#8216;miny&#8217; 1 WHEN &#8216;meeny&#8217; 2 WHEN &#8216;eeny&#8217; 3 WHEN &#8216;moe&#8217; 4 END, ColumnThree]]></description>
+										<content:encoded><![CDATA[<p>SELECT ColumnOne, ColumnTwo, ColumnThree FROM Table<br />
 ORDER BY<br />
 CASE ColumnTwo<br />
 WHEN &#8216;miny&#8217; 1<br />
@@ -67,19 +72,23 @@ WHEN &#8216;eeny&#8217; 3<br />
 WHEN &#8216;moe&#8217; 4<br />
 END, ColumnThree</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Insert Select Query Results into Another Table</title>
-		<link>/2012/01/insert-select-query-results-into-another-table/</link>
-				<pubDate>Thu, 26 Jan 2012 16:55:54 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2012/01/insert-select-query-results-into-another-table/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 26 Jan 2012 16:55:54 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[SQL]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=280</guid>
 
-		<guid isPermaLink="false">/?p=280</guid>
-				<description><![CDATA[INSERT INTO dbo.Destination ( FieldOne ,FieldTwo ,FieldThree ,FieldFour ,FieldFive ) SELECT FieldOne ,FieldTwo ,FieldThree ,FieldFour ,FieldFive FROM dbo.Source]]></description>
-								<content:encoded><![CDATA[<p>INSERT INTO dbo.Destination<br />
+					<description><![CDATA[INSERT INTO dbo.Destination ( FieldOne ,FieldTwo ,FieldThree ,FieldFour ,FieldFive ) SELECT FieldOne ,FieldTwo ,FieldThree ,FieldFour ,FieldFive FROM dbo.Source]]></description>
+										<content:encoded><![CDATA[<p>INSERT INTO dbo.Destination<br />
 (<br />
 FieldOne<br />
 ,FieldTwo<br />
@@ -95,26 +104,33 @@ FieldOne<br />
 ,FieldFive<br />
 FROM dbo.Source</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Data truncation error when importing to SQL from CSV/Excel</title>
-		<link>/2010/11/data-truncation-error-when-importing-to-sql-from-csv/</link>
-				<pubDate>Thu, 11 Nov 2010 04:28:08 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/data-truncation-error-when-importing-to-sql-from-csv/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2010 04:28:08 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[SQL]]></category>
 		<category><![CDATA[data]]></category>
 		<category><![CDATA[helpdesk]]></category>
 		<category><![CDATA[sql]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=50</guid>
-				<description><![CDATA[If you are importing large (greater than 8 rows) amounts of data into a SQL database via the SQL Server Import and Export Wizard you may run across this error: Error 0xc02020a1: Data Flow Task 1: Data conversion failed. The data conversion for column &#8220;ColumnName&#8221; returned status value 4 and status text &#8220;Text was truncated [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>If you are importing large (greater than 8 rows) amounts of data into a SQL database via the SQL Server Import and Export Wizard you may run across this error:</p>
+
+					<description><![CDATA[If you are importing large (greater than 8 rows) amounts of data into a SQL database via the SQL Server Import and Export Wizard you may run across this error: Error 0xc02020a1: Data Flow Task 1: Data conversion failed. The data conversion for column &#8220;ColumnName&#8221; returned status value 4 and status text &#8220;Text was truncated [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you are importing large (greater than 8 rows) amounts of data into a SQL database via the SQL Server Import and Export Wizard you may run across this error:</p>
 <p style="padding-left: 30px;">Error 0xc02020a1: Data Flow Task 1: Data conversion failed. The data conversion for column &#8220;ColumnName&#8221; returned status value 4 and status text &#8220;Text was truncated or one or more characters had no match in the target code page.&#8221;.<br />
 (SQL Server Import and Export Wizard)</p>
 <p><span id="more-50"></span>This is due to a wonderful setting within Excel in your registry that tells it to only check the first 8 rows of data within your spreadsheet to determine the column size for the remainder of all the data.  The fix for this is to modify your registry to set it from 8 to 0.  When it&#8217;s set to 0 it will check the entire spreadsheet. This may cause some performance issues during the initial data import if the file is extremely large.  Here is the the registry key to search for (there may be more than one that needs to be set):</p>
 <p>TypeGuessRows</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>HTML &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/html/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/html/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Tue, 18 Mar 2014 17:27:17 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,55 +18,64 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Knockout.js Extenders: Grouped</title>
-		<link>/2014/02/knockout-js-extenders-grouped/</link>
-				<pubDate>Thu, 27 Feb 2014 03:31:24 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2014/02/knockout-js-extenders-grouped/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 27 Feb 2014 03:31:24 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[JavaScript]]></category>
 		<category><![CDATA[Knockout.js]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=522</guid>
 
-		<guid isPermaLink="false">/?p=522</guid>
-				<description><![CDATA[I wrote this extender to more easily handle outputting observable arrays in row+column layout.  Typically, when running a simple foreach loop to display the content of an observable array you&#8217;re forced to include the row+column logic within the view itself or you have to write additional helper functions in the view model.  I ran in [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>I wrote this extender to more easily handle outputting observable arrays in row+column layout.  Typically, when running a simple foreach loop to display the content of an observable array you&#8217;re forced to include the row+column logic within the view itself or you have to write additional helper functions in the view model.  I ran in to a situation where several different observable arrays needed to be displayed in row+column grids and rather than handling that functionality in the view or view model, I created this extension to generate a property of the observable array that is simply an additional observable array of the parent that has all the elements arranged in groups of whatever quantity that is specified.</p>
+					<description><![CDATA[I wrote this extender to more easily handle outputting observable arrays in row+column layout.  Typically, when running a simple foreach loop to display the content of an observable array you&#8217;re forced to include the row+column logic within the view itself or you have to write additional helper functions in the view model.  I ran in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I wrote this extender to more easily handle outputting observable arrays in row+column layout.  Typically, when running a simple foreach loop to display the content of an observable array you&#8217;re forced to include the row+column logic within the view itself or you have to write additional helper functions in the view model.  I ran in to a situation where several different observable arrays needed to be displayed in row+column grids and rather than handling that functionality in the view or view model, I created this extension to generate a property of the observable array that is simply an additional observable array of the parent that has all the elements arranged in groups of whatever quantity that is specified.</p>
 <script src="https://gist.github.com/hereswhatidid/8553151.js"></script>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Clean WordPress nav walker class</title>
-		<link>/2014/02/clean-wordpress-nav-walker-class/</link>
-				<pubDate>Sun, 09 Feb 2014 19:11:48 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2014/02/clean-wordpress-nav-walker-class/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sun, 09 Feb 2014 19:11:48 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=512</guid>
 
-		<guid isPermaLink="false">/?p=512</guid>
-				<description><![CDATA[This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.]]></description>
-								<content:encoded><![CDATA[<p>This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.<br />
+					<description><![CDATA[This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.]]></description>
+										<content:encoded><![CDATA[<p>This walker class will generate a clean unordered list. It removes the numerous classes added to each list item by the default WordPress but will keep any custom classes that have been added directly via the menus admin.<br />
 <script src="https://gist.github.com/hereswhatidid/8904445.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Update: CSS3 Pie still pretty rough</title>
-		<link>/2011/06/update-css3-pie-still-pretty-rough/</link>
-				<pubDate>Fri, 24 Jun 2011 19:19:22 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/06/update-css3-pie-still-pretty-rough/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 24 Jun 2011 19:19:22 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[CSS]]></category>
 		<category><![CDATA[CSS3]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=259</guid>
 
-		<guid isPermaLink="false">/?p=259</guid>
-				<description><![CDATA[After attempting to use the CSS3 Pie method for achieving some CSS3 support in IE browsers I&#8217;ve unfortunately come to the conclusion that it is still far too buggy for any kind of use other than for testing or demonstrations.  It has a pretty significant issue with the way that IE8 and lower hand page [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>After attempting to use the CSS3 Pie method for achieving some CSS3 support in IE browsers I&#8217;ve unfortunately come to the conclusion that it is still far too buggy for any kind of use other than for testing or demonstrations.  It has a pretty significant issue with the way that IE8 and lower hand page zooming in that any background image that you have will remain at it&#8217;s fixed size and simply tile.  <span id="more-259"></span>Here&#8217;s a screenshot showing what my tabbed quotes example looks like after zooming:</p>
-<p><img class="alignnone size-full wp-image-260" title="IE Tiling Background Zoom Bug" src="/wp-content/uploads/2011/06/css3-pie-tile-bug.png" alt="" width="590" height="343" srcset="/media/2011/06/css3-pie-tile-bug.png 590w, /media/2011/06/css3-pie-tile-bug-580x337.png 580w" sizes="(max-width: 590px) 100vw, 590px" /></p>
+					<description><![CDATA[After attempting to use the CSS3 Pie method for achieving some CSS3 support in IE browsers I&#8217;ve unfortunately come to the conclusion that it is still far too buggy for any kind of use other than for testing or demonstrations.  It has a pretty significant issue with the way that IE8 and lower hand page [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>After attempting to use the CSS3 Pie method for achieving some CSS3 support in IE browsers I&#8217;ve unfortunately come to the conclusion that it is still far too buggy for any kind of use other than for testing or demonstrations.  It has a pretty significant issue with the way that IE8 and lower hand page zooming in that any background image that you have will remain at it&#8217;s fixed size and simply tile.  <span id="more-259"></span>Here&#8217;s a screenshot showing what my tabbed quotes example looks like after zooming:</p>
+<p><img class="alignnone size-full wp-image-260" title="IE Tiling Background Zoom Bug" src="https://www.hereswhatidid.com/wp-content/uploads/2011/06/css3-pie-tile-bug.png" alt="" width="590" height="343" srcset="https://www.hereswhatidid.com/media/2011/06/css3-pie-tile-bug.png 590w, https://www.hereswhatidid.com/media/2011/06/css3-pie-tile-bug-580x337.png 580w" sizes="(max-width: 590px) 100vw, 590px" /></p>
 <p>Here are a few other issues that I&#8217;ve run into as well:</p>
 <ol>
 <li><strong>Noticeable delay on style rendering when page first loads.</strong> When you first load a page using the CSS3 Pie fix there is a small delay before those CSS3 properties are put in place.  This delay increases with every element that has some type of CSS3 style applied to it.  So if you wanted to round the corners on 100 divs on a single page you could be seeing nearly a full half-second delay before those are rendered on the screen.  It appears to be affected purely by machine speed so even people with a very fast internet connection will experience a delay unless they&#8217;re on a powerful machine.</li>
@@ -75,23 +84,27 @@
 </ol>
 <p>I&#8217;m sure the problems with CSS3 Pie are purely related to having to work around the huge amount of shortcomings within the IE browser and I applaud the author for getting it this far.  For now, though, I would still recommend against using this for any type of production work.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Google News style floating sidebar</title>
-		<link>/2011/02/google-news-style-floating-sidebar/</link>
-				<comments>/2011/02/google-news-style-floating-sidebar/#comments</comments>
-				<pubDate>Mon, 28 Feb 2011 03:34:09 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/02/google-news-style-floating-sidebar/</link>
+					<comments>https://www.hereswhatidid.com/2011/02/google-news-style-floating-sidebar/#comments</comments>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Mon, 28 Feb 2011 03:34:09 +0000</pubDate>
 				<category><![CDATA[CSS]]></category>
 		<category><![CDATA[CSS3]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[JavaScript]]></category>
 		<category><![CDATA[jQuery]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=244</guid>
 
-		<guid isPermaLink="false">/?p=244</guid>
-				<description><![CDATA[I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire navigation vertically, when you mouseover the navigation area a set of vertical scroll bars appears.  After a little digging it turns out they did this with a combination of CSS and JavaScript.  Here&#8217;s a simple demo I&#8217;ve set up that illustrates how I believe they achieved the effect.</p>
+					<description><![CDATA[I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I noticed a subtle but nice feature on the Google News main page recently.  The left-hand navigation that has the various section headings remains fixed to the top left area as you scroll down but it does not overlap the top banner area.  Also, if your browser window is too small to fit the entire navigation vertically, when you mouseover the navigation area a set of vertical scroll bars appears.  After a little digging it turns out they did this with a combination of CSS and JavaScript.  Here&#8217;s a simple demo I&#8217;ve set up that illustrates how I believe they achieved the effect.</p>
 <p><span id="more-244"></span><br />
 Initially, the sidebar area is set to a non-fixed position.  In my example I&#8217;m just floating it to the left of the main content area.  It also has overflow set to hidden.  Here is the CSS for the sidebar:</p>
 <pre class="prettyprint linenums">
@@ -122,47 +135,55 @@ $('#pinned').removeClass('pin-set').css('height',int_sideheight+'px');
 &lt;/script&gt;
 </pre>
 <p>What I&#8217;m doing is checking to seel when the scrollTop() is greater than the height of the header area. If it is, then apply that pin-set class to the sidebar navigation area.  If it isn&#8217;t, I&#8217;m clearing the class so that the sidebar area will always remain below the header area.  The mouseover scroll bar effect is purely CSS-driven.</p>
-<p><a href="/coding/fixedsidebar/sidebar.php" target="_blank">View a working demo of this code here.</a></p>
+<p><a href="https://www.hereswhatidid.com/coding/fixedsidebar/sidebar.php" target="_blank">View a working demo of this code here.</a></p>
 ]]></content:encoded>
-							<wfw:commentRss>/2011/02/google-news-style-floating-sidebar/feed/</wfw:commentRss>
-		<slash:comments>1</slash:comments>
-							</item>
+					
+					<wfw:commentRss>https://www.hereswhatidid.com/2011/02/google-news-style-floating-sidebar/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
 		<item>
 		<title>Using jQuery to find elements that contain a specific text string</title>
-		<link>/2011/02/using-jquery-to-find-elements-that-contain-a-specific-text-string/</link>
-				<pubDate>Wed, 23 Feb 2011 22:31:31 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/02/using-jquery-to-find-elements-that-contain-a-specific-text-string/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 23 Feb 2011 22:31:31 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[JavaScript]]></category>
 		<category><![CDATA[jQuery]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=241</guid>
 
-		<guid isPermaLink="false">/?p=241</guid>
-				<description><![CDATA[This snippet of code uses the .filter() function within jQuery to find all &#8220;li&#8221; elements that contain just the text &#8220;findthis&#8221;.]]></description>
-								<content:encoded><![CDATA[<p>This snippet of code uses the .filter() function within jQuery to find all &#8220;li&#8221; elements that contain just the text &#8220;findthis&#8221;.</p>
+					<description><![CDATA[This snippet of code uses the .filter() function within jQuery to find all &#8220;li&#8221; elements that contain just the text &#8220;findthis&#8221;.]]></description>
+										<content:encoded><![CDATA[<p>This snippet of code uses the .filter() function within jQuery to find all &#8220;li&#8221; elements that contain just the text &#8220;findthis&#8221;.</p>
 <pre class="prettyprint linenums">
 $('li:contains(&quot;findthis&quot;)').filter(function() {
   return $(this).text() == &quot;findthis&quot;;
 }).addClass('active');
 </pre>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Use CSS3 PIE for enabling CSS3 in IE</title>
-		<link>/2011/02/use-css3-pie-for-enabling-css3-in-ie/</link>
-				<comments>/2011/02/use-css3-pie-for-enabling-css3-in-ie/#comments</comments>
-				<pubDate>Sat, 12 Feb 2011 14:44:45 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/02/use-css3-pie-for-enabling-css3-in-ie/</link>
+					<comments>https://www.hereswhatidid.com/2011/02/use-css3-pie-for-enabling-css3-in-ie/#comments</comments>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 12 Feb 2011 14:44:45 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[CSS]]></category>
 		<category><![CDATA[CSS3]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=191</guid>
 
-		<guid isPermaLink="false">/?p=191</guid>
-				<description><![CDATA[I recently ran across this Internet Explorer CSS3 workaround that uses a HTC file to solve the majority of my CSS3 woes when it comes to developing cross-browser layouts.  Rounded corners, drop shadows, gradients, rgba, multiple backgrounds and even PNG transparency support are all solved with a simple (mostly simple) bit of CSS and the [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>I recently ran across this Internet Explorer CSS3 workaround that uses a HTC file to solve the majority of my CSS3 woes when it comes to developing cross-browser layouts.  Rounded corners, drop shadows, gradients, rgba, multiple backgrounds and even PNG transparency support are all solved with a simple (mostly simple) bit of CSS and the HTC file they&#8217;ve developed.<span id="more-191"></span>The official site for this fix is here:</p>
+					<description><![CDATA[I recently ran across this Internet Explorer CSS3 workaround that uses a HTC file to solve the majority of my CSS3 woes when it comes to developing cross-browser layouts.  Rounded corners, drop shadows, gradients, rgba, multiple backgrounds and even PNG transparency support are all solved with a simple (mostly simple) bit of CSS and the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I recently ran across this Internet Explorer CSS3 workaround that uses a HTC file to solve the majority of my CSS3 woes when it comes to developing cross-browser layouts.  Rounded corners, drop shadows, gradients, rgba, multiple backgrounds and even PNG transparency support are all solved with a simple (mostly simple) bit of CSS and the HTC file they&#8217;ve developed.<span id="more-191"></span>The official site for this fix is here:</p>
 <p><a href="http://css3pie.com/" target="_blank">http://css3pie.com/</a>/</p>
 <p>I&#8217;ve set up a working demo of the code described below here:</p>
 <p><a href="/coding/csspie/csspie.html" target="_blank">View Demo</a></p>
@@ -171,14 +192,14 @@ $('li:contains(&quot;findthis&quot;)').filter(function() {
 <p>Here&#8217;s a screenshot of the basic tabbed content boxes as they are rendered in Internet Explorer 6 and Internet Explorer 7/8.  I lumped 7 and 8 together since they were nearly identical except for some very minor font anti-aliasing differences.</p>
 <h3>Before CSS3 PIE</h3>
 <h3>Internet Explorer 6</h3>
-<p><img class="alignnone size-full wp-image-198" title="IE 6 Before CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie6-before.png" alt="IE 6 Before CSS3 PIE" width="520" height="389" /></p>
+<p><img class="alignnone size-full wp-image-198" title="IE 6 Before CSS3 PIE" src="https://www.hereswhatidid.com/wp-content/uploads/2011/02/css-pie-ie6-before.png" alt="IE 6 Before CSS3 PIE" width="520" height="389" /></p>
 <h3>Internet Explorer 7 &amp; 8</h3>
-<p><img class="alignnone size-full wp-image-200" title="IE 7 &amp; 8 Before CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie78-before.png" alt="IE 7 &amp; 8 Before CSS3 PIE" width="520" height="389" /></p>
+<p><img class="alignnone size-full wp-image-200" title="IE 7 &amp; 8 Before CSS3 PIE" src="https://www.hereswhatidid.com/wp-content/uploads/2011/02/css-pie-ie78-before.png" alt="IE 7 &amp; 8 Before CSS3 PIE" width="520" height="389" /></p>
 <h3>After CSS3 PIE</h3>
 <h3>Internet Explorer 6</h3>
-<p><img class="alignnone size-full wp-image-197" title="IE 6 After CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie6-after.png" alt="IE 6 After CSS3 PIE" width="580" height="430" /></p>
+<p><img class="alignnone size-full wp-image-197" title="IE 6 After CSS3 PIE" src="https://www.hereswhatidid.com/wp-content/uploads/2011/02/css-pie-ie6-after.png" alt="IE 6 After CSS3 PIE" width="580" height="430" /></p>
 <h3>Internet Explorer 7 &amp; 8</h3>
-<p><img class="alignnone size-full wp-image-199" title="IE 7 &amp; 8 After CSS3 PIE" src="/wp-content/uploads/2011/02/css-pie-ie78-after.png" alt="IE 7 &amp; 8 After CSS3 PIE" width="580" height="430" /></p>
+<p><img class="alignnone size-full wp-image-199" title="IE 7 &amp; 8 After CSS3 PIE" src="https://www.hereswhatidid.com/wp-content/uploads/2011/02/css-pie-ie78-after.png" alt="IE 7 &amp; 8 After CSS3 PIE" width="580" height="430" /></p>
 <h3>Implementation</h3>
 <p>There are a few things to watch out for when using CSS3 PIE.  A few of the CSS3 properties have to be done using the &#8220;-pie&#8221; prefix in order to trigger the proper rendering in Internet Explorer.  For example, to achieve this same multiple background declaration in CSS3 PIE:</p>
 <pre class="prettyprint linenums">
@@ -203,24 +224,28 @@ z-index: 1;
 </pre>
 <p>All in all, I&#8217;ve found this system well worth the 2-3 minor tricky parts.  In my opinion it&#8217;s a much better solution than letting the unsupported CSS3 elements degrade for those that are still using Internet Explorer 6-8.</p>
 ]]></content:encoded>
-							<wfw:commentRss>/2011/02/use-css3-pie-for-enabling-css3-in-ie/feed/</wfw:commentRss>
-		<slash:comments>3</slash:comments>
-							</item>
+					
+					<wfw:commentRss>https://www.hereswhatidid.com/2011/02/use-css3-pie-for-enabling-css3-in-ie/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
 		<item>
 		<title>Read the Agreement Validator</title>
-		<link>/2011/02/read-the-agreement-validator/</link>
-				<pubDate>Fri, 04 Feb 2011 20:51:06 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/02/read-the-agreement-validator/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 04 Feb 2011 20:51:06 +0000</pubDate>
 				<category><![CDATA[CSS]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[JavaScript]]></category>
 		<category><![CDATA[jQuery]]></category>
 		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=175</guid>
 
-		<guid isPermaLink="false">/?p=175</guid>
-				<description><![CDATA[Recently a client wanted to have a user agreement added to an enrollment form. The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission. Once again, jQuery to the rescue! HTML jQuery JavaScript: I&#8217;m currently working on [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Recently a client wanted to have a user agreement added to an enrollment form.  The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission.  Once again, jQuery to the rescue!<span id="more-175"></span></p>
+					<description><![CDATA[Recently a client wanted to have a user agreement added to an enrollment form. The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission. Once again, jQuery to the rescue! HTML jQuery JavaScript: I&#8217;m currently working on [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Recently a client wanted to have a user agreement added to an enrollment form.  The catch was that I needed to confirm that the user had at least scrolled through the text before allowing them to continue on with the form submission.  Once again, jQuery to the rescue!<span id="more-175"></span></p>
 <p>HTML</p>
 <pre class="prettyprint linenums">
 &lt;div class=&quot;agreement&quot;&gt;
@@ -244,12 +269,16 @@ $(&quot;.agreement&quot;).scroll(function() {
 </pre>
 <p>I&#8217;m currently working on deploying this to a generic jQuery plugin that will let you specify the content that needs to be scrolled through as well as the content should become enabled once that criteria is met.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Gareth Stevens</title>
-		<link>/2010/11/gareth-stevens/</link>
-				<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/gareth-stevens/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
 				<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[ECommerce]]></category>
 		<category><![CDATA[HTML]]></category>
@@ -258,37 +287,45 @@ $(&quot;.agreement&quot;).scroll(function() {
 		<category><![CDATA[e-commerce]]></category>
 		<category><![CDATA[portfolio]]></category>
 		<category><![CDATA[sql]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=4</guid>
-				<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
-								<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="/media/2011/01/gareth-stevens-01.jpg 598w, /media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
+
+					<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
+										<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="https://www.hereswhatidid.com/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="https://www.hereswhatidid.com/media/2011/01/gareth-stevens-01.jpg 598w, https://www.hereswhatidid.com/media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
 <p><strong>&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers.</strong> Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Display inconsistencies between FireFox and other browsers?</title>
-		<link>/2010/11/display-inconsistencies-between-firefox-and-other-browsers/</link>
-				<pubDate>Sat, 06 Nov 2010 04:26:56 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/display-inconsistencies-between-firefox-and-other-browsers/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 06 Nov 2010 04:26:56 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[CSS]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=46</guid>
-				<description><![CDATA[Double check your syntax. FireFox is more forgiving of errors than IE when it comes to the CSS code. For example: [sourcecode language=&#8221;css&#8221;]background:transparent url(images/check.gif)no-repeat 0 6px;[/sourcecode] Will work as intended within FireFox but not IE even though there is no space between the URL declaration and the &#8220;no-repeat&#8221; parameter. Change that code to: background:transparent url(images/check.gif) [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Double check your syntax.  FireFox is more forgiving of errors than IE when it comes to the CSS code. For example:<br />
+
+					<description><![CDATA[Double check your syntax. FireFox is more forgiving of errors than IE when it comes to the CSS code. For example: [sourcecode language=&#8221;css&#8221;]background:transparent url(images/check.gif)no-repeat 0 6px;[/sourcecode] Will work as intended within FireFox but not IE even though there is no space between the URL declaration and the &#8220;no-repeat&#8221; parameter. Change that code to: background:transparent url(images/check.gif) [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Double check your syntax.  FireFox is more forgiving of errors than IE when it comes to the CSS code. For example:<br />
 [sourcecode language=&#8221;css&#8221;]background:transparent url(images/check.gif)no-repeat 0 6px;[/sourcecode]</p>
 <p>Will work as intended within FireFox but not IE even though there is no space between the URL declaration and the &#8220;no-repeat&#8221; parameter.  Change that code to:<br />
 background:transparent url(images/check.gif) no-repeat 0 6px;<br />
 And it will work fine all around.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Google Static Maps</title>
-		<link>/2010/11/google-static-maps/</link>
-				<pubDate>Thu, 04 Nov 2010 04:26:05 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/google-static-maps/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Thu, 04 Nov 2010 04:26:05 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[HTML]]></category>
 		<category><![CDATA[JavaScript]]></category>
@@ -296,10 +333,10 @@ And it will work fine all around.</p>
 		<category><![CDATA[google maps]]></category>
 		<category><![CDATA[graphics]]></category>
 		<category><![CDATA[javascript]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=44</guid>
-				<description><![CDATA[This is a nice utility for embedding a static version of a Google Maps location. For example, if you didn&#8217;t want to actually embed the fully functional Google Map but just an image of that map you can use this to dynamically generate it based on URL parameters. That means if the address changes or you [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>This is a nice utility for embedding a static version of a Google Maps location.  For example, if you didn&#8217;t want to actually embed the fully functional Google Map but just an image of that map you can use this to dynamically generate it based on URL parameters. That means if the address changes or you want to switch the view from Map to Satellite, all you need to do it pass a different value to the image path.  Here&#8217;s a a couple examples:</p>
+
+					<description><![CDATA[This is a nice utility for embedding a static version of a Google Maps location. For example, if you didn&#8217;t want to actually embed the fully functional Google Map but just an image of that map you can use this to dynamically generate it based on URL parameters. That means if the address changes or you [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>This is a nice utility for embedding a static version of a Google Maps location.  For example, if you didn&#8217;t want to actually embed the fully functional Google Map but just an image of that map you can use this to dynamically generate it based on URL parameters. That means if the address changes or you want to switch the view from Map to Satellite, all you need to do it pass a different value to the image path.  Here&#8217;s a a couple examples:</p>
 <p><img src="http://maps.google.com/maps/api/staticmap?center=Risdall+Marketing+Group,550+Main+St,New+Brighton,MN+55112&amp;zoom=14&amp;size=200x200&amp;sensor=false&amp;markers=size:mid|color:blue|550+Main+St,New+Brighton,MN+55112" alt="" width="200" height="200" /> <img src="http://maps.google.com/maps/api/staticmap?center=Risdall+Marketing+Group,550+Main+St,New+Brighton,MN+55112&amp;zoom=14&amp;size=200x200&amp;sensor=false&amp;markers=size:mid|color:green|550+Main+St,New+Brighton,MN+55112&amp;maptype=satellite" alt="" width="200" height="200" /></p>
 <p>These images are both generated on the fly via Google Maps.</p>
 <p>[sourcecode lang=&#8221;html&#8221;]&lt;img src=&quot;http://maps.google.com/maps/api/staticmap?center=Risdall+Marketing+Group,550+Main+St,New+Brighton,MN+55112&amp;zoom=14&amp;size=200&#215;200&amp;sensor=false&amp;markers=size:mid|color:blue|550+Main+St,New+Brighton,MN+55112&quot; /&gt;[/sourcecode]</p>
@@ -307,6 +344,9 @@ And it will work fine all around.</p>
 <p>The bandwidth limitation is 1000 unique (different) image requests per  viewer per day.  Which means you would only see a limit on users who  happen to view 1000 DIFFERENT static Google Maps images within a 24 hour  period.</p>
 <p><a href="http://code.google.com/apis/maps/documentation/staticmaps/" target="_blank">Here&#8217;s the full api developers guide.</a></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Classic ASP &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/classic-asp/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/classic-asp/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Thu, 15 Nov 2012 15:49:12 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,12 +18,13 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>301 Redirection Codes</title>
-		<link>/2010/11/301-redirection-codes/</link>
-				<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/301-redirection-codes/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sun, 14 Nov 2010 04:28:48 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[Development]]></category>
@@ -34,10 +35,10 @@
 		<category><![CDATA[hosting]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[seo]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=52</guid>
-				<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
+
+					<description><![CDATA[A collection of the most common methods for performing 301 redirects: Redirect with .htaccess and Mod_Rewrite 301 Redirect: xyz-site.com to www.xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^www.xyz-site.com$ [NC] RewriteRule ^(.*)$ http://www.xyz-site.com/$1 [L,R=301] 301 Redirect: www.xyz-site.com to xyz-site.com RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} !^xyz-site.com$ [NC] RewriteRule ^(.*)$ http://xyz-site.com/$1 [L,R=301] 301 Redirect: Redirecting Individual pages [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>A collection of the most common methods for performing 301 redirects:<span id="more-52"></span></p>
 <div>
 <h3>Redirect with .htaccess and Mod_Rewrite</h3>
 <p><span style="color: #000000; line-height: 23px;">301 Redirect: xyz-site.com to www.xyz-site.com</span></p>
@@ -102,12 +103,16 @@ print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
 <p>* This script should be the first piece of code on the page to function correctly.</p>
 </div>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Classic ASP Recordset values disappearing…</title>
-		<link>/2010/11/classic-asp-recordset-values-disappearing/</link>
-				<pubDate>Tue, 09 Nov 2010 04:27:37 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/classic-asp-recordset-values-disappearing/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 09 Nov 2010 04:27:37 +0000</pubDate>
 				<category><![CDATA[Browser Quirks]]></category>
 		<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[Development]]></category>
@@ -115,22 +120,26 @@ print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
 		<category><![CDATA[classic asp]]></category>
 		<category><![CDATA[hosting]]></category>
 		<category><![CDATA[sql]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=48</guid>
-				<description><![CDATA[Or just plain acting strange? Check your connection string. Recently had a Classic ASP site that I was converting from running off of Access to using a SQL2005 database and the values in recordsets were behaving very oddly. Anytime a row column was accessed it would clear the rest of the values. For example, if I [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>Or just plain acting strange?  Check your connection string. Recently had a Classic ASP site that I was converting from running off of Access to using a SQL2005 database and the values in recordsets were behaving very oddly.  Anytime a row column was accessed it would clear the rest of the values.  For example, if I called up the value of</p>
+
+					<description><![CDATA[Or just plain acting strange? Check your connection string. Recently had a Classic ASP site that I was converting from running off of Access to using a SQL2005 database and the values in recordsets were behaving very oddly. Anytime a row column was accessed it would clear the rest of the values. For example, if I [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Or just plain acting strange?  Check your connection string. Recently had a Classic ASP site that I was converting from running off of Access to using a SQL2005 database and the values in recordsets were behaving very oddly.  Anytime a row column was accessed it would clear the rest of the values.  For example, if I called up the value of</p>
 <p>[vb]rsTemp.Fields(&quot;FieldOne&quot;)[/vb]</p>
 <p>Any other fields in that particular row would come up blank.  After quite a bit of searching the solution came down to the fact I was using this as my connection string:<span id="more-48"></span></p>
 <p>Driver={SQL Server}; Server=DBServer; Database=DBName; Uid=DBUserName; Pwd=DBPassword;</p>
 <p>Changing the driver portion of the connection string immediately fixed all the strange behaviors I was getting:</p>
 <p>Provider=SQLNCLI; Server=DBServer; Database=DBName; Uid=DBUserName; Pwd=DBPassword;</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Gareth Stevens</title>
-		<link>/2010/11/gareth-stevens/</link>
-				<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/gareth-stevens/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
 				<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[ECommerce]]></category>
 		<category><![CDATA[HTML]]></category>
@@ -139,12 +148,15 @@ print $q-&gt;redirect(&quot; http://www.new-url.com/ &quot;);<br />
 		<category><![CDATA[e-commerce]]></category>
 		<category><![CDATA[portfolio]]></category>
 		<category><![CDATA[sql]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=4</guid>
-				<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
-								<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="/media/2011/01/gareth-stevens-01.jpg 598w, /media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
+
+					<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
+										<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="https://www.hereswhatidid.com/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="https://www.hereswhatidid.com/media/2011/01/gareth-stevens-01.jpg 598w, https://www.hereswhatidid.com/media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
 <p><strong>&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers.</strong> Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

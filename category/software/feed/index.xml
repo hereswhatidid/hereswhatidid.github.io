@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Software &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/software/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/software/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Thu, 15 Nov 2012 15:48:12 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,22 +18,26 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Windows Character Map Search</title>
-		<link>/2011/02/windows-character-map-search/</link>
-				<pubDate>Mon, 21 Feb 2011 01:41:42 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2011/02/windows-character-map-search/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Mon, 21 Feb 2011 01:41:42 +0000</pubDate>
 				<category><![CDATA[Software]]></category>
 		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=226</guid>
 
-		<guid isPermaLink="false">/?p=226</guid>
-				<description><![CDATA[Ever wanted to skip right to just the double left quote in the default Windows Character Map?  Well, turns out you can.  Just click the &#8220;Advanced view&#8221; check box in the bottom left of the Character Map window. Then type in the name of the character you&#8217;re looking for and hit &#8220;Search.&#8221;]]></description>
-								<content:encoded><![CDATA[<p>Ever wanted to skip right to just the double left quote in the default Windows Character Map?  Well, turns out you can.  Just click the &#8220;Advanced view&#8221; check box in the bottom left of the Character Map window.<span id="more-226"></span></p>
-<p><img class="alignnone size-full wp-image-227" title="Character Map Advanced View" src="/wp-content/uploads/2011/02/charmap-01.gif" alt="" width="490" height="418" srcset="/media/2011/02/charmap-01.gif 490w, /media/2011/02/charmap-01-410x350.gif 410w" sizes="(max-width: 490px) 100vw, 490px" /></p>
+					<description><![CDATA[Ever wanted to skip right to just the double left quote in the default Windows Character Map?  Well, turns out you can.  Just click the &#8220;Advanced view&#8221; check box in the bottom left of the Character Map window. Then type in the name of the character you&#8217;re looking for and hit &#8220;Search.&#8221;]]></description>
+										<content:encoded><![CDATA[<p>Ever wanted to skip right to just the double left quote in the default Windows Character Map?  Well, turns out you can.  Just click the &#8220;Advanced view&#8221; check box in the bottom left of the Character Map window.<span id="more-226"></span></p>
+<p><img class="alignnone size-full wp-image-227" title="Character Map Advanced View" src="https://www.hereswhatidid.com/wp-content/uploads/2011/02/charmap-01.gif" alt="" width="490" height="418" srcset="https://www.hereswhatidid.com/media/2011/02/charmap-01.gif 490w, https://www.hereswhatidid.com/media/2011/02/charmap-01-410x350.gif 410w" sizes="(max-width: 490px) 100vw, 490px" /></p>
 <p>Then type in the name of the character you&#8217;re looking for and hit &#8220;Search.&#8221;</p>
-<p><img class="alignnone size-full wp-image-228" title="Character Map Search" src="/wp-content/uploads/2011/02/charmap-02.gif" alt="" width="490" height="516" srcset="/media/2011/02/charmap-02.gif 490w, /media/2011/02/charmap-02-332x350.gif 332w" sizes="(max-width: 490px) 100vw, 490px" /></p>
+<p><img class="alignnone size-full wp-image-228" title="Character Map Search" src="https://www.hereswhatidid.com/wp-content/uploads/2011/02/charmap-02.gif" alt="" width="490" height="516" srcset="https://www.hereswhatidid.com/media/2011/02/charmap-02.gif 490w, https://www.hereswhatidid.com/media/2011/02/charmap-02-332x350.gif 332w" sizes="(max-width: 490px) 100vw, 490px" /></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

@@ -8,36 +8,42 @@
 <channel>
 	<title>
 	Comments on: ImportBuddy &#8220;ERROR #83893a: unable to decode JSON restore data &#8220;. Restore halted.&#8221; error	</title>
-	<atom:link href="/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/" rel="self" type="application/rss+xml" />
-	<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
+	<atom:link href="https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Fri, 27 Mar 2015 22:18:37 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
-			<item>
-				<title>
-				By: Robyn				</title>
-				<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comment-103</link>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
+	<item>
+		<title>
+		By: Robyn		</title>
+		<link>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comment-103</link>
+
 		<dc:creator><![CDATA[Robyn]]></dc:creator>
 		<pubDate>Fri, 27 Mar 2015 22:18:37 +0000</pubDate>
-		<guid isPermaLink="false">/?p=586#comment-103</guid>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=586#comment-103</guid>
+
 					<description><![CDATA[You saved my night! TY TY TY]]></description>
-		<content:encoded><![CDATA[<p>You saved my night! TY TY TY</p>
+			<content:encoded><![CDATA[<p>You saved my night! TY TY TY</p>
 ]]></content:encoded>
-						</item>
-						<item>
-				<title>
-				By: Corey				</title>
-				<link>/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comment-102</link>
+		
+			</item>
+		<item>
+		<title>
+		By: Corey		</title>
+		<link>https://www.hereswhatidid.com/2015/03/importbuddy-error-83893a-unable-to-decode-json-restore-data-restore-halted-error/#comment-102</link>
+
 		<dc:creator><![CDATA[Corey]]></dc:creator>
 		<pubDate>Tue, 24 Mar 2015 19:28:10 +0000</pubDate>
-		<guid isPermaLink="false">/?p=586#comment-102</guid>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=586#comment-102</guid>
+
 					<description><![CDATA[This post saved me a TON of time trying to figure out what was going on. THANK YOU!]]></description>
-		<content:encoded><![CDATA[<p>This post saved me a TON of time trying to figure out what was going on. THANK YOU!</p>
+			<content:encoded><![CDATA[<p>This post saved me a TON of time trying to figure out what was going on. THANK YOU!</p>
 ]]></content:encoded>
-						</item>
-			</channel>
+		
+			</item>
+	</channel>
 </rss>

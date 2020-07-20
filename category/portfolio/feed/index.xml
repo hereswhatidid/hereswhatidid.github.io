@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Portfolio &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/portfolio/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/portfolio/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Thu, 15 Nov 2012 15:49:12 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,12 +18,13 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Gareth Stevens</title>
-		<link>/2010/11/gareth-stevens/</link>
-				<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2010/11/gareth-stevens/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 06 Nov 2010 13:34:56 +0000</pubDate>
 				<category><![CDATA[Classic ASP]]></category>
 		<category><![CDATA[ECommerce]]></category>
 		<category><![CDATA[HTML]]></category>
@@ -32,12 +33,15 @@
 		<category><![CDATA[e-commerce]]></category>
 		<category><![CDATA[portfolio]]></category>
 		<category><![CDATA[sql]]></category>
-
 		<guid isPermaLink="false">http://hereswhatidid/?p=4</guid>
-				<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
-								<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="/media/2011/01/gareth-stevens-01.jpg 598w, /media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
+
+					<description><![CDATA[&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers. Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;]]></description>
+										<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-155" title="Gareth Stevens 01" src="https://www.hereswhatidid.com/wp-content/uploads/2011/01/gareth-stevens-01.jpg" alt="Gareth Stevens Splash Page" width="598" height="414" srcset="https://www.hereswhatidid.com/media/2011/01/gareth-stevens-01.jpg 598w, https://www.hereswhatidid.com/media/2011/01/gareth-stevens-01-300x207.jpg 300w" sizes="(max-width: 598px) 100vw, 598px" /></p>
 <p><strong>&#8220;Gareth Stevens is one of the world’s most respected library and educational publishers.</strong> Our publishing program focuses on nonfiction titles carefully written and designed to align with current curriculum standards and objectives. Our mission is to lead children to a lifetime of learning. We do this through high-quality, high-interest books for every age group.&#8221;</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

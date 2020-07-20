@@ -9,32 +9,36 @@
 
 <channel>
 	<title>GravityForms &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/wordpress/gravityforms/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/wordpress/gravityforms/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Tue, 18 Sep 2018 16:54:31 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 15 Feb 2020 01:02:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Populate an ACF drop down field with a list of GravityForm forms</title>
-		<link>/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
-				<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2018/09/populate-an-acf-drop-down-field-with-a-list-of-gravityform-forms/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 18 Sep 2018 16:54:31 +0000</pubDate>
 				<category><![CDATA[Advanced Custom Fields]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[GravityForms]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=703</guid>
 
-		<guid isPermaLink="false">/?p=703</guid>
-				<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
-								<content:encoded><![CDATA[<p>Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:</p>
+					<description><![CDATA[Here is an example script showing how to populate an Advanced Custom Fields drop down with any forms you have currently enabled that have been created by the GravityForms plugin:]]></description>
+										<content:encoded><![CDATA[<p>Here is an example script showing how to populate an <a href="https://www.advancedcustomfields.com/" target="_blank" rel="noopener noreferrer">Advanced Custom Fields</a> drop down with any forms you have currently enabled that have been created by the <a href="https://www.gravityforms.com/" target="_blank" rel="noopener noreferrer">GravityForms</a> plugin:</p>
 <p><script src="https://gist.github.com/hereswhatidid/eaee026f172e53b8d79c20d6c1666be6.js"></script></p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>

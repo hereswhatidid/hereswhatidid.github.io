@@ -9,8 +9,8 @@
 
 <channel>
 	<title>MySQL &#8211; here&#039;s what I did&#8230;</title>
-	<atom:link href="/category/development/mysql/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.hereswhatidid.com/category/development/mysql/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
 	<lastBuildDate>Sat, 21 Apr 2018 23:38:00 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -18,20 +18,21 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.2.5</generator>
+	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
 		<title>Using MySQL to conditionally update WordPress post meta data</title>
-		<link>/2018/04/using-mysql-to-conditionally-update-wordpress-post-meta-data/</link>
-				<pubDate>Sat, 21 Apr 2018 15:14:29 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2018/04/using-mysql-to-conditionally-update-wordpress-post-meta-data/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Sat, 21 Apr 2018 15:14:29 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[MySQL]]></category>
 		<category><![CDATA[WooCommerce]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=691</guid>
 
-		<guid isPermaLink="false">/?p=691</guid>
-				<description><![CDATA[After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first image twice. The suggestion from the plugin&#8217;s documentation was to rerun the import specifically targeting those fields to fix the issue. This was less than ideal as we were dealing with a product list that was nearly 3,000 items long and took 20-25 minutes to fully import.</p>
+					<description><![CDATA[After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>After a recent bulk product import for a WooCommerce installation we noticed an issue with the gallery images. The featured image for each product was set to the first image within the gallery for that product. This created a duplicate image issue where the image gallery on the product detail page would show the first image twice. The suggestion from the plugin&#8217;s documentation was to rerun the import specifically targeting those fields to fix the issue. This was less than ideal as we were dealing with a product list that was nearly 3,000 items long and took 20-25 minutes to fully import.</p>
 <p>Because I knew the underlying data was fine, it was just being duplicated, I decided to use a MySQL query to update the database directly rather than running another import. Here is the query I ended up with:</p>
 <blockquote><p><code>UPDATE wp_postmeta a<br />
 JOIN wp_postmeta b<br />
@@ -52,22 +53,26 @@ JOIN wp_postmeta b</code></p></blockquote>
 <p>Finally I am establishing which meta fields that I&#8217;m looking to target with the query.</p>
 <p>By using this MySQL approach to fixing the meta data I was able to fix the meta fields with a single command that took roughly 3 seconds to process rather than running another full product import.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Beginner&#8217;s Guide: Installing WP-CLI with AMPPS</title>
-		<link>/2014/01/installing-wp-cli-with-ampps/</link>
-				<pubDate>Tue, 21 Jan 2014 04:52:46 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2014/01/installing-wp-cli-with-ampps/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Tue, 21 Jan 2014 04:52:46 +0000</pubDate>
 				<category><![CDATA[AMPPS]]></category>
 		<category><![CDATA[Development]]></category>
 		<category><![CDATA[MySQL]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
 		<category><![CDATA[WP-CLI]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=502</guid>
 
-		<guid isPermaLink="false">/?p=502</guid>
-				<description><![CDATA[This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP binary that is bundled with the OS.  When this happens, WP-CLI cannot communicate with the local MySQL instance and will usually return a bit of HTML in the terminal that says something along the lines of &#8220;Error Establishing A Database Connection&#8221; and/or &#8220;Can’t connect to local MySQL.&#8221;</p>
+					<description><![CDATA[This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>This is a step by step tutorial on how I was able to get WP-CLI up and running on Mavericks with AMPPS.  The biggest issue that you will typically face when installing WP-CLI along side a web host software stack (MAMP, XAMPP, AMPPS) on a Mac is that WP-CLI will want to use the PHP binary that is bundled with the OS.  When this happens, WP-CLI cannot communicate with the local MySQL instance and will usually return a bit of HTML in the terminal that says something along the lines of &#8220;Error Establishing A Database Connection&#8221; and/or &#8220;Can’t connect to local MySQL.&#8221;</p>
 <h3>Step 1 &#8211; Install WP-CLI</h3>
 <pre><code>curl -L https://github.com/wp-cli/wp-cli/releases/download/v0.13.0/wp-cli.phar &gt; wp-cli.phar</code></pre>
 <p>And then running these commands in order to be able to call WP-CLI by just using &#8216;wp&#8217;:</p>
@@ -82,21 +87,28 @@ sudo mv wp-cli.phar /usr/bin/wp</code></pre>
 <pre><code>wp --info</code></pre>
 <p>The PHP binary setting should now be pointing to the PHP binary within your AMPPS directory. If not, go back and verify that the paths you entered in the .bash_profile file are correct.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 		<item>
 		<title>Transients won&#8217;t show up?  Check for duplicates!</title>
-		<link>/2012/09/transients-wont-show-up-check-for-duplicates/</link>
-				<pubDate>Wed, 26 Sep 2012 14:36:10 +0000</pubDate>
+		<link>https://www.hereswhatidid.com/2012/09/transients-wont-show-up-check-for-duplicates/</link>
+		
 		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Wed, 26 Sep 2012 14:36:10 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[MySQL]]></category>
 		<category><![CDATA[PHP]]></category>
 		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=315</guid>
 
-		<guid isPermaLink="false">/?p=315</guid>
-				<description><![CDATA[If you&#8217;ve found that particular transients simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the get_site_transient() function to silently fail.  Simply go [&#8230;]]]></description>
-								<content:encoded><![CDATA[<p>If you&#8217;ve found that particular <a href="http://codex.wordpress.org/Transients_API" target="_blank">transients</a> simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the <a href="http://codex.wordpress.org/Function_Reference/get_site_transient" target="_blank">get_site_transient()</a> function to silently fail.  Simply go in and remove the duplicate transient &#8216;meta_key&#8217;s that are LOWER than the highest duplicate.  After doing this you should now see your transients correctly.</p>
+					<description><![CDATA[If you&#8217;ve found that particular transients simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the get_site_transient() function to silently fail.  Simply go [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>If you&#8217;ve found that particular <a href="http://codex.wordpress.org/Transients_API" target="_blank">transients</a> simply will not display in your theme yet they aren&#8217;t throwing an error?  Check your database for duplicate entries.  It is possible when moving a site between servers for a transients to become duplicated within the wp_sitemeta table and this causes the <a href="http://codex.wordpress.org/Function_Reference/get_site_transient" target="_blank">get_site_transient()</a> function to silently fail.  Simply go in and remove the duplicate transient &#8216;meta_key&#8217;s that are LOWER than the highest duplicate.  After doing this you should now see your transients correctly.</p>
 ]]></content:encoded>
-										</item>
+					
+		
+		
+			</item>
 	</channel>
 </rss>
