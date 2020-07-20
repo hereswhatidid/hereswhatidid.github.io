@@ -12,7 +12,7 @@
 	<atom:link href="https://www.hereswhatidid.com/category/development/php/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Fri, 21 Feb 2020 15:40:48 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 20 Jul 2020 15:28:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -27,6 +27,7 @@
 		<pubDate>Fri, 14 Feb 2020 14:40:49 +0000</pubDate>
 				<category><![CDATA[Development]]></category>
 		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
 		<category><![CDATA[WooCommerce]]></category>
 		<category><![CDATA[WordPress]]></category>
 		<category><![CDATA[Yoast]]></category>

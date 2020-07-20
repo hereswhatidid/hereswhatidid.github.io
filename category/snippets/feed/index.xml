@@ -12,7 +12,7 @@
 	<atom:link href="https://www.hereswhatidid.com/category/snippets/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.hereswhatidid.com/</link>
 	<description>The Development Blog of Gabe Shackle</description>
-	<lastBuildDate>Sat, 15 Feb 2014 05:32:49 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 20 Jul 2020 15:28:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,29 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.4.2</generator>
 	<item>
+		<title>Override WooCommerce breadcrumbs with Yoast Primary Categories</title>
+		<link>https://www.hereswhatidid.com/2020/02/override-woocommerce-breadcrumbs-with-yoast-primary-categories/</link>
+		
+		<dc:creator><![CDATA[Gabe]]></dc:creator>
+		<pubDate>Fri, 14 Feb 2020 14:40:49 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[WooCommerce]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[Yoast]]></category>
+		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=738</guid>
+
+					<description><![CDATA[The default behavior for WooCommerce breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the Yoast SEO plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The default behavior for <a href="https://woocommerce.com/" target="_blank" rel="noopener noreferrer">WooCommerce</a> breadcrumbs when you have multiple categories selected for a product is to grab the first one found in the list. If you&#8217;re making use of the Primary Category options provided by the <a href="https://yoast.com/wordpress/plugins/seo/" target="_blank" rel="noopener noreferrer">Yoast SEO</a> plugin WooCommerce will ignore that setting. Most solutions I&#8217;ve found so far have recommended replacing the WooCommerce breadcrumbs with the ones provided by Yoast. If you&#8217;ve done any customization or styling based on the WooCommerce breadcrumbs, the Yoast SEO version is less than ideal. The HTML structure of the Yoast breadcrumbs is a series of nested &lt;span&gt; tags and the divider is manually set through the plugin settings. Not only is this not great from a CSS styling perspective, it&#8217;s completely differnent from the breadcrumb structure provided by WooCommerce and other breadcrumbs plugins.</p>
+<p>Another option that exists for integrating the Primary Category in to the WooCommerce breadcrumbs is to simply override the main term that WooCommerce uses to generate the crumbs. The code below demonstrates how to do this using the `woocommerce_breadcrumb_main_term` filter. This code can be added to your theme&#8217;s functions.php file or in a plugin file:</p>
+<p><script src="https://gist.github.com/hereswhatidid/fb9152a11bc359fa32772e4d18f01c9a.js"></script></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Clean WordPress nav walker class</title>
 		<link>https://www.hereswhatidid.com/2014/02/clean-wordpress-nav-walker-class/</link>
 		
@@ -269,36 +292,6 @@ WHERE option_value LIKE CONCAT('%',@oldurl,'%');
 UPDATE wp_postmeta
 SET meta_value = REPLACE(meta_value, @oldurl, @newurl)
 WHERE meta_value LIKE CONCAT('%',@oldurl,'%');
-</pre>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Modify the default stylesheet path for WordPress blogs</title>
-		<link>https://www.hereswhatidid.com/2012/02/modify-the-default-stylesheet-path-for-wordpress-blogs/</link>
-		
-		<dc:creator><![CDATA[Gabe]]></dc:creator>
-		<pubDate>Fri, 03 Feb 2012 16:36:50 +0000</pubDate>
-				<category><![CDATA[CSS]]></category>
-		<category><![CDATA[Development]]></category>
-		<category><![CDATA[PHP]]></category>
-		<category><![CDATA[Snippets]]></category>
-		<category><![CDATA[WordPress]]></category>
-		<guid isPermaLink="false">https://www.hereswhatidid.com/?p=287</guid>
-
-					<description><![CDATA[Recently I wanted to update a particular WordPress installation to use something other than the theme&#8217;s style.css file as it&#8217;s default CSS document.  Here is the code to enable that:]]></description>
-										<content:encoded><![CDATA[<p>Recently I wanted to update a particular WordPress installation to use something other than the theme&#8217;s style.css file as it&#8217;s default CSS document.  Here is the code to enable that:</p>
-<pre class="prettyprint linenums">
-&lt;?php
-function modify_stylesheet_uri(){
-$stylesheet_dir_uri = THEMEURI;
-$stylesheet_uri = THEMEURI.'/css/styles-screen.css';
-return $stylesheet_uri;
-}
-add_filter("stylesheet_uri", "modify_stylesheet_uri");
-?&gt;
 </pre>
 ]]></content:encoded>
 					
